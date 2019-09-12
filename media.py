@@ -4,8 +4,9 @@
 #4 Tester
 
 import unittest
+import abc
 
-class Media:
+class Media(metaclass=abc.ABCMeta):
 
     def __init__(self, id:int, title:str, price:float, author=None, publisher=None):
         self.id = id
@@ -14,8 +15,8 @@ class Media:
         self.author = author
         self.publisher = publisher
 
-    def getNetPrice(self):
-        return self.price * 1.2
+    @abc.abstractmethod
+    def getNetPrice(self):...
 
     def __repr__(self):
         return f"{type(self)} {self.id} {self.title}"
@@ -25,7 +26,7 @@ class Book(Media):
     nbBook = 0
 
     def __init__(self, id:int, title:str, price:float, author=None, publisher=None, nbPage = 0):
-        super(Media, self).__init__(id,title,price,author,publisher)
+        super().__init__(id,title,price,author,publisher)
         self.nbPage = nbPage
         Book.nbBook += 1
 
@@ -40,6 +41,9 @@ class Cd(Media):
     def __init__(self, id:int, title:str, price:float, author=None, publisher=None, nbTrack = 0):
         super().__init__(id,title,price,author,publisher)
         self.nbTrack = nbTrack
+
+    def getNetPrice(self):
+        return self.price * 1.2 * 0.8
 
 class Cart:
 
@@ -80,7 +84,7 @@ class MediaTest(unittest.TestCase):
         c.add(b)
         self.assertEqual(1, len(c.medias))
         c.add(Cd(1,"",20))
-        self.assertAlmostEqual(34.03, c.getTotalNetPrice(), delta = 1e-2) # liste en intention + sum()
+        self.assertAlmostEqual(29.23, c.getTotalNetPrice(), delta = 1e-2) # liste en intention + sum()
 
 
 
