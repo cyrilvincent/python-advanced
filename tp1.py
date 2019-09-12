@@ -11,7 +11,9 @@ def div1000(x):
 def isPositive(x):
     return x > 0
 
-res = map(div1000, l)
-res = map(math.sin, res)
-res = filter(isPositive, res)
+isPositive = lambda x : x > 0
+
+res = map(lambda x : x / 1000, l)
+res = map(lambda x : math.sin(x + math.pi / 3), res)
+res = filter(lambda x : x > 0, res)
 print(list(res))

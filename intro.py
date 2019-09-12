@@ -94,6 +94,33 @@ class MyTests(unittest.TestCase):
         l = range(5)
         self.assertListEqual([0,2,4,6,8], list(map(double, l)))
 
+    def testMapIntention(self):
+        l = range(5)
+        self.assertListEqual([0,1,4,9,16], list(map(lambda x : x ** 2, l)))
+        self.assertListEqual([0, 1, 4, 9, 16], [x ** 2 for x in l])
+
+    def testFilterIntention(self):
+        l = range(5)
+        self.assertListEqual([0,2,4], list(filter(lambda x : x % 2 == 0, l)))
+        self.assertListEqual([0, 2, 4], [x for x in l if x % 2 == 0])
+
+    def testFilterMapIntention(self):
+        l = range(5)
+        self.assertListEqual([0,4,16], list(map(lambda x : x **2, filter(lambda x : x % 2 == 0, l))))
+        self.assertListEqual([0, 4, 16], [x ** 2 for x in l if x % 2 == 0])
+
+
+    def testReference(self):
+        l1 = [1,2,3]
+        l2 = l1
+        l2.append(4)
+        self.assertListEqual([1,2,3,4], l1)
+        l3 = list(l1)
+        l3.remove(4)
+        self.assertListEqual([1, 2, 3, 4], l1)
+        self.assertTrue(l1 is l2)
+        self.assertFalse(l3 is l1)
+
 if __name__ == '__main__':
     unittest.main()
 
