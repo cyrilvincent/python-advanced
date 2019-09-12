@@ -21,6 +21,15 @@ class Media(metaclass=abc.ABCMeta):
     def __repr__(self):
         return f"{type(self)} {self.id} {self.title}"
 
+    def __lt__(self, other):
+        return self.price - other.price
+
+    def __eq__(self, other):
+        return self.id == other.id
+
+    def __ne__(self, other):
+        return self.id != other.id # != not(==)
+
 class Book(Media):
 
     nbBook = 0
