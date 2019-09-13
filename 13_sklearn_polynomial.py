@@ -28,7 +28,7 @@ plt.scatter(x_plot, f(x_plot))
 plt.plot(x_plot, y_plot)
 plt.show()
 import math
-print(1 - math.sqrt(model.score(X, y))) #75%
+print(model.score(X, y)) #75%
 
 import sklearn.preprocessing as pp
 import sklearn.pipeline as pipe
@@ -45,7 +45,7 @@ plt.scatter(x_plot, f(x_plot))
 plt.plot(x_plot, y_plot)
 plt.show()
 import math
-print(1 - math.sqrt(model.score(X, y))) #72%
+print(model.score(X, y)) #72%
 
 model = pipe.make_pipeline(pp.PolynomialFeatures(3), sklm.Ridge())
 model.fit(X,y)
@@ -54,7 +54,7 @@ plt.scatter(x_plot, f(x_plot))
 plt.plot(x_plot, y_plot)
 plt.show()
 import math
-print(1 - math.sqrt(model.score(X, y))) #61%
+print(model.score(X, y)) #61%
 
 model = pipe.make_pipeline(pp.PolynomialFeatures(4), sklm.Ridge())
 model.fit(X,y)
@@ -63,7 +63,7 @@ plt.scatter(x_plot, f(x_plot))
 plt.plot(x_plot, y_plot)
 plt.show()
 import math
-print(1 - math.sqrt(model.score(X, y))) #18%
+print(model.score(X, y)) #18%
 
 model = pipe.make_pipeline(pp.PolynomialFeatures(5), sklm.Ridge())
 model.fit(X,y)
@@ -72,7 +72,7 @@ plt.scatter(x_plot, f(x_plot))
 plt.plot(x_plot, y_plot)
 plt.show()
 import math
-print(1 - math.sqrt(model.score(X, y))) #3%
+print(model.score(X, y)) #3%
 
 model = pipe.make_pipeline(pp.PolynomialFeatures(6), sklm.Ridge())
 model.fit(X,y)
@@ -81,7 +81,7 @@ plt.scatter(x_plot, f(x_plot))
 plt.plot(x_plot, y_plot)
 plt.show()
 import math
-print(1 - math.sqrt(model.score(X, y))) #3%
+print(model.score(X, y)) #3%
 
 # Boucle
 for i in range(10):
@@ -93,11 +93,3 @@ for i in range(10):
 plt.legend(loc='lower left')
 plt.show()
 
-model = pipe.make_pipeline(pp.FunctionTransformer(np.sin), sklm.Ridge())
-model.fit(X,y)
-y_plot = model.predict(X_plot)
-plt.scatter(x_plot, f(x_plot))
-plt.plot(x_plot, y_plot)
-plt.show()
-import math
-print(1 - math.sqrt(model.score(X, y))) #3%

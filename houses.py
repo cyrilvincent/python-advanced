@@ -8,12 +8,6 @@ with open("house/house.csv") as f:
     print(res)
     print(res[0] / res[1])
 
-l = [1,2,3,4,10]
-res = reduce(lambda acc, cur : (acc[0]+cur, acc[1]+1), l, (0,0))
-print(res)
-print(res[0]/res[1])
-
-
 def reduce2(reduceFn, l, init = 0):
     acc = init
     for cur in l:

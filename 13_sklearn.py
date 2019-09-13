@@ -1,34 +1,27 @@
-import csv
-
-data = []
-with open("house/house.csv") as f:
-    reader = csv.DictReader(f)
-    for row in reader:
-        t = (float(row["loyer"]), float(row["surface"]))
-        data.append(t)
-
-import numpy as np
-
-surfaces = np.array([d[1] for d in data])
-loyers = np.array([d[0] for d in data])
-
+import pandas as pd
 import sklearn.linear_model as sklm
+import sklearn.preprocessing as pp
+import sklearn.pipeline as pipe
+import sklearn.model_selection as ms
 
-regr = sklm.LinearRegression()
-X = np.matrix([np.ones(surfaces.shape[0]), surfaces]).T
-print(X)
-y = np.matrix(loyers).T
-print(y)
-regr.fit(X,y)
-print(regr.predict(X).T[0])
-import math
-print(1 - math.sqrt( regr.score(X, y))) #9.3%
-print(regr.coef_[0][1])
-print(regr.intercept_[0])
+
+data = pd.read_csv("house/house.csv")
+data = data[data.surface < 250]
+surfaces =data["surface"].values.reshape(-1,1)
+loyers =data["loyer"]
+
+xtrain, xtest, ytrain, ytest = ms.train_test_split(surfaces, loyers, train_size=0.8, test_size=0.2)
+
+
+#model = sklm.LinearRegression()
+model = pipe.make_pipeline(pp.PolynomialFeatures(3), sklm.Ridge())
+model.fit(xtrain, ytrain)
+print(model.score(xtest, ytest))
 
 import matplotlib.pyplot as plt
+import numpy as np
 plt.plot(surfaces, loyers, 'ro', markersize=4)
-plt.plot(surfaces, regr.predict(X).T[0] )
+plt.plot(range(250), model.predict(np.arange(250).reshape(-1,1)) )
 plt.show()
 
 
