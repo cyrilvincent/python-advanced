@@ -17,12 +17,17 @@ xtrain, xtest, ytrain, ytest = ms.train_test_split(surfaces, loyers, train_size=
 model = pipe.make_pipeline(pp.PolynomialFeatures(3), sklm.Ridge())
 model.fit(xtrain, ytrain)
 print(model.score(xtest, ytest))
+print(f"{model.steps[1][1].coef_[3]}x^3 "
+      f"+ {model.steps[1][1].coef_[2]}x^2 "
+      f"+ {model.steps[1][1].coef_[1]}x "
+      f"+ {model.steps[1][1].intercept_}")
 
 import matplotlib.pyplot as plt
 import numpy as np
 plt.plot(surfaces, loyers, 'ro', markersize=4)
 plt.plot(range(250), model.predict(np.arange(250).reshape(-1,1)) )
 plt.show()
+
 
 
 

@@ -9,20 +9,23 @@ from sklearn.model_selection import train_test_split
 X_train,X_test,y_train,y_test = train_test_split(X,y)
 
 from sklearn.preprocessing import StandardScaler
-scaler = StandardScaler()
+scaler = StandardScaler() # data = (data - mean) / std
 scaler.fit(X_train)
 
 X_train = scaler.transform(X_train)
 X_test = scaler.transform(X_test)
 
 from sklearn.neural_network import MLPClassifier
-mlp = MLPClassifier(hidden_layer_sizes=(30,30,30))
+mlp = MLPClassifier(hidden_layer_sizes=(30,30,30), max_iter=10000,warm_start=True)
 mlp.fit(X_train,y_train)
-
+import pickle
+with open("mlp.pickle","wb") as f:
+    pickle.dump(mlp, f)
+mlp = None
+with open("mlp.pickle","rb") as f:
+    mlp = pickle.load(f)
 predictions = mlp.predict(X_test)
 
-from sklearn.metrics import classification_report,confusion_matrix
-print(y_test)
-print(predictions)
-print(confusion_matrix(y_test,predictions)) #55=vrai négatifs, 3=faux négatif, 2=faux positifs, 83=vrai positifs
-print(classification_report(y_test,predictions)) #97% de succès
+
+print(y_test - predictions)
+print(mlp.score(X_test, y_test))

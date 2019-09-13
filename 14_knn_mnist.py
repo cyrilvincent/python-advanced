@@ -13,23 +13,23 @@ xtrain, xtest, ytrain, ytest = ms.train_test_split(data, target, train_size=0.8,
 import sklearn.neighbors as nn
 model = nn.KNeighborsClassifier(n_neighbors=3)
 model.fit(xtrain, ytrain)
-error = 1 - model.score(xtest, ytest)
+error = model.score(xtest, ytest)
 print('Erreur: %f' % error)
 
-errors = []
+score = []
 for k in range(2,15):
     model = nn.KNeighborsClassifier(k)
-    errors.append(100 * (1 - model.fit(xtrain, ytrain).score(xtest, ytest)))
+    score.append(model.fit(xtrain, ytrain).score(xtest, ytest))
 import matplotlib.pyplot as plt
-plt.plot(range(2,15), errors, 'o-')
+plt.plot(range(2,15), score, 'o-')
 plt.show()
 
-min_nn = errors.index(min(errors)) + 2
+min_nn = score.index(max(score)) + 2
 print("min_nn: "+str(min_nn))
 
 model = nn.KNeighborsClassifier(n_neighbors=min_nn)
 model.fit(xtrain, ytrain)
-error = 1 - model.score(xtest, ytest)
+error = model.score(xtest, ytest)
 print('Erreur: %f' % error)
 
 # On récupère le classifieur le plus performant
