@@ -1,13 +1,18 @@
 import csv
+from functools import reduce
 
 with open("house/house.csv") as f:
-    reader = list(csv.DictReader(f))
-    print(sum([float(row["loyer"]) / float(row["surface"]) for row in reader]) / len(reader))
+    reader = csv.DictReader(f)
+    gen = (float(row["loyer"]) / float(row["surface"]) for row in reader)
+    res = reduce(lambda acc, cur: (acc[0] + cur, acc[1] + 1), gen, (0, 0))
+    print(res)
+    print(res[0] / res[1])
 
-    l = range(5)
-    print(sum(l))
-from functools import reduce
-print(reduce(lambda acc, cur : acc + cur, l ))
+l = [1,2,3,4,10]
+res = reduce(lambda acc, cur : (acc[0]+cur, acc[1]+1), l, (0,0))
+print(res)
+print(res[0]/res[1])
+
 
 def reduce2(reduceFn, l, init = 0):
     acc = init
