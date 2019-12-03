@@ -1,3 +1,27 @@
+import abc
+class MesuresRepository(metaclass=abc.ABCMeta):
+
+    def __init__(self, path):
+        self.path = path
+
+    @abc.abstractmethod
+    def load(self):...
+
+    @abc.abstractmethod
+    def powers(self):...
+
+    @abc.abstractmethod
+    def errors(self): ...
+
+class MesuresCSV(MesuresRepository):
+
+    def __init__(self, path):
+        super().__init__(path)
+
+    
+
+
+
 class Mesure:
 
     counter = 0
@@ -21,6 +45,19 @@ class Mesure:
 
     def __del__(self):
         Mesure.counter -= 1
+
+    def __repr__(self):
+        return f"Mesure T: {self.T} AM: {self.AM} VM: {self.VM}"
+
+class MesureWithT(Mesure):
+
+    def __init__(self, T, AT, VT, AM, VM, Temp):
+        super().__init__(T, AT,VT,AM,VM)
+        self.Temp = Temp
+
+    def __repr__(self):
+        return super().__repr__() + f"Temp: {self.Temp}"
+
 
 import unittest
 class MesureTest(unittest.TestCase):
@@ -46,4 +83,8 @@ class MesureTest(unittest.TestCase):
         self.assertEqual(2, Mesure.counter)
         del m1
         self.assertEqual(1, Mesure.counter)
+
+    def testMesuresCSV(self):
+        mesuresCSV = MesuresCSV("mesures/mesures.csv")
+        mesuresCSV.load()
 
