@@ -58,6 +58,7 @@ class BankAccountTest(unittest.TestCase):
         self.assertEqual(100, account._balance)
         with self.assertRaises(ValueError):
             account.deposit(-50)
+        print(account.__dict__)
 
     def testWithdraw(self):
         account = BankAccount("Cyril")
@@ -74,5 +75,10 @@ class BankAccountTest(unittest.TestCase):
         account = BankAccountWithInterest("Cyril", 0.05)
         account.deposit(100)
         self.assertEqual(5, account.computeInterest())
+
+    def testSale(self):
+        account = BankAccount(None)
+        account.__dict__ = {'id': 1, 'owner': 'Cyril', '_balance': 100}
+        self.assertEqual("Cyril", account.owner)
 
 
