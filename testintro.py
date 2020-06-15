@@ -27,8 +27,8 @@ class MyTests(unittest.TestCase):
 
     def testFilterByFn(self):
         l = [0,1,2,3,4,5,6,7,8,9]
-        self.assertListEqual([0,2,4,6,8], intro.FilterByFn(intro.isEven, l))
-        self.assertListEqual([2,3,5,7], intro.FilterByFn(intro.isPrime, l))
+        self.assertListEqual([0,2,4,6,8], intro.filterByFn(intro.isEven, l))
+        self.assertListEqual([2,3,5,7], intro.filterByFn(intro.isPrime, l))
 
 if __name__ == '__main__':
    unittest.main()
