@@ -3,7 +3,13 @@
 def isEven(x):
     return x % 2 == 0
 
-def isPrime(x):
+toto = isEven
+
+def verify(x, verificationFn):
+    return verificationFn(x)
+
+
+def isPrime(x:int=0) -> bool:
     if x < 2:
         return False
     else:
@@ -12,4 +18,7 @@ def isPrime(x):
                 return False
         return True
 
+
+def toto(x, tutu,y=0,titi=0):
+    pass
 
