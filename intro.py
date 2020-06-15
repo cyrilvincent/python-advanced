@@ -28,18 +28,18 @@ def isPrime(x:int=0) -> bool:
                 return False
         return True
 
-def toto(*params):
-    for p in params:
-        print(p)
+# def toto(*params):
+#     for p in params:
+#         print(p)
 
-def titi(**kwargs):
-    for p in kwargs:
-        print(p)
-
-toto()
-toto(1)
-toto(1,2,3,4,5,6,74,8,9)
-titi(param1=12, param2=25)
+# def titi(**kwargs):
+#     for p in kwargs:
+#         print(p)
+#
+# toto()
+# toto(1)
+# toto(1,2,3,4,5,6,74,8,9)
+# titi(param1=12, param2=25)
 
 # f(x) = x + 1
 f = lambda x : x + 1

@@ -50,15 +50,15 @@ class MyTests(unittest.TestCase):
         self.assertListEqual([4, 16], list(filter(lambda x: x % 2 == 0, map(lambda x: x ** 2, l))))
 
     def testprimeven(self):
-        l = range(10)
-        # Filtrer les premiers pairs
-        # assert([2])
-        l = range(100000)
-        # tester les casts en list
-        l = range(100000000000000000000000000000000000000000000000000)
-        res = [2]
-        for i in l:
+        l = range(1000000000000000000000000000000000000)
+        res = filter(lambda x : x % 2 == 0, l)
+        res = filter(lambda x : intro.isPrime(x), res)
+        res = map(lambda x: x ** 2, res)
+
+        print(res)
+        for i in res:
             print(i)
+        #self.assertListEqual([2], list(res))
 
 
 
