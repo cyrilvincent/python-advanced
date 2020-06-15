@@ -3,10 +3,20 @@
 def isEven(x):
     return x % 2 == 0
 
+def isGreaterThan(x):
+    return x > 5
+
 toto = isEven
 
 def verify(x, verificationFn):
     return verificationFn(x)
+
+def filterByFn(fn, l):
+    res = []
+    for val in l:
+        if fn(val):
+            res.append(val)
+    return res
 
 
 def isPrime(x:int=0) -> bool:
@@ -18,7 +28,4 @@ def isPrime(x:int=0) -> bool:
                 return False
         return True
 
-
-def toto(x, tutu,y=0,titi=0):
-    pass
 

@@ -17,7 +17,7 @@ class MyTests(unittest.TestCase):
         self.assertAlmostEqual(2, math.sqrt(2) ** 2, delta=1e-5)
 
     def testPrimeNumber(self):
-        self.assertEqual(False, intro.isPrime("toto"))
+        self.assertEqual(False, intro.isPrime(8))
         self.assertEqual(True, intro.isPrime(7))
         self.assertEqual(True, intro.isPrime(x=4391))
 
@@ -29,6 +29,7 @@ class MyTests(unittest.TestCase):
         l = [0,1,2,3,4,5,6,7,8,9]
         self.assertListEqual([0,2,4,6,8], intro.filterByFn(intro.isEven, l))
         self.assertListEqual([2,3,5,7], intro.filterByFn(intro.isPrime, l))
+        self.assertListEqual([6,7,8,9], intro.filterByFn(intro.isGreaterThan, l))
 
 if __name__ == '__main__':
    unittest.main()
