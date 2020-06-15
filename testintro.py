@@ -30,6 +30,37 @@ class MyTests(unittest.TestCase):
         self.assertListEqual([0,2,4,6,8], intro.filterByFn(intro.isEven, l))
         self.assertListEqual([2,3,5,7], intro.filterByFn(intro.isPrime, l))
         self.assertListEqual([6,7,8,9], intro.filterByFn(intro.isGreaterThan, l))
+        num = 5
+        self.assertListEqual([6, 7, 8, 9], intro.filterByFn(lambda x : x > 5, l))
+
+    def testfilter(self):
+        l = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        self.assertListEqual([0, 2, 4, 6, 8], list(filter(lambda x : x % 2 == 0, l)))
+
+    def testmap(self):
+        l = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        self.assertListEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], list(map(lambda x: x + 1, l)))
+        l = [1,2,3,4]
+        self.assertListEqual([1,4,9,16], list(map(lambda x: x ** 2, l)))
+
+        res = list(map(lambda x: x ** 2, l))
+        res = list(filter(lambda x: x % 2 == 0, res))
+        self.assertListEqual([4,16], res)
+
+        self.assertListEqual([4, 16], list(filter(lambda x: x % 2 == 0, map(lambda x: x ** 2, l))))
+
+    def testprimeven(self):
+        l = range(10)
+        # Filtrer les premiers pairs
+        # assert([2])
+        l = range(100000)
+        # tester les casts en list
+        l = range(100000000000000000000000000000000000000000000000000)
+        res = [2]
+        for i in l:
+            print(i)
+
+
 
 if __name__ == '__main__':
    unittest.main()
