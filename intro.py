@@ -48,6 +48,6 @@ isEven = lambda x : x % 2 == 0
 def inc(x):
     return x + 1
 
-print(f(3))
+# print(f(3))
 
 

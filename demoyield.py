@@ -40,4 +40,6 @@ for i in res: # Boucles intriquées, 2 boucles mais UNE SEULE itération
 print("end")
 for i in res: # Boucles intriquées, 2 boucles mais UNE SEULE itération
     print(i)
+res = None
+del(res)
 print("end")
