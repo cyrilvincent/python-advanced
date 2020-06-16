@@ -1,20 +1,29 @@
 import unittest
 
+class Point:
+
+    def __init__(self, x = 0, y = 0):
+        self.x = x
+        self.y = y
+
+    def __repr__(self):
+        return f"({self.x},{self.y})"
+
+    def move(self, x, y):
+        self.x = x
+        self.y = y
+
+    def moveRel(self, x, y):
+        self.x += x
+        self.y += y
+
+
 class Rectangle:
 
-    # Rectangle possède une origine (sommet en haut à gauche)
-    # Origine est un Point
-    # Un Point c'est x,y
-    # Dans point faire la méthode move (déplacement absolue) et moveRel (vectoriel)
-    # (3,2) => absolue (4,3) => (4,3)
-    # (3,2) => vectoriel (4,3) => (7,5)
-    # Dans Rectangle faire les méthodes move
-
-
-    def __init__(self, length = 0, width = 0):
+    def __init__(self, length = 0, width = 0, origin = Point()):
         self._length = length
         self._width = width
-        # Passer les 2 attributs en propriétés ainsi que la surface et le périmètre
+        self.origin = origin
 
     @property
     def area(self):
@@ -40,9 +49,28 @@ class Rectangle:
     def width(self, value):
         self._width = value
 
+    def move(self, x, y):
+        self.origin.move(x,y)
+
+    def __repr__(self):
+        return f"Rectangle {self.origin} L{self.length} W{self._width}"
+
 class GeometryTest(unittest.TestCase):
 
     def testRectangle(self):
-        r1 = Rectangle(3,2)
+        r1 = Rectangle(3,2,Point(4,2))
         self.assertEqual(6, r1.area)
         self.assertEqual(10, r1.perimeter)
+        r1.move(5,2)
+        r1.origin.moveRel(1,1)
+        print(r1)
+
+    def testPoint(self):
+        p1 = Point(3,2)
+        p1.move(4,3)
+        self.assertEqual(4, p1.x)
+        self.assertEqual(3, p1.y)
+        print(p1)
+        p1.moveRel(-1,-1)
+        self.assertEqual(3, p1.x)
+        self.assertEqual(2, p1.y)
