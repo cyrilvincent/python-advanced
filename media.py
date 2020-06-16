@@ -3,6 +3,16 @@ import unittest
 
 class Book:
 
+    # Gérer nbBook
+
+    def __del__(self):
+        pass
+        # var = var1
+        # var = None
+        # del(var)
+        # Sort d'une fonction pour les variables locales
+        # Garbage Collector
+
     def __init__(self, isbn, title, price, author, editor = None, publicationDate = datetime.datetime.now(), category=None):
         self.isbn = isbn
         self.title = title
@@ -12,14 +22,15 @@ class Book:
         self.publicationDate = publicationDate
         self.category = category
 
-    def getNetPrice(self):
+    @property
+    def netPrice(self):
         return self.price * 1.055
-    # A passer en propriété lecture seule
+
 
 class MediaTest(unittest.TestCase):
 
     def testBook(self):
         b1 = Book("123","Python",10,"Cyril")
-        netPrice = b1.getNetPrice()
+        netPrice = b1.netPrice
         self.assertAlmostEqual(10.55, netPrice,delta=1e-3)
         b2 = Book("123", "Python", 10, "Cyril", publicationDate=datetime.datetime(2020,6,16))
