@@ -1,46 +1,83 @@
 import datetime
 import unittest
+import abc
 
 # Book : nbPage, Cd : NbTrack, Dvd : zone
 # Media : id, title, price, author, editor, publication
 # bonus : Item : id, title, price
+# 15h40
 
-class Book:
+class Item(metaclass=abc.ABCMeta): # Abstraite interdit de faire Item()
 
-    nbBook = 0
-
-    def __init__(self, isbn, title, price, author, editor = None, publicationDate = datetime.datetime.now(), category=None):
-        self.isbn = isbn
+    def __init__(self, id, title, price):
+        self.id = id
         self.title = title
         self.price = price
+
+    @property
+    @abc.abstractmethod
+    def netPrice(self):...
+
+class Media(Item, metaclass=abc.ABCMeta):
+
+    def __init__(self, id, title, price, author, editor = None, publicationDate = datetime.datetime.now(), category=None):
+        Item.__init__(self, id,title,price)
         self.author = author
         self.editor = editor
         self.publicationDate = publicationDate
         self.category = category
+
+class Book(Media):
+    nbBook = 0
+
+    def __init__(self, isbn, title, price, author, editor = None, publicationDate = datetime.datetime.now(), category=None, nbPage = 0):
+        super().__init__(isbn,title,price,author,editor,publicationDate,category)
+        self.nbPage = nbPage
         Book.nbBook += 1
+
+    @property
+    def netPrice(self):
+        return self.price * 0.95 * 1.055 + 0.01
 
     def __del__(self):
         Book.nbBook -= 1
 
-    @property
+class Cd(Media):
+
+    def __init__(self, id, title, price, author, editor = None, publicationDate = datetime.datetime.now(), category=None, nbTrack = 0):
+        super().__init__(id,title,price,author,editor,publicationDate,category)
+        self.nbTrack = nbTrack
+
     def netPrice(self):
-        return self.price * 1.055
+        return self.price * 1.2
 
 
 class Cart:
 
+    # Améliorer Cart pour qu'il accepte des media
+    # Passer Item et Media en abstract
+    # Passer Item.netPrice en abstract
+    # Calculer le prix TTC du panier
+    # Refaire le prix TTC du panier avec une list en intention + sum([1,2,3])=6
     def __init__(self):
         self.items = []
 
-    def add(self, item: Book):
+    def add(self, item: Media):
         self.items.append(item)
 
-    def remove(self, item:Book):
+    def remove(self, item:Media):
         self.items.remove(item)
 
     @property
     def nbItems(self):
         return len(self.items)
+
+    @property
+    def netPrice(self):
+        total = 0
+        for media in self.items:
+            total += media.netPrice
+        return total
 
 class MediaTest(unittest.TestCase):
 
@@ -67,4 +104,9 @@ class MediaTest(unittest.TestCase):
         self.assertEqual(1, cart.nbItems)
         cart.remove(b1)
         self.assertEqual(0, cart.nbItems)
+
+    def testPolymorphism(self):
+        #item = Item(0,"",0) interdit
+        cd = Cd("123", "Johnny", 10, "Cyril")
+        print(cd.netPrice)
 
