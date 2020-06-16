@@ -14,6 +14,7 @@ class Book:
 
     def getNetPrice(self):
         return self.price * 1.055
+    # A passer en propriété lecture seule
 
 class MediaTest(unittest.TestCase):
 

@@ -4,17 +4,24 @@ class BankAccount:
 
     def __init__(self, id, customer, balance = 0):
         self.id = id
-        self.balance = balance
+        self._balance = balance
         self.customer = customer
 
     def deposit(self, amount):
-        self.balance += amount
+        self._balance += amount
 
     def withdraw(self, amount):
-        if amount < self.balance:
-            self.balance -= amount
+        if amount < self._balance:
+            self._balance -= amount
         else:
             pass
+
+    @property
+    def balance(self):
+        return self._balance
+
+    # def getBalance(self):
+    #     return self._balance
 
 class BankAccountTest(unittest.TestCase):
 
