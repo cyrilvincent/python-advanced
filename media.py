@@ -1,13 +1,6 @@
 import datetime
 import unittest
 
-class Cart:
-    pass
-    # Cart = Liste de Book
-    # Au départ elle est vide
-    # Ajouter
-    # Remove
-
 class Book:
 
     nbBook = 0
@@ -30,6 +23,21 @@ class Book:
         return self.price * 1.055
 
 
+class Cart:
+
+    def __init__(self):
+        self.items = []
+
+    def add(self, item: Book):
+        self.items.append(item)
+
+    def remove(self, item:Book):
+        self.items.remove(item)
+
+    @property
+    def nbItems(self):
+        return len(self.items)
+
 class MediaTest(unittest.TestCase):
 
     def testBook(self):
@@ -46,3 +54,12 @@ class MediaTest(unittest.TestCase):
         self.assertEqual(2, Book.nbBook)
         del(b2)
         self.assertEqual(1, Book.nbBook)
+
+    def testCart(self):
+        cart = Cart()
+        self.assertEqual(0, cart.nbItems)
+        b1 = Book("123", "Python", 10, "Cyril")
+        cart.add(b1)
+        self.assertEqual(1, cart.nbItems)
+        cart.remove(b1)
+        self.assertEqual(0, cart.nbItems)
