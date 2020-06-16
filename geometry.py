@@ -55,6 +55,12 @@ class Rectangle:
     def __repr__(self):
         return f"Rectangle {self.origin} L{self.length} W{self._width}"
 
+class Square(Rectangle):
+
+    def __init__(self, side):
+        self.length = side
+        self.width = side
+
 class GeometryTest(unittest.TestCase):
 
     def testRectangle(self):
@@ -74,3 +80,14 @@ class GeometryTest(unittest.TestCase):
         p1.moveRel(-1,-1)
         self.assertEqual(3, p1.x)
         self.assertEqual(2, p1.y)
+
+
+    def testSquare(self):
+        s1 = Square(2)
+        self.assertEqual(4, s1.area)
+
+# class TriangleRectangle(Rectangle, Triangle);
+#
+#     @property
+#     def area(self):
+#         super().area / 2

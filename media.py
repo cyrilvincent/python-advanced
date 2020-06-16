@@ -1,6 +1,10 @@
 import datetime
 import unittest
 
+# Book : nbPage, Cd : NbTrack, Dvd : zone
+# Media : id, title, price, author, editor, publication
+# bonus : Item : id, title, price
+
 class Book:
 
     nbBook = 0
@@ -63,3 +67,4 @@ class MediaTest(unittest.TestCase):
         self.assertEqual(1, cart.nbItems)
         cart.remove(b1)
         self.assertEqual(0, cart.nbItems)
+
