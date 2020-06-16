@@ -1,17 +1,16 @@
 import datetime
 import unittest
 
+class Cart:
+    pass
+    # Cart = Liste de Book
+    # Au départ elle est vide
+    # Ajouter
+    # Remove
+
 class Book:
 
-    # Gérer nbBook
-
-    def __del__(self):
-        pass
-        # var = var1
-        # var = None
-        # del(var)
-        # Sort d'une fonction pour les variables locales
-        # Garbage Collector
+    nbBook = 0
 
     def __init__(self, isbn, title, price, author, editor = None, publicationDate = datetime.datetime.now(), category=None):
         self.isbn = isbn
@@ -21,6 +20,10 @@ class Book:
         self.editor = editor
         self.publicationDate = publicationDate
         self.category = category
+        Book.nbBook += 1
+
+    def __del__(self):
+        Book.nbBook -= 1
 
     @property
     def netPrice(self):
@@ -34,3 +37,12 @@ class MediaTest(unittest.TestCase):
         netPrice = b1.netPrice
         self.assertAlmostEqual(10.55, netPrice,delta=1e-3)
         b2 = Book("123", "Python", 10, "Cyril", publicationDate=datetime.datetime(2020,6,16))
+
+    def testNbBook(self):
+        self.assertEqual(0, Book.nbBook)
+        b1 = Book("123", "Python", 10, "Cyril")
+        self.assertEqual(1, Book.nbBook)
+        b2 = Book("123", "Python", 10, "Cyril")
+        self.assertEqual(2, Book.nbBook)
+        del(b2)
+        self.assertEqual(1, Book.nbBook)

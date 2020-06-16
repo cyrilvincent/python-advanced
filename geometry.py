@@ -2,6 +2,15 @@ import unittest
 
 class Rectangle:
 
+    # Rectangle possède une origine (sommet en haut à gauche)
+    # Origine est un Point
+    # Un Point c'est x,y
+    # Dans point faire la méthode move (déplacement absolue) et moveRel (vectoriel)
+    # (3,2) => absolue (4,3) => (4,3)
+    # (3,2) => vectoriel (4,3) => (7,5)
+    # Dans Rectangle faire les méthodes move
+
+
     def __init__(self, length = 0, width = 0):
         self._length = length
         self._width = width
