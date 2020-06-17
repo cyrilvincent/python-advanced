@@ -1,6 +1,8 @@
 import datetime
 import unittest
 import abc
+import csv
+import sqlite3
 
 # Book : nbPage, Cd : NbTrack, Dvd : zone
 # Media : id, title, price, author, editor, publication
@@ -84,24 +86,32 @@ class MediaRepository(metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def load(self):...
 
-    @abc.abstractmethod
-    def getByPrice(self, price):... #Retrouver tous les medias price <= paramètre
+    def getByPrice(self, price):
+        return [m for m in self.items if m.price <= price]
 
-    @abc.abstractmethod
-    def getByTitle(self, title):... #Retrouver tous les medias contenant le title BONUS
+    def getByTitle(self, title):
+        return [m for m in self.items if title.upper() in m.title.upper()]
 
 class CsvRepository(MediaRepository):
-    pass
+
+    def load(self):
+        with open(self.path) as f:
+            reader = csv.DictReader(f)
+            self.items = [Book(row["id"], row["title"], float(row["price"]), "Cyril") for row in reader]
 
 class SqlRepository(MediaRepository):
-    pass
+
+    def load(self):
+        with sqlite3.connect("data/media/books.db3") as connect:
+            cursor = connect.execute("select id,title,price from book")
+            self.items = [Book(row[0], row[1], row[2], "Cyril") for row in cursor]
 
 class MediaTest(unittest.TestCase):
 
     def testBook(self):
         b1 = Book("123","Python",10,"Cyril")
         netPrice = b1.netPrice
-        self.assertAlmostEqual(10.55, netPrice,delta=1e-3)
+        self.assertAlmostEqual(10.0324, netPrice,delta=1e-3)
         b2 = Book("123", "Python", 10, "Cyril", publicationDate=datetime.datetime(2020,6,16))
 
     def testNbBook(self):
@@ -127,3 +137,22 @@ class MediaTest(unittest.TestCase):
         cd = Cd("123", "Johnny", 10, "Cyril")
         print(cd.netPrice)
 
+    def testCsvRepository(self):
+        repo = CsvRepository("data/media/books.csv")
+        repo.load()
+        self.assertTrue(len(repo.items) > 0)
+        print(repo.items)
+        l = repo.getByPrice(11)
+        self.assertEqual(2, len(l))
+        l = repo.getByTitle("python")
+        self.assertEqual(2, len(l))
+
+    def testCsvRepository(self):
+        repo =SqlRepository("data/media/books.db3")
+        repo.load()
+        self.assertTrue(len(repo.items) > 0)
+        print(repo.items)
+        l = repo.getByPrice(11)
+        self.assertEqual(2, len(l))
+        l = repo.getByTitle("python")
+        self.assertEqual(1, len(l))
