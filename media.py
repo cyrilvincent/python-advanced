@@ -54,11 +54,6 @@ class Cd(Media):
 
 class Cart:
 
-    # Améliorer Cart pour qu'il accepte des media
-    # Passer Item et Media en abstract
-    # Passer Item.netPrice en abstract
-    # Calculer le prix TTC du panier
-    # Refaire le prix TTC du panier avec une list en intention + sum([1,2,3])=6
     def __init__(self):
         self.items = []
 
@@ -74,10 +69,11 @@ class Cart:
 
     @property
     def netPrice(self):
-        total = 0
-        for media in self.items:
-            total += media.netPrice
-        return total
+        # total = 0
+        # for media in self.items:
+        #     total += media.netPrice
+        # return total
+        return sum([m.netPrice for m in self.items])
 
 class MediaTest(unittest.TestCase):
 
