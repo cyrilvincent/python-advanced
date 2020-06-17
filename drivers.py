@@ -17,11 +17,9 @@ class OpenGLNVidia(OpenGLPattern):
     def __init__(self, id):
         self.id = id
 
-    @abc.abstractmethod
     def plotPoint(self, x, y):
         return f"({x},{y})"
 
-    @abc.abstractmethod
     def drawLine(self, x1, y1, x2, y2):
         pass
 
@@ -30,11 +28,9 @@ class OpenGLIntel(OpenGLPattern):
     def __init__(self, id):
         self.id = id
 
-    @abc.abstractmethod
     def plotPoint(self, x, y):
         return f"[{x},{y}]"
 
-    @abc.abstractmethod
     def drawLine(self, x1, y1, x2, y2):
         pass
 
