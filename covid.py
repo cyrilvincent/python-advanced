@@ -10,7 +10,7 @@ print(dataframe)
 #     ynbcas = [int(row["NbCas"]) for row in reader]
 #     ydc = [int(row["DC"]) for row in reader]
 
-plt.yscale("log")
+#plt.yscale("log")
 plt.scatter(dataframe["ix"], dataframe.NbCas)
 plt.bar(dataframe["ix"], dataframe.DC)
 plt.show()
@@ -27,6 +27,7 @@ import numpy as np
 # ydc = np.array(ydc)
 print("NbCas", np.mean(dataframe.NbCas), np.min(dataframe.NbCas), np.max(dataframe.NbCas), np.std(dataframe.NbCas))
 print("DC", np.mean(dataframe.DC), np.min(dataframe.DC), np.max(dataframe.DC), np.std(dataframe.DC))
+dataframe["ix"] = dataframe.NbCas[dataframe["ix"] > 40]
 dataframe.NbCas = dataframe.NbCas[dataframe["ix"] > 40]
 dataframe.DC = dataframe.DC[dataframe["ix"] > 40]
 print("NbCas", np.mean(dataframe.NbCas), np.min(dataframe.NbCas), np.max(dataframe.NbCas), np.std(dataframe.NbCas))
@@ -34,4 +35,5 @@ print("DC", np.mean(dataframe.DC), np.min(dataframe.DC), np.max(dataframe.DC), n
 letalities = dataframe.DC / dataframe.NbCas
 print(letalities)
 print(np.mean(letalities))
+print(np.sum(dataframe.DC) / np.sum(dataframe.NbCas))
 dataframe.to_excel("data/covid.xlsx")
