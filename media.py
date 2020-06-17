@@ -75,6 +75,27 @@ class Cart:
         # return total
         return sum([m.netPrice for m in self.items])
 
+class MediaRepository(metaclass=abc.ABCMeta):
+
+    def __init__(self, path):
+        self.path = path
+        self.items = [] # List de media
+
+    @abc.abstractmethod
+    def load(self):...
+
+    @abc.abstractmethod
+    def getByPrice(self, price):... #Retrouver tous les medias price <= paramètre
+
+    @abc.abstractmethod
+    def getByTitle(self, title):... #Retrouver tous les medias contenant le title BONUS
+
+class CsvRepository(MediaRepository):
+    pass
+
+class SqlRepository(MediaRepository):
+    pass
+
 class MediaTest(unittest.TestCase):
 
     def testBook(self):
