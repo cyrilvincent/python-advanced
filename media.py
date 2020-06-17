@@ -29,6 +29,12 @@ class Media(Item, metaclass=abc.ABCMeta):
         self.publicationDate = publicationDate
         self.category = category
 
+    def __eq__(self, other):
+        return self.id == other.id
+
+    def __ne__(self, other):
+        return self.id != other.id
+
 class Book(Media):
     nbBook = 0
 
@@ -148,7 +154,7 @@ class MediaTest(unittest.TestCase):
         self.assertEqual(2, len(l))
 
     def testSqlRepository(self):
-        repo =SqlRepository("data/media/books.db3")
+        repo=SqlRepository("data/media/books.db3")
         repo.load()
         self.assertTrue(len(repo.items) > 0)
         print(repo.items)
@@ -156,3 +162,20 @@ class MediaTest(unittest.TestCase):
         self.assertEqual(2, len(l))
         l = repo.getByTitle("python")
         self.assertEqual(1, len(l))
+
+    def testDict(self):
+        cd = Cd("123", "Johnny", 10, "Cyril")
+        dico = cd.__dict__
+        self.assertEqual("123", dico["id"])
+        dico["titi"]="toto"
+        cd.__dict__ = dico
+        self.assertEqual("toto", cd.titi)
+        import json
+        import bson
+        with open("data/media/cd.json","w") as f:
+            json.dump(dico, f,default=str)
+
+    def testEquality(self):
+        cd1 = Cd("123", "Johnny", 10, "Cyril")
+        cd2 = Cd("123", "Johnny", 10, "Cyril")
+        self.assertEqual(cd1,cd2)
