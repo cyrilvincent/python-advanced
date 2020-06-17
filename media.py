@@ -102,7 +102,7 @@ class CsvRepository(MediaRepository):
 class SqlRepository(MediaRepository):
 
     def load(self):
-        with sqlite3.connect("data/media/books.db3") as connect:
+        with sqlite3.connect(self.path) as connect:
             cursor = connect.execute("select id,title,price from book")
             self.items = [Book(row[0], row[1], row[2], "Cyril") for row in cursor]
 
@@ -147,7 +147,7 @@ class MediaTest(unittest.TestCase):
         l = repo.getByTitle("python")
         self.assertEqual(2, len(l))
 
-    def testCsvRepository(self):
+    def testSqlRepository(self):
         repo =SqlRepository("data/media/books.db3")
         repo.load()
         self.assertTrue(len(repo.items) > 0)
