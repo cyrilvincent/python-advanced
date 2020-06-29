@@ -18,4 +18,5 @@ class TP2Test(unittest.TestCase):
         self.assertEqual(2, list(res)[0])
         # for val in res:
         #     print(val)
+        # tp3 refaire tp2 avec des intention list
 
