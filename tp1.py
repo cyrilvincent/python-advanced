@@ -12,6 +12,8 @@ def isPrime(x: int) -> bool:
                 return False
         return True
 
+f = lambda x : x + 1
+
 class TP1Test(unittest.TestCase):
 
     def testIsEven(self):
@@ -23,3 +25,13 @@ class TP1Test(unittest.TestCase):
         self.assertFalse(isPrime(8))
         self.assertTrue(isPrime(2))
         self.assertTrue(isPrime(524287))
+
+    def testLambda(self):
+        self.assertEqual(2, f(1))
+
+    def testFilter(self):
+        l = [1,2,3,4,5,6,7,8,9]
+        self.assertListEqual([2,4,6,8], myfilter(isEven, l))
+        self.assertListEqual([2,3,5,7], myfilter(isPrime, l))
+        self.assertListEqual([2,4,6,8], myfilter(lambda x : x % 2 == 0, l))
+        self.assertListEqual([2, 3, 5, 7], myfilter(lambda x : isPrime(x), l))
