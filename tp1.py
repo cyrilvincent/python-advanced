@@ -14,6 +14,19 @@ def isPrime(x: int) -> bool:
 
 f = lambda x : x + 1
 
+def myfilter(fn, l):
+    res = []
+    for val in l:
+        if fn(val):
+            res.append(val)
+    return res
+
+def mymap(fn, l):
+    res = []
+    for val in l:
+        res.append(fn(val))
+    return res
+
 class TP1Test(unittest.TestCase):
 
     def testIsEven(self):
@@ -29,9 +42,23 @@ class TP1Test(unittest.TestCase):
     def testLambda(self):
         self.assertEqual(2, f(1))
 
+
     def testFilter(self):
         l = [1,2,3,4,5,6,7,8,9]
         self.assertListEqual([2,4,6,8], myfilter(isEven, l))
         self.assertListEqual([2,3,5,7], myfilter(isPrime, l))
         self.assertListEqual([2,4,6,8], myfilter(lambda x : x % 2 == 0, l))
         self.assertListEqual([2, 3, 5, 7], myfilter(lambda x : isPrime(x), l))
+        print(myfilter(isEven, l))
+        print(list(filter(isEven, l)))
+
+    def testMap(self):
+        l = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        res = mymap(lambda x : x + 1, l)
+        self.assertListEqual([2, 3, 4, 5, 6, 7, 8, 9, 10], res)
+        self.assertListEqual([2, 3, 4, 5, 6, 7, 8, 9, 10], list(map(lambda x : x + 1, l)))
+        res = list(map(lambda x: x ** 2, filter(lambda x : x % 2 == 0, l)))
+        self.assertListEqual([4, 16, 36, 64], res)
+        print(res)
+        for val in res:
+            print(val)
