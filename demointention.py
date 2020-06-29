@@ -20,3 +20,4 @@ class IntentionTest(unittest.TestCase):
         res1 = [x ** 2 for x in l if x % 2 == 0]
         res2 = list(map(lambda x : x ** 2, filter(lambda x : x % 2 ==0, l)))
         self.assertListEqual(res1, res2)
+
