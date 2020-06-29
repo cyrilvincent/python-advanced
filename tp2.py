@@ -4,13 +4,18 @@ import tp1
 class TP2Test(unittest.TestCase):
 
     def testPrime(self):
-        l = range(1000)
-        # Afficher la racine carrée des nombres premiers filtrés de l
-        # math.sqrt() ou ** 0.5
+        l = range(100000)
+        res = filter(tp1.isPrime, l)
+        res = list(map(lambda x : x ** 2, res))
+        # print(res)
+        # for val in res:
+        #     print(val)
 
     def testFilters(self):
-        l = range(1000)
-        # Afficher le nombre premier pair = [2]
-        # Tester l'opérateur list
-        # Une boucle sur le résultat
-        # Essayer avec un range très grand
+        l = range(100)
+        res = filter(tp1.isPrime, l)
+        res = list(filter(lambda x : x % 2 == 0, res))
+        self.assertEqual(2, list(res)[0])
+        # for val in res:
+        #     print(val)
+
