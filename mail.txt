@@ -1,1 +1,2 @@
 contact@cyrilvincent.com
+https://github.com/cyrilvincent/python-advanced
