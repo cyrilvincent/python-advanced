@@ -1,10 +1,24 @@
+class Point:
+
+    def __init__(self, x = 0, y = 0):
+        self.x = 0
+        self.y = 0
+
+    def move(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __repr__(self):
+        return f"({self.x},{self.y})"
+
 class Rectangle:
 
     toto = 3
 
-    def __init__(self, length, width):
+    def __init__(self, length:float, width:float, origin:Point=Point()):
         self.length = length
         self.width = width
+        self.origin = origin
         Rectangle.toto = 4
 
     @property
@@ -18,6 +32,12 @@ class Rectangle:
     @staticmethod
     def static():
         return 0
+
+    def move(self, x, y):
+        self.origin.move(x,y)
+
+    def __repr__(self):
+        return f"Rectangle {self.length}x{self.width} {self.origin.__repr__()}"
 
 
 import unittest
@@ -57,6 +77,15 @@ class RectangleTest(unittest.TestCase):
         print(r1.toto)
         r2 = Rectangle(0,0)
         Rectangle.toto()
+
+    def testPoint(self):
+        p1 = Point(0,0)
+        print(p1)
+        r1 = Rectangle(0,0,p1)
+        r2 = Rectangle(0,0,Point(0,0))
+        r1.move(3,2)
+        self.assertEqual(3, r1.origin.x)
+
 
 
 
