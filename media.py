@@ -1,5 +1,6 @@
 import datetime
 from typing import *
+import abc
 
 class Publisher:
 
@@ -7,7 +8,7 @@ class Publisher:
         self.name = name
 
 
-class Item:
+class Item(metaclass=abc.ABCMeta):
 
     def __init__(self, id, price):
         self.id = id
@@ -24,7 +25,7 @@ class Item:
         else:
             self._price = value
 
-class Media(Item):
+class Media(Item, metaclass=abc.ABCMeta):
 
     def __init__(self, id, title, price, author=None, date=datetime.datetime.now(), publisher = Publisher(None) ):
         super().__init__(id,price)
@@ -33,9 +34,8 @@ class Media(Item):
         self.date = date
         self.publisher = publisher
 
-    @property
-    def netPrice(self):
-        return self._price * (1 + Media.vat)
+    @abc.abstractmethod
+    def netPrice(self):...
 
 class Book(Media):
 
@@ -45,6 +45,7 @@ class Book(Media):
     def __init__(self, id, title, price, author=None, date=datetime.datetime.now(), publisher = Publisher(None), nbPage = 0):
         super().__init__(id,title,price,author,date,publisher)
         self.nbPage = nbPage
+        Book.nbBook += 1
 
     @property
     def netPrice(self):
@@ -58,6 +59,9 @@ class Cd(Media):
     def __init__(self, id, title, price, author=None, date=datetime.datetime.now(), publisher = Publisher(None), nbTrack = 0):
         super().__init__(id,title,price,author,date,publisher)
         self.nbTrack = nbTrack
+
+    def netPrice(self):
+        return self.price * 1.2
 
 class Cart:
 
@@ -83,7 +87,7 @@ class MediaTest(unittest.TestCase):
 
     def testBook(self):
         b = Book(0,None,10)
-        self.assertAlmostEqual(10 * 1.055, b.netPrice, 1e-4)
+        self.assertAlmostEqual(10.0325, b.netPrice, delta = 1e-4)
 
     def testNbBook(self):
         b = Book(0,None,0)
@@ -109,7 +113,7 @@ class MediaTest(unittest.TestCase):
         b2 = Book(1,"Numpy",20)
         cart.add(b2)
         self.assertEqual(2, cart.nbItem)
-        self.assertAlmostEqual((10.+20.)*1.055, cart.totalNetPrice, delta=1e-4)
+        self.assertAlmostEqual(30.0875, cart.totalNetPrice, delta=1e-4)
         cart.remove(b2)
         self.assertEqual(1, cart.nbItem)
 
@@ -127,13 +131,6 @@ class MediaTest(unittest.TestCase):
     #   |  |  |
     # Book Cd Dvd
 
-        def testListMedia():
-            medias:List[Media]=[]
-            medias.append(Book(0,"",10))
-            medias.append(Cd(0,"",15))
-            i = 1
-            medias[i].netPrice
-
         # Passer Media en abstract
         # Passe Media.netPrice en abstract
-        # Corriger les erreurs et tester
+        # Corriger les erreurs et tester le cart.netPrice
