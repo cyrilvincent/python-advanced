@@ -25,6 +25,15 @@ class Item(metaclass=abc.ABCMeta):
         else:
             self._price = value
 
+    def __eq__(self, other):
+        return self.id == other.id
+
+    def __ne__(self, other):
+        return self.id != other.id
+
+    def __lt__(self, other):
+        return self.price - other.price
+
 class Media(Item, metaclass=abc.ABCMeta):
 
     def __init__(self, id, title, price, author=None, date=datetime.datetime.now(), publisher = Publisher(None) ):

@@ -128,6 +128,7 @@ class RectangleTest(unittest.TestCase):
         p1 = Point(3,2)
         p2 = Point(3,2)
         self.assertTrue(p1 == p2)
+        #15h45
 
 
 
