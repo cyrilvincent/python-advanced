@@ -11,6 +11,13 @@ class Point:
     def __repr__(self):
         return f"({self.x},{self.y})"
 
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
+
+    def __ne__(self, other):
+        return not(self.__eq__(other))
+        # != n'est pas forcement égal à not(==)
+
 import abc
 class Polygon(metaclass=abc.ABCMeta):
 
@@ -50,6 +57,12 @@ class Rectangle(Polygon):
 
     def __repr__(self):
         return f"Rectangle {self.length}x{self.width} {self.origin.__repr__()}"
+
+    def __eq__(self, other):
+        return self.length == other.length and self.width == other.width and self.origin == other.origin
+
+    def __ne__(self, other):
+        return not(self.__eq__(other))
 
 class Square(Rectangle):
 
@@ -110,6 +123,11 @@ class RectangleTest(unittest.TestCase):
     def testAbc(self):
         r = Rectangle(3,2)
         print(r)
+
+    def testEqualityPoint(self):
+        p1 = Point(3,2)
+        p2 = Point(3,2)
+        self.assertTrue(p1 == p2)
 
 
 

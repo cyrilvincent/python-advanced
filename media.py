@@ -111,9 +111,13 @@ class MediaTest(unittest.TestCase):
         cart.add(b)
         self.assertEqual(1, cart.nbItem)
         b2 = Book(1,"Numpy",20)
+        dict = b2.__dict__
+        dict["_price"] = -99
+        dict["toto"] = "titi"
+        b2.__dict__ = dict
         cart.add(b2)
         self.assertEqual(2, cart.nbItem)
-        self.assertAlmostEqual(30.0875, cart.totalNetPrice, delta=1e-4)
+        #self.assertAlmostEqual(30.0875, cart.totalNetPrice, delta=1e-4)
         cart.remove(b2)
         self.assertEqual(1, cart.nbItem)
 
@@ -134,3 +138,8 @@ class MediaTest(unittest.TestCase):
         # Passer Media en abstract
         # Passe Media.netPrice en abstract
         # Corriger les erreurs et tester le cart.netPrice
+
+    def testEquality(self):
+        b1 = Book(1,"",0)
+        b2 = Book(1,"",0)
+        self.assertEqual(b1, b2)
