@@ -26,8 +26,6 @@ class Item:
 
 class Media(Item):
 
-    vat = 0.2
-
     def __init__(self, id, title, price, author=None, date=datetime.datetime.now(), publisher = Publisher(None) ):
         super().__init__(id,price)
         self.title = title
@@ -38,10 +36,6 @@ class Media(Item):
     @property
     def netPrice(self):
         return self._price * (1 + Media.vat)
-
-
-
-
 
 class Book(Media):
 
@@ -54,7 +48,7 @@ class Book(Media):
 
     @property
     def netPrice(self):
-        return self._price * (1 + Book.vat)
+        return self.price * (1 + Book.vat) * 0.95 + 0.01
 
     def __del__(self):
         Book.nbBook -= 1
@@ -68,7 +62,7 @@ class Cd(Media):
 class Cart:
 
     def __init__(self):
-        self.items:List[Book]=[]
+        self.items:List[Media]=[]
 
     def add(self, item):
         self.items.append(item)
@@ -132,3 +126,14 @@ class MediaTest(unittest.TestCase):
     #   Media     Stylo
     #   |  |  |
     # Book Cd Dvd
+
+        def testListMedia():
+            medias:List[Media]=[]
+            medias.append(Book(0,"",10))
+            medias.append(Cd(0,"",15))
+            i = 1
+            medias[i].netPrice
+
+        # Passer Media en abstract
+        # Passe Media.netPrice en abstract
+        # Corriger les erreurs et tester

@@ -11,14 +11,26 @@ class Point:
     def __repr__(self):
         return f"({self.x},{self.y})"
 
-class Rectangle:
+import abc
+class Polygon(metaclass=abc.ABCMeta):
+
+    def __init__(self, origin=Point()):
+        self.origin = origin
+
+    @abc.abstractmethod
+    def area(self):...
+
+    @abc.abstractmethod
+    def perimeter(self):...
+
+class Rectangle(Polygon):
 
     toto = 3
 
     def __init__(self, length:float, width:float, origin:Point=Point()):
+        super().__init__(origin)
         self.length = length
         self.width = width
-        self.origin = origin
         Rectangle.toto = 4
 
     @property
@@ -94,6 +106,10 @@ class RectangleTest(unittest.TestCase):
     def testSquare(self):
         c = Square(2)
         self.assertEqual(4, c.area)
+
+    def testAbc(self):
+        r = Rectangle(3,2)
+        print(r)
 
 
 
