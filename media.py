@@ -6,20 +6,12 @@ class Publisher:
     def __init__(self, name):
         self.name = name
 
-class Book:
 
-    nbBook = 0
-    vat = 0.055
+class Item:
 
-    def __init__(self, id, title, price, author=None, nbPage=0, date=datetime.datetime.now(), publisher = Publisher(None) ):
+    def __init__(self, id, price):
         self.id = id
-        self.title = title
         self._price = price
-        self.author = author
-        self.nbPage = nbPage
-        self.date = date
-        self.publisher = publisher
-        Book.nbBook += 1
 
     @property
     def price(self):
@@ -32,12 +24,46 @@ class Book:
         else:
             self._price = value
 
+class Media(Item):
+
+    vat = 0.2
+
+    def __init__(self, id, title, price, author=None, date=datetime.datetime.now(), publisher = Publisher(None) ):
+        super().__init__(id,price)
+        self.title = title
+        self.author = author
+        self.date = date
+        self.publisher = publisher
+
+    @property
+    def netPrice(self):
+        return self._price * (1 + Media.vat)
+
+
+
+
+
+class Book(Media):
+
+    nbBook = 0
+    vat = 0.055
+
+    def __init__(self, id, title, price, author=None, date=datetime.datetime.now(), publisher = Publisher(None), nbPage = 0):
+        super().__init__(id,title,price,author,date,publisher)
+        self.nbPage = nbPage
+
     @property
     def netPrice(self):
         return self._price * (1 + Book.vat)
 
     def __del__(self):
         Book.nbBook -= 1
+
+class Cd(Media):
+
+    def __init__(self, id, title, price, author=None, date=datetime.datetime.now(), publisher = Publisher(None), nbTrack = 0):
+        super().__init__(id,title,price,author,date,publisher)
+        self.nbTrack = nbTrack
 
 class Cart:
 
