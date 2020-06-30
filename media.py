@@ -43,3 +43,8 @@ class MediaTest(unittest.TestCase):
         self.assertEqual(1, Book.nbBook)
         del(b)
         self.assertEqual(0, Book.nbBook)
+
+    def testNegativePrice(self):
+        b = Book(0,None,0)
+        with self.assertRaises(ValueError):
+            b.price = -10
