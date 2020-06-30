@@ -39,6 +39,11 @@ class Rectangle:
     def __repr__(self):
         return f"Rectangle {self.length}x{self.width} {self.origin.__repr__()}"
 
+class Square(Rectangle):
+
+    def __init__(self, side=0, origin=Point()):
+        super().__init__(side, side, origin)
+        self.toto = 0
 
 import unittest
 class RectangleTest(unittest.TestCase):
@@ -76,7 +81,6 @@ class RectangleTest(unittest.TestCase):
         r1 = Rectangle(0,0)
         print(r1.toto)
         r2 = Rectangle(0,0)
-        Rectangle.toto()
 
     def testPoint(self):
         p1 = Point(0,0)
@@ -85,6 +89,11 @@ class RectangleTest(unittest.TestCase):
         r2 = Rectangle(0,0,Point(0,0))
         r1.move(3,2)
         self.assertEqual(3, r1.origin.x)
+        print(r1.__dir__())
+
+    def testSquare(self):
+        c = Square(2)
+        self.assertEqual(4, c.area)
 
 
 
