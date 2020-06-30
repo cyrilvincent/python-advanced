@@ -96,5 +96,13 @@ class MediaTest(unittest.TestCase):
     # Gérer des Book(nbPage), Cd(nbTrack), Dvd(zone)
     # Media
     # Gérer la TVA 20%
-    # Bonus : Stylo, MachineALaver => Item
+    # Bonus : Créer les classes Stylo, MachineALaver => Créer Item
+    # Bonus : Book hérite de Media et Media hérite de Item
+    # Bonus : stylo hérite de Item
     # MAJ Cart
+
+    #        Item
+    #     |        |
+    #   Media     Stylo
+    #   |  |  |
+    # Book Cd Dvd
