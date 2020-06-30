@@ -2,28 +2,44 @@ import datetime
 
 class Book:
 
+    nbBook = 0
+
     def __init__(self, id, title, price, author=None, nbPage=0, date=datetime.datetime.now()):
         self.id = id
         self.title = title
-        self.price = price
+        self._price = price
         self.author = author
         self.nbPage = nbPage
         self.date = date
+        Book.nbBook += 1
 
-    def getNetPrice(self):
-        return self.price * 1.055
+    @property
+    def price(self):
+        return self._price
+
+    @price.setter
+    def price(self, value):
+        if value < 0:
+            raise ValueError("Negative price")
+        else:
+            self._price = value
+
+    @property
+    def netPrice(self):
+        return self._price * 1.055
 
     def __del__(self):
-        pass
+        Book.nbBook -= 1
 
 import unittest
 class MediaTest(unittest.TestCase):
 
     def testBook(self):
         b = Book(0,None,10)
-        self.assertAlmostEqual(10 * 1.055, b.getNetPrice(), 1e-4)
+        self.assertAlmostEqual(10 * 1.055, b.netPrice, 1e-4)
 
-    # Passer le self.price en privé + getter + setter
-    # Dans le setter interdire les price < 0
-    # Passer le netPrice en @property
-    # Compter automatiquement les livres instanciés
+    def testNbBook(self):
+        b = Book(0,None,0)
+        self.assertEqual(1, Book.nbBook)
+        del(b)
+        self.assertEqual(0, Book.nbBook)
