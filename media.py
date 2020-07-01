@@ -202,8 +202,9 @@ class MediaTest(unittest.TestCase):
 
     def testRepository(self):
         #repo:AbstractRepository = CsvRepository("data/media/books.csv")
-        repo: AbstractRepository = JsonRepository("data/media/books.json")
+        #repo: AbstractRepository = JsonRepository("data/media/books.json")
         #repo: AbstractRepository = PickleRepository("data/media/books.pickle")
+        repo: AbstractRepository = DbRepository("data/media/books.db3")
         repo.load()
         medias = repo.medias
         self.assertEqual(4, len(medias))
