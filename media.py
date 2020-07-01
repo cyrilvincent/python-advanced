@@ -91,6 +91,24 @@ class Cart:
     def nbItem(self):
         return len(self.items)
 
+class AbstractRepository(metaclass=abc.ABCMeta):
+
+    def __init__(self, path):
+        self.path = path
+        self.medias:List[Media] = []
+
+    @abc.abstractmethod
+    def load(self):... #Lit la source de données et charge medias
+
+    @abc.abstractmethod
+    def getMediaByPrice(self, price:float)->List[Media]:... #Rechercher les medias dont le prix est <= price
+
+    @abc.abstractmethod
+    def getMediaByTitle(self, title: float) -> List[Media]: ...  # Rechercher les medias dont title est contenu dans le titre
+
+
+
+
 import unittest
 class MediaTest(unittest.TestCase):
 
@@ -152,3 +170,16 @@ class MediaTest(unittest.TestCase):
         b1 = Book(1,"",0)
         b2 = Book(1,"",0)
         self.assertEqual(b1, b2)
+
+    def testRepository(self):
+        #repo:AbstractRepository = CsvRepository("data/media/books.csv")
+        #repo: AbstractRepository = JsonRepository("data/media/books.json")
+        repo: AbstractRepository = PickleRepository("data/media/books.pickle")
+        medias = repo.medias
+        self.assertEqual(4, medias)
+        medias = repo.getMediaByPrice(10)
+        self.assertEqual(4, medias)
+        medias = repo.getMediaByTitle("py")
+        self.assertEqual(3, medias)
+
+
