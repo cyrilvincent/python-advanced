@@ -100,14 +100,43 @@ class AbstractRepository(metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def load(self):... #Lit la source de données et charge medias
 
-    @abc.abstractmethod
-    def getMediaByPrice(self, price:float)->List[Media]:... #Rechercher les medias dont le prix est <= price
+    def getMediaByPrice(self, price: float) -> List[Media]:
+        return [m for m in self.medias if m.price <= price]
 
-    @abc.abstractmethod
-    def getMediaByTitle(self, title: float) -> List[Media]: ...  # Rechercher les medias dont title est contenu dans le titre
+    def getMediaByTitle(self, title: float) -> List[Media]:
+        return [m for m in self.medias if title.upper() in m.title.upper()]
 
+import csv
+class CsvRepository(AbstractRepository):
 
+    def load(self):
+        with open(self.path) as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                book = Book(int(row["id"]), row["title"], float(row["price"]))
+                self.medias.append(book)
 
+import pickle
+class PickleRepository(AbstractRepository):
+
+    def load(self):
+        with open(self.path, "rb") as f:
+            l = pickle.load(f)
+            for dico in l:
+                b = Book(0,"",0)
+                b.__dict__ = dico
+                b._price = float(dico["price"])
+                self.medias.append(b)
+
+import json
+class JsonRepository(AbstractRepository):
+
+    def load(self):
+        with open(self.path) as f:
+            l = json.load(f)
+            for dico in l:
+                b = Book(int(dico["id"]),dico["title"],float(dico["price"]))
+                self.medias.append(b)
 
 import unittest
 class MediaTest(unittest.TestCase):
@@ -173,13 +202,14 @@ class MediaTest(unittest.TestCase):
 
     def testRepository(self):
         #repo:AbstractRepository = CsvRepository("data/media/books.csv")
-        #repo: AbstractRepository = JsonRepository("data/media/books.json")
-        repo: AbstractRepository = PickleRepository("data/media/books.pickle")
+        repo: AbstractRepository = JsonRepository("data/media/books.json")
+        #repo: AbstractRepository = PickleRepository("data/media/books.pickle")
+        repo.load()
         medias = repo.medias
-        self.assertEqual(4, medias)
+        self.assertEqual(4, len(medias))
         medias = repo.getMediaByPrice(10)
-        self.assertEqual(4, medias)
+        self.assertEqual(2, len(medias))
         medias = repo.getMediaByTitle("py")
-        self.assertEqual(3, medias)
+        self.assertEqual(3, len(medias))
 
 
