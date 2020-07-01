@@ -32,3 +32,11 @@ with open("data/covid-france.txt") as f:
     print(nbcastotal, nbcasmoyen)
     print(nbdctotal, nbdcmoyen)
     print(nbdctotal / nbcastotal)
+
+import pandas as pd
+
+dataframe = pd.read_csv("data/covid-france.txt")
+ix = dataframe["ix"]
+nbcas = dataframe.NbCas
+dcs = dataframe.DC
+print(nbcas)
