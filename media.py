@@ -138,6 +138,17 @@ class JsonRepository(AbstractRepository):
                 b = Book(int(dico["id"]),dico["title"],float(dico["price"]))
                 self.medias.append(b)
 
+import sqlite3 as db
+class DbRepository(AbstractRepository):
+
+    def load(self):
+        with db.connect(self.path) as conn:
+            cursor = conn.cursor()
+            cursor.execute("select id,title,price from book")
+            for row in cursor:
+                b = Book(row[0],row[1],row[2])
+                self.medias.append(b)
+
 import unittest
 class MediaTest(unittest.TestCase):
 
@@ -207,10 +218,10 @@ class MediaTest(unittest.TestCase):
         repo: AbstractRepository = DbRepository("data/media/books.db3")
         repo.load()
         medias = repo.medias
-        self.assertEqual(4, len(medias))
+        self.assertEqual(6, len(medias))
         medias = repo.getMediaByPrice(10)
         self.assertEqual(2, len(medias))
         medias = repo.getMediaByTitle("py")
-        self.assertEqual(3, len(medias))
+        self.assertEqual(2, len(medias))
 
 
