@@ -76,6 +76,16 @@ class MyTests(unittest.TestCase):
         # Filtrer les nombres premiers  et passer au carré
         # Filtrer les nombres premiers et les pairs
 
+        res = [x ** 2 for x in l if demo.is_prime(x)]
+        self.assertListEqual([4,9], res)
+
+        res = [x for x in l if demo.is_prime(x)]
+        res = [x for x in res if x % 2 == 0]
+        self.assertListEqual([2], res)
+
+        res = [x for x in l if demo.is_prime(x) and x % 2 == 0]
+        self.assertListEqual([2], res)
+
     def test_value_reference(self):
         i = 2
         j = i
@@ -96,6 +106,26 @@ class MyTests(unittest.TestCase):
         l1 = [1,2,3]
         l2 = list(l1)
         l1.append(4)
+
+    def test_tuple(self):
+        res = demo.demo_tuple()
+        self.assertEqual(1, res[0])
+        self.assertEqual(99, res[1])
+
+        (a,b) = demo.demo_tuple()
+        self.assertEqual(1, a)
+        self.assertEqual(99, b)
+
+        a,b = demo.demo_tuple()
+        self.assertEqual(1, a)
+        self.assertEqual(99, b)
+
+    def test_min_max_avg(self):
+        l = range(10)
+        min, max, avg = demo.min_max_avg(l)
+        self.assertEqual(0, min)
+        self.assertEqual(9, max)
+        self.assertEqual(4.5, avg)
 
 
 if __name__ == '__main__':

@@ -33,6 +33,12 @@ def double(x):
 def inc(x):
     return x + 1
 
+def demo_tuple():
+    #Calcul
+    a = 1
+    b = 99
+    return a,b
+
 
 
 
