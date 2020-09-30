@@ -1,6 +1,7 @@
 import unittest
 import demo
 import math
+import geometry
 
 class MyTests(unittest.TestCase):
 
@@ -126,6 +127,27 @@ class MyTests(unittest.TestCase):
         self.assertEqual(0, min)
         self.assertEqual(9, max)
         self.assertEqual(4.5, avg)
+
+    def test_min_max_avg_dico(self):
+        l = range(10)
+        dico = demo.min_max_avg_dico(l)
+        self.assertEqual(0, dico["min"])
+        self.assertEqual(9, dico["max"])
+        self.assertEqual(4.5, dico["avg"])
+
+    def test_dico(self):
+        dico = demo.dico()
+        self.assertEqual("Hans Christian Andersen", dico["author"])
+
+    def test_rectangle(self):
+        r1 = geometry.Rectangle(width=3,length=2)
+        self.assertEqual(3, r1.width)
+        self.assertEqual(10, r1.perimeter())
+        self.assertEqual(6, r1.area())
+        self.assertEqual(6, geometry.Rectangle.area(r1))
+        r2 = geometry.Rectangle(width=3, length=2)
+        r1 = r2
+        self.assertEqual(r1, r2)
 
 
 if __name__ == '__main__':

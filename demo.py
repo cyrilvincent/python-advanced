@@ -39,6 +39,43 @@ def demo_tuple():
     b = 99
     return a,b
 
+def min_max_avg(l):
+    min = l[0]
+    max= l[0]
+    sum = 0
+    for i in l:
+        if i < min:
+            min = i
+        elif i > max:
+            max = i
+        sum += i
+    return min, max, sum / len(l)
+
+def min_max_avg_dico(l):
+    min = l[0]
+    max = l[0]
+    sum = 0
+    for i in l:
+        if i < min:
+            min = i
+        elif i > max:
+            max = i
+        sum += i
+    return {"min":min, "max":max, "avg":sum / len(l)}
+
+def dico():
+    dico = {
+        "author": "Hans Christian Andersen",
+        "country": "Denmark",
+        "imageLink": "images/fairy-tales.jpg",
+        "language": "Danish",
+        "link": "https://en.wikipedia.org/wiki/Fairy_Tales_Told_for_Children._First_Collection.\n",
+        "pages": 784,
+        "title": "Fairy tales",
+        "year": 1836
+    }
+    return dico
+
 
 
 
