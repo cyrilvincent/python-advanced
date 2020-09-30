@@ -37,7 +37,6 @@ class MyTests(unittest.TestCase):
         l = [0,1,2,3,4,5,6,7]
         res = filter(demo.is_prime, l)
         res = list(res)
-        print(res)
         self.assertListEqual([2,3,5,7], res)
 
     def test_map(self):
@@ -53,11 +52,20 @@ class MyTests(unittest.TestCase):
 
     def test_tp1(self):
         l = range(5)
-        # Filtrer les nombres pairs
-        # Monter au carré les nombres pairs
+        res = filter(lambda x : x % 2 == 0, l)
+        res = map(lambda x : x ** 2, res)
+        res = list(res)
         self.assertListEqual([0, 4, 16], res)
-        # Obtenir la racine carrée des nombres premiers de l
-        self.assertAlmostEqual(2, math.sqrt(2) ** 2,delta=1e-5)
+
+    def test_evenprime(self):
+        l = range(5)
+        res = filter(demo.is_prime, l)
+        res = filter(lambda x : x % 2 == 0, res)
+        # res = list(res)
+        # self.assertListEqual([2], res)
+        for i in res:
+            print(i)
+
 
 
 

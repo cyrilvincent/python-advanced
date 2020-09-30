@@ -35,9 +35,5 @@ def inc(x):
 
 
 
-l = range(100)
-print(filter_even(l))
-
-
 
 # Reprise 10h35
