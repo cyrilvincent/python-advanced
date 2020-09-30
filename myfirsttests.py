@@ -63,11 +63,39 @@ class MyTests(unittest.TestCase):
         res = filter(lambda x : x % 2 == 0, res)
         # res = list(res)
         # self.assertListEqual([2], res)
-        for i in res:
-            print(i)
+        # for i in res:
+        #     print(i)
 
+    def test_intention_list(self):
+        l = range(5)
+        res = list(map(lambda x: x ** 2, filter(lambda x: x % 2 == 0, l)))
+        # <=>
+        res = [x ** 2 for x in l if x % 2 == 0]
+        self.assertListEqual([0, 4, 16], res)
+        #Refaire l'exercice filter + map et filter + filter avec des liste en intention
+        # Filtrer les nombres premiers  et passer au carré
+        # Filtrer les nombres premiers et les pairs
 
+    def test_value_reference(self):
+        i = 2
+        j = i
+        self.assertEqual(i,j)
+        j += 1
+        self.assertEqual(3, j)
+        self.assertEqual(2, i)
+        l1 = [1,2,3]
+        l2 = l1
+        l2.append(4)
+        self.assertEqual([1,2,3,4], l2)
+        self.assertEqual([1, 2, 3, 4], l1)
+        l3 = [1,2,3,4]
+        self.assertTrue(l2 == l3)
+        self.assertFalse(l2 is l3)
+        self.assertTrue(l2 is l1)
 
+        l1 = [1,2,3]
+        l2 = list(l1)
+        l1.append(4)
 
 
 if __name__ == '__main__':
