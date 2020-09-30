@@ -141,12 +141,13 @@ class MyTests(unittest.TestCase):
 
     def test_rectangle(self):
         r1 = geometry.Rectangle(width=3,length=2)
-        self.assertEqual(3, r1.width)
+        self.assertEqual(3, r1._width)
         self.assertEqual(10, r1.perimeter())
         self.assertEqual(6, r1.area())
         self.assertEqual(6, geometry.Rectangle.area(r1))
         r2 = geometry.Rectangle(width=3, length=2)
         r1 = r2
+        r1.width = 3
         self.assertEqual(r1, r2)
 
 
