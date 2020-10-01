@@ -6,10 +6,9 @@ class Publisher:
     def __init__(self, name):
         self.name = name
 
-# Créer la classe Media, Cd, Dvd
-# Le panier doit accepter indifférement des medias
-# Attention au prix TTC, TVA = 20%
-# Correction à 13h
+#Rendre Media abstrait + netPrice abstrait
+#Book : price * (1 + TVA) * 0.95 + 0.01
+#Vérifier que le prix TTC du panier marche toujours
 
 class Media:
     tva = 0.2
@@ -86,11 +85,11 @@ class Cart:
 
     @property
     def totalNetPrice(self):
-        sum = 0
-        for item in self.items:
-            sum += item.netPrice()
-        return sum
-        #return sum([item.netPrice() for item in self.items])
+        # sum = 0
+        # for item in self.items:
+        #     sum += item.netPrice()
+        # return sum
+        return sum([item.netPrice() for item in self.items])
 
     def removeAll(self, item):
         for _ in range(self.items.count(item)):

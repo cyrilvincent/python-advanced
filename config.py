@@ -1,4 +1,4 @@
 import drivers
 
-#driver = drivers.NVidiaOpenGLDriver()
-driver = drivers.IntelOpenGLDriver()
+driver = drivers.NVidiaOpenGLDriver()
+#driver = drivers.IntelOpenGLDriver()
