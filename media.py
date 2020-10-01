@@ -9,32 +9,23 @@ class Publisher:
 # Créer la classe Media, Cd, Dvd
 # Le panier doit accepter indifférement des medias
 # Attention au prix TTC, TVA = 20%
+# Correction à 13h
 
-class Book:
+class Media:
+    tva = 0.2
 
-    tva = 0.055
-    _nbBook = 0
-
-    def __init__(self, title, price, publicationDate = datetime.datetime.now(), color = "", authors = [], nbPage = 0, publisher:Publisher = None):
+    def __init__(self, title, price, publicationDate = datetime.datetime.now(), color = "", authors=None, publisher:Publisher = None):
+        if authors is None:
+            authors = []
         self.title = title
         self._price = price
         self.publicationDate = publicationDate
         self.color = color
-        self.nbPage = nbPage
         self.publisher = publisher
         self.authors = authors
-        Book._nbBook += 1
-
-    @staticmethod
-    def nbBook():
-        return Book._nbBook
-
-    @classmethod
-    def nbBook2(cls):
-        return cls._nbBook
 
     def netPrice(self):
-        return self._price * (1 + Book.tva)
+        return self._price * (1 + Media.tva)
 
     @property
     def price(self):
@@ -47,8 +38,36 @@ class Book:
         else:
             self._price = value
 
+class Book(Media):
+
+    tva = 0.055
+    _nbBook = 0
+
+    def __init__(self, title, price, publicationDate = datetime.datetime.now(), color = "", authors=None, publisher:Publisher = None, nbPage = 0):
+        super().__init__(title,price,publicationDate,color,authors,publisher)
+        self.nbPage = nbPage
+        Book._nbBook += 1
+
+    def netPrice(self):
+        return self._price * (1 + Book.tva)
+
+    @staticmethod
+    def nbBook():
+        return Book._nbBook
+
+    @classmethod
+    def nbBook2(cls):
+        return cls._nbBook
+
     def __del__(self):
         Book._nbBook -= 1
+
+class Cd(Media):
+
+    def __init__(self, title, price, publicationDate=datetime.datetime.now(), color="", authors=None,
+                 publisher: Publisher = None, nbTrack=0):
+        Media.__init__(self,title,price,publicationDate,color,authors,publisher)
+        self.nbTrack = nbTrack
 
 class Cart:
 
