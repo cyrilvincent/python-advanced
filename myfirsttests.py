@@ -151,9 +151,9 @@ class MyTests(unittest.TestCase):
         r1.width = 3
         self.assertEqual(r1, r2)
         r1.toto = 4
-        geometry.Rectangle.toto = 5
-        self.assertEqual(0, r1.origin.x)
+        self.assertEqual(5, r1.origin.x)
         r1.origin = p1
+        print(r1)
 
 
 

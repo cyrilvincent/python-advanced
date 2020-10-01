@@ -30,9 +30,11 @@ class MediaTest(unittest.TestCase):
         b2 = media.Book("Numpy", 20, publisher=p1)
         cart.add(b2)
         self.assertEqual(2, cart.nbItem)
-        self.assertEqual((10+20)*1.055, cart.totalNetPrice())
+        self.assertEqual((10+20)*1.055, cart.totalNetPrice)
         cart.remove(b2)
         self.assertEqual(1, cart.nbItem)
-        self.assertEqual(10 * 1.055, cart.totalNetPrice())
+        self.assertEqual(10 * 1.055, cart.totalNetPrice)
+
+        # Correction à 10h35
 
 

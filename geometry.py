@@ -4,6 +4,9 @@ class Point:
         self.x = x
         self.y = y
 
+    def __repr__(self):
+        return f"({self.x}, {self.y})"
+
 class Rectangle:
 
     toto = 3
@@ -34,3 +37,12 @@ class Rectangle:
     def move(self, x, y):
         self.origin.x = x
         self.origin.y = y
+
+    def __repr__(self):
+        return f"Rectangle {self._width} {self._length} {self.origin}"
+
+class Square(Rectangle):
+
+    def __init__(self, side):
+        super(Rectangle).__init__(side, side)
+
