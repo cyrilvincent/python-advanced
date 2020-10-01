@@ -14,3 +14,5 @@ ERROR:root:Price < 0
 ERROR:root:Price < 0
 ERROR:root:Price < 0
 ERROR:root:Price < 0
+ERROR:root:Price < 0
+ERROR:root:Price < 0

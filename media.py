@@ -1,4 +1,5 @@
 import datetime
+import abc
 from typing import List
 
 class Publisher:
@@ -10,7 +11,7 @@ class Publisher:
 #Book : price * (1 + TVA) * 0.95 + 0.01
 #Vérifier que le prix TTC du panier marche toujours
 
-class Media:
+class Media(metaclass=abc.ABCMeta):
     tva = 0.2
 
     def __init__(self, title, price, publicationDate = datetime.datetime.now(), color = "", authors=None, publisher:Publisher = None):
@@ -23,8 +24,8 @@ class Media:
         self.publisher = publisher
         self.authors = authors
 
-    def netPrice(self):
-        return self._price * (1 + Media.tva)
+    @abc.abstractmethod
+    def netPrice(self):...
 
     @property
     def price(self):
@@ -48,7 +49,7 @@ class Book(Media):
         Book._nbBook += 1
 
     def netPrice(self):
-        return self._price * (1 + Book.tva)
+        return self._price * (1 + Book.tva) * 0.95 + 0.01
 
     @staticmethod
     def nbBook():
@@ -68,19 +69,22 @@ class Cd(Media):
         Media.__init__(self,title,price,publicationDate,color,authors,publisher)
         self.nbTrack = nbTrack
 
+    def netPrice(self):
+        return self._price * (1 + Media.tva)
+
 class Cart:
 
     def __init__(self):
-        self.items:List[Book] = []
+        self.items:List[Media] = []
 
     @property
     def nbItem(self):
         return len(self.items)
 
-    def add(self, item:Book):
+    def add(self, item:Media):
         self.items.append(item)
 
-    def remove(self, item:Book):
+    def remove(self, item:Media):
         self.items.remove(item)
 
     @property
