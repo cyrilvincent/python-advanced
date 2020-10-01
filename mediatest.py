@@ -37,6 +37,8 @@ class MediaTest(unittest.TestCase):
         cd1 = media.Cd("Allumez le feu",5,authors=["Johnny"],nbTrack=10)
         cart.add(cd1)
         self.assertEqual(10 * 1.055 + 5 * 1.2, cart.totalNetPrice)
+        m1 = media.Media("XXX",0)
+        cart.add(m1)
 
 
 
