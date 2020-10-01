@@ -149,6 +149,8 @@ class MyTests(unittest.TestCase):
         r1 = r2
         r1.width = 3
         self.assertEqual(r1, r2)
+        r1.toto = 4
+        geometry.Rectangle.toto = 5
 
 
 

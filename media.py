@@ -23,3 +23,6 @@ class Book:
         else:
             self._price = value
 
+    def __del__(self):
+        pass
+
