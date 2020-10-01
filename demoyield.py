@@ -1,8 +1,13 @@
 import demo
+import time
 
 def filter(fn, l):
     for i in l:
         if fn(i):
+            # x = time.process_time_ns()
+            # time.sleep(0.1)
+            # y = time.process_time_ns()
+            # x - y
             yield i #return streaming
 
 def map(fn, l):
