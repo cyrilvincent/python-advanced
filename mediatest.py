@@ -40,12 +40,11 @@ class MediaTest(unittest.TestCase):
         # cd1.__dict__["title"] = "XXX"
         # print(cd1.__dict__["title"])
         # cd1.__dict__["toto"] = "titi"
-        cd1 = media.Cd("Allumez le feu", 5, authors=["Johnny"], nbTrack=10)
         cd2 = media.Cd("Allumez le feu", 5, authors=["Johnny"], nbTrack=10)
-        #Redéfinir == et != pour Media
-        # Tester == et is
-        # Tester cd2 in cart.items => True
-        # cd1 == cd2
-        # cd1 is cd2
+        self.assertEqual(cd1, cd2)
+        self.assertIsNot(cd1, cd2)
+        self.assertIn(cd2, cart.items)
+
+
 
 

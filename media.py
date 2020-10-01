@@ -38,6 +38,13 @@ class Media(metaclass=abc.ABCMeta):
         else:
             self._price = value
 
+    def __eq__(self, other):
+        return self.title == other.title \
+               and self.price == other.price
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
+
 class Book(Media):
 
     tva = 0.055
