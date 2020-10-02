@@ -1,6 +1,7 @@
 import csv
 
-with open("data/covid-france.txt") as f:
+with open("data/covid-france.txt","r") as f:
+    content = f.read()
     reader = csv.DictReader(f)
     # for row in reader:
     #     if float(row["NbCas"]) > 10:

@@ -2,6 +2,9 @@ import unittest
 import media
 import datetime
 import logging
+import pickle
+import json
+import jsonpickle
 
 class MediaTest(unittest.TestCase):
 
@@ -44,6 +47,29 @@ class MediaTest(unittest.TestCase):
         self.assertEqual(cd1, cd2)
         self.assertIsNot(cd1, cd2)
         self.assertIn(cd2, cart.items)
+        with open("cart.pickle","wb") as f:
+            pickle.dump(cart, f)
+        cart = None
+        with open("cart.pickle","rb") as f:
+            cart = pickle.load(f)
+            self.assertEqual(2, cart.nbItem)
+        with open("cart.json","w") as f:
+            s = jsonpickle.dumps(cart, unpicklable=False)
+            f.write(s)
+
+            """
+            [10:22] Patrick FULCHERI (Invité)
+    
+HTTPS_PROXY=http://login:password@appgw.sgp.st.com:8080
+HTTP_PROXY=http:// login:password @appgw.sgp.st.com:8080
+
+            """
+
+    def test_json(self):
+        with open("data/media/books.json","r") as f:
+            dico = json.load(f)
+            self.assertEqual("Python", dico[0]["title"])
+
 
 
 
