@@ -5,11 +5,6 @@ l1 = [1,2,3]
 l2 = [4,5,6]
 print(l1 + l2)
 print(l1 * 2)
-
-l1.sort(lambda x : x)
-
-
-
 a1 = np.array(l1, dtype=bool)
 a2 = np.array(l2)
 print(a1 + a2)
@@ -26,9 +21,11 @@ print(m1.dot(m2))
 dataframe = pandas.read_csv("data/house/house.csv")
 print(dataframe)
 res = dataframe["loyer"] / dataframe.surface
+print(np.min(res))
+print(np.max(res))
 print(np.mean(res))
 print(np.std(res))
-dataframe.sort_values()
+print(np.median(res))
 
 # Charger house.csv avec pandas
 # Calculer pour loyer : min, max, avg, std, median
