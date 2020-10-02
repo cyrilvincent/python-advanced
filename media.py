@@ -53,7 +53,16 @@ class Book(Media):
     def __init__(self, title, price, publicationDate = datetime.datetime.now(), color = "", authors=None, publisher:Publisher = None, nbPage = 0):
         super().__init__(title,price,publicationDate,color,authors,publisher)
         self.nbPage = nbPage
+        self._isbn = None
         Book._nbBook += 1
+
+    @property
+    def isbn(self):
+        return self._isbn
+
+    @isbn.setter
+    def isbn(self, value):
+        pass
 
     def netPrice(self):
         return self._price * (1 + Book.tva) * 0.95 + 0.01

@@ -5,6 +5,7 @@ import logging
 import pickle
 import json
 import jsonpickle
+import re
 
 class MediaTest(unittest.TestCase):
 
@@ -67,12 +68,10 @@ HTTP_PROXY=http:// login:password @appgw.sgp.st.com:8080
             dico = json.load(f)
             self.assertEqual("Python", dico[0]["title"])
 
-    # Dans data/media/books
-    # De lire un books.*
-    # Mettez les infos lues soit dans un dico ou une liste soit dans un cart
-    # Sauvegardez le tout dans pickle
-    # Bonus sauvegardez dans jsonpickle
-    # Correction à 11h15
+    #2-7654-1005-4
+    def test_re(self):
+        pattern = "^\d-\d{4}-[0-9]{4}-[0-9]$"
+
 
 
 

@@ -1,4 +1,5 @@
 import functools
+import time
 
 # Recursive
 def fibo(n):
@@ -19,14 +20,16 @@ def fibo(n):
         n1 = sum
         n -= 1
         yield sum
+        time.sleep(1)
+
 res = fibo(10)
 for i in res:
     print(i)
 
 #Reduce
-fibo = lambda x, y : (x[0] + x[1], x[0])
+fibo = lambda x, _ : (x[0] + x[1], x[0]) #(x[0]=n-1, x[1]=n-2)
 n = 10
 res = functools.reduce(fibo,range(1, n),(1,0))
-print(res)
+print(res[0])
 
 
