@@ -72,6 +72,7 @@ HTTP_PROXY=http:// login:password @appgw.sgp.st.com:8080
     # Mettez les infos lues soit dans un dico ou une liste soit dans un cart
     # Sauvegardez le tout dans pickle
     # Bonus sauvegardez dans jsonpickle
+    # Correction à 11h15
 
 
 
