@@ -1,5 +1,6 @@
 import numpy as np
 import pandas
+import matplotlib.pyplot as plt
 
 l1 = [1,2,3]
 l2 = [4,5,6]
@@ -30,3 +31,7 @@ print(np.median(res))
 # Charger house.csv avec pandas
 # Calculer pour loyer : min, max, avg, std, median
 # Calculer pour loyer / surface : min, max, avg, std, median
+# Afficher un schema x = loyer, y = surface
+
+plt.scatter(dataframe["surface"], dataframe.loyer)
+plt.show()
