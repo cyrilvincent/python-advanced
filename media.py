@@ -1,5 +1,6 @@
 import datetime
 import abc
+import re
 from typing import List
 
 class Publisher:
@@ -60,9 +61,14 @@ class Book(Media):
     def isbn(self):
         return self._isbn
 
+    # 2-7654-1005-4
     @isbn.setter
     def isbn(self, value):
-        pass
+        pattern = "^\d-\d{4}-[0-9]{4}-[0-9]$"
+        if value is not None and type(value) is str and re.match(pattern, value):
+            self._isbn = value
+        else:
+            raise ValueError(f"Bad isbn {value}")
 
     def netPrice(self):
         return self._price * (1 + Book.tva) * 0.95 + 0.01
