@@ -48,6 +48,7 @@ class MediaTest(unittest.TestCase):
         self.assertEqual(cd1, cd2)
         self.assertIsNot(cd1, cd2)
         self.assertIn(cd2, cart.items)
+        cart.items = cart.items.sort(lambda m : m.price, reverse=True)
         with open("cart.pickle","wb") as f:
             pickle.dump(cart, f)
         cart = None
