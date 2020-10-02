@@ -58,17 +58,20 @@ class MediaTest(unittest.TestCase):
             f.write(s)
 
             """
-            [10:22] Patrick FULCHERI (Invité)
-    
 HTTPS_PROXY=http://login:password@appgw.sgp.st.com:8080
 HTTP_PROXY=http:// login:password @appgw.sgp.st.com:8080
-
             """
 
     def test_json(self):
         with open("data/media/books.json","r") as f:
             dico = json.load(f)
             self.assertEqual("Python", dico[0]["title"])
+
+    # Dans data/media/books
+    # De lire un books.*
+    # Mettez les infos lues soit dans un dico ou une liste soit dans un cart
+    # Sauvegardez le tout dans pickle
+    # Bonus sauvegardez dans jsonpickle
 
 
 
