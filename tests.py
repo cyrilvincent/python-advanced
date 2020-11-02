@@ -110,5 +110,14 @@ class MyTest(unittest.TestCase):
     def test_tuple(self):
         l = range(11)
         min,max,avg = demotuple.min_max_avg(l)
-        print(min,max,avg)
+        self.assertEqual(0, min)
+        self.assertEqual(10, max)
+        self.assertEqual(5, avg)
+
+    def test_dico(self):
+        l = range(11)
+        dico = demotuple.min_max_avg_dico(l)
+        self.assertEqual(0, dico["min"])
+        self.assertEqual(10,  dico["max"])
+        self.assertEqual(5,  dico["avg"])
 
