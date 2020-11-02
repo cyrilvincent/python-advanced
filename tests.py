@@ -1,6 +1,7 @@
 import unittest
 import hello
 import tp1
+import tp2
 
 class MyTest(unittest.TestCase):
 
@@ -21,7 +22,6 @@ class MyTest(unittest.TestCase):
         self.assertTrue(tp1.is_prime(7))
         self.assertFalse(tp1.is_prime(8))
         self.assertTrue(tp1.is_prime(2731))
-        self.assertTrue(tp1.is_prime("toto"))
         # Un nombre premier est un nombre qui possède exactement 2 diviseurs : 1 et lui même
         # Un nombre est premier sauf s'il possède un diviseur entre 2 et n-1
 
@@ -34,9 +34,12 @@ class MyTest(unittest.TestCase):
     def test_list(self):
         l = [0,1,3,5,9,-1,10,3,8,3,99]
         res = tp2.remove_all(l, 3)
-        self.assertEqual([0,1,5,9,-1,10,8,99])
+        self.assertEqual(res,[0,1,5,9,-1,10,8,99])
+        l = [0, 1, 3, 5, 9, -1, 10, 3, 8, 3, 99]
         res = tp2.filter_even(l)
-        self.assertEqual([0,10,8])
+        self.assertEqual(res,[0,10,8])
         res = tp2.filter_prime(l)
-        self.assertEqual([3,5,3,3])
+        l = [0, 1, 3, 5, 9, -1, 10, 3, 8, 3, 99]
+        self.assertEqual(res,[3,5,3,3])
         # Bonus : Essayer d'optimiser les 2 fonctions de filtre
+        # Reprise 13h
