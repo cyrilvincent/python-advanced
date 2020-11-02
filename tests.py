@@ -4,11 +4,12 @@ import tp1
 
 class MyTest(unittest.TestCase):
 
+
     def test1(self):
-        self.assertEqual(2,1+1)
+        self.assertEqual(2, 1+1)
 
     def test_add(self):
-        res = hello.add(2,3)
+        res = hello.add(2, 3)
         self.assertEqual(5, res)
 
     def test_iseven(self):
@@ -20,5 +21,9 @@ class MyTest(unittest.TestCase):
         self.assertTrue(tp1.is_prime(7))
         self.assertFalse(tp1.is_prime(8))
         self.assertTrue(tp1.is_prime(2731))
+        self.assertTrue(tp1.is_prime("toto"))
         # Un nombre premier est un nombre qui possède exactement 2 diviseurs : 1 et lui même
         # Un nombre est premier sauf s'il possède un diviseur entre 2 et n-1
+
+    def test_complex_function(self):
+        tp1.complex_function(1,2,3,4,5,6,toto=7,titi=8)
