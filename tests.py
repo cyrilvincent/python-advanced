@@ -30,3 +30,13 @@ class MyTest(unittest.TestCase):
         print(type(tp1.complex_function))
         f = tp1.complex_function
         f(3,4)
+
+    def test_list(self):
+        l = [0,1,3,5,9,-1,10,3,8,3,99]
+        res = tp2.remove_all(l, 3)
+        self.assertEqual([0,1,5,9,-1,10,8,99])
+        res = tp2.filter_even(l)
+        self.assertEqual([0,10,8])
+        res = tp2.filter_prime(l)
+        self.assertEqual([3,5,3,3])
+        # Bonus : Essayer d'optimiser les 2 fonctions de filtre
