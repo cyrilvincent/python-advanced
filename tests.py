@@ -2,7 +2,7 @@ import unittest
 import hello
 import tp1
 import tp2
-import math
+import demotuple
 
 class MyTest(unittest.TestCase):
 
@@ -101,8 +101,14 @@ class MyTest(unittest.TestCase):
 
     def test_intention_list(self):
         l = range(10)
+        res = [x for x in l if x % 2 == 0]
+        res = [x for x in l if tp1.is_prime(x)]
+        res = [x for x in l if tp1.is_prime(x) and x % 2 == 0]
         res = [x ** 2 for x in l if tp1.is_prime(x)]
         self.assertEqual([4, 9, 25, 49], res)
-        # Refaire le test précédent avec des listes en intention
 
+    def test_tuple(self):
+        l = range(11)
+        min,max,avg = demotuple.min_max_avg(l)
+        print(min,max,avg)
 
