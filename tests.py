@@ -83,3 +83,11 @@ class MyTest(unittest.TestCase):
         self.assertFalse(l1 == l2)
         print(l1,l2)
 
+    def test_tp_filter_map(self):
+        l = range(100)
+        # Filtrer l par les nombres pairs
+        # Filtrer l par les nombre premiers
+        # Filtrer l par les nombres pairs ET premiers
+        # Filtrer l par les nombres premiers et les monter au carré
+        
+
