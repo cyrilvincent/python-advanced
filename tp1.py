@@ -1,6 +1,8 @@
 def is_even(x:int)->bool:
     return x % 2 == 0
 
+is_even = lambda x : x % 2 == 0
+
 def is_prime(x:int)->bool:
     if x < 2:
         return False

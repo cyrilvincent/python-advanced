@@ -27,3 +27,6 @@ class MyTest(unittest.TestCase):
 
     def test_complex_function(self):
         tp1.complex_function(1,2,3,4,5,6,toto=7,titi=8)
+        print(type(tp1.complex_function))
+        f = tp1.complex_function
+        f(3,4)
