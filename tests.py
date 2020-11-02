@@ -84,10 +84,25 @@ class MyTest(unittest.TestCase):
         print(l1,l2)
 
     def test_tp_filter_map(self):
-        l = range(100)
-        # Filtrer l par les nombres pairs
-        # Filtrer l par les nombre premiers
-        # Filtrer l par les nombres pairs ET premiers
-        # Filtrer l par les nombres premiers et les monter au carré
-        
+        l = range(10)
+        res = list(filter(lambda x : x % 2 == 0, l))
+        self.assertEqual([0,2,4,6,8], res)
+        res = list(filter(tp1.is_prime, l))
+        self.assertEqual([2,3,5,7], res)
+        res = list(filter(lambda x: x % 2 == 0 and tp1.is_prime(x), l))
+        res = filter(lambda x : x % 2 == 0, l)
+        res = list(filter(tp1.is_prime, res))
+        self.assertEqual([2], res)
+        res = list(filter(tp1.is_prime, l))
+        res = list(map(lambda x : x ** 2, res))
+        self.assertEqual([4, 9, 25, 49], res)
+        res = list(map(lambda x : x ** 2, filter(lambda x : tp1.is_prime(x), l)))
+        self.assertEqual([4, 9, 25, 49], res)
+
+    def test_intention_list(self):
+        l = range(10)
+        res = [x ** 2 for x in l if tp1.is_prime(x)]
+        self.assertEqual([4, 9, 25, 49], res)
+        # Refaire le test précédent avec des listes en intention
+
 
