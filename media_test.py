@@ -26,3 +26,7 @@ class MediaTest(unittest.TestCase):
         self.assertIs(b1, b2)
         b1 = None #Rare
         del(b1) #Rare
+
+    def test_publisher(self):
+        p1 = media.Publisher("ENI", "Champs Elysée, Paris")
+        self.assertEqual(p1.name, "ENI")

@@ -1,8 +1,13 @@
+from dataclasses import dataclass
+import math
+
+
 class Rectangle:
 
     def __init__(self, width:float=0, length:float=0):
         self._width = width
         self._length = length
+
 
     def perimeter(self):
         return 2 * (self._length + self._width)
@@ -20,4 +25,14 @@ class Rectangle:
             self._width = value
         else:
             raise ValueError("Width < 0")
+
+@dataclass
+class Circle:
+
+    radius : float
+
+    def area(self):
+        return math.pi * self.radius ** 2
+
+
 
