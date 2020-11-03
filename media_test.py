@@ -35,4 +35,19 @@ class MediaTest(unittest.TestCase):
     def test_publisher(self):
         p1 = media.Publisher("ENI", "Champs Elysée, Paris")
         self.assertEqual(p1.name, "ENI")
+        b1 = media.Book("123", "Python", 10, ["Cyril"], 99, p1)
+        self.assertEqual("ENI", b1.publisher.name)
 
+    def test_cart(self):
+        cart = media.Cart()
+        self.assertEqual(0, len(cart.items))
+        b1 = media.Book("123", "Python", 10, ["Cyril"], 99)
+        cart.add(b1)
+        self.assertEqual(1, len(cart.items))
+        b2 = media.Book("456", "Numpy", 20, ["Cyril"], 99)
+        cart.add(b2)
+        self.assertEqual(2, len(cart.items))
+        self.assertAlmostEqual((10+20)*1.055, cart.total_net_price(),delta=1e-3)
+        cart.remove(b2)
+        self.assertEqual(1, len(cart.items))
+        self.assertAlmostEqual((10) * 1.055, cart.total_net_price(),delta=1e-3)
