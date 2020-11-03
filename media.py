@@ -7,23 +7,20 @@ class Publisher:
     name:str
     address:str=""
 
-class Book:
+class Media:
 
-    tva = 0.055
-    nb_book = 0
+    tva = 0.2
 
-    def __init__(self, isbn:str, title:str, price:float, authors:List[str], type:str="", nb_page:int=0, publisher:Publisher = None):
-        self.isbn = isbn
+    def __init__(self, id:str, title:str, price:float, authors:List[str], type:str= "", publisher:Publisher = None):
+        self.id = id
         self.title = title
         self._price = price
         self.authors = authors
         self.type = type
-        self.nb_page = nb_page
         self.publisher = publisher
-        Book.nb_book += 1
 
     def net_price(self):
-        return self._price * (1 + Book.tva)
+        return self._price * (1 + Media.tva)
 
     @property
     def price(self):
@@ -36,13 +33,32 @@ class Book:
         else:
             raise ValueError("Price <= 0")
 
+class Book(Media):
+
+    tva = 0.055
+    nb_book = 0
+
+    def __init__(self, id:str, title:str, price:float, authors:List[str], type:str="", nb_page:int=0, publisher:Publisher = None):
+        super().__init__(id,title,price,authors,type,publisher)
+        self.nb_page = nb_page
+        Book.nb_book += 1
+
+    def net_price(self):
+        return self._price * (1 + Book.tva)
+
     def __del__(self):
         Book.nb_book -= 1
+
+class Cd(Media):
+
+    def __init__(self, id:str, title:str, price:float, authors:List[str], type:str="", nb_track:int=0, publisher:Publisher = None):
+        super().__init__(id,title,price,authors,type,publisher)
+        self.nb_track = nb_track
 
 class Cart:
 
     def __init__(self):
-        self.items:List[Book] = []
+        self.items:List[Media] = []
 
     def add(self, item):
         self.items.append(item)

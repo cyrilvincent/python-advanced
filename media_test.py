@@ -53,9 +53,5 @@ class MediaTest(unittest.TestCase):
         self.assertAlmostEqual((10) * 1.055, cart.total_net_price(),delta=1e-3)
 
     def test_inheritance(self):
-        cd = media.Cd() #nb_track
-        dvd = media.Dvd() #zone:int
-        # Créer une classe Media
-        # Cart : ajouter un "media"
-        # Attention : Cd et Dvd ont comme TVA 20%
-        # reprise 14h
+        cd = media.Cd("001","Allumez le feu",10, ["Johnny"])
+        self.assertAlmostEqual(12.0,cd.net_price(),delta = 1e-3)
