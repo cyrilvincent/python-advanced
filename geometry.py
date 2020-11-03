@@ -38,6 +38,19 @@ class Rectangle:
         self.origin.x = x
         self.origin.y = y
 
+    def __repr__(self):
+        return f"Rectangle length:{self._length} width:{self._width} origin:{self.origin}"
+
+class Square(Rectangle):
+
+    def __init__(self, side):
+        #Rectangle.__init__(self,side,side)
+        super().__init__(side, side)
+
+    def __repr__(self):
+        return f"Square side:{self.side}"
+
+
 @dataclass
 class Circle:
 
