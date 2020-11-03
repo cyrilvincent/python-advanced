@@ -20,9 +20,10 @@ class MediaTest(unittest.TestCase):
         b1 = media.Book("123", "Python", 10, ["Cyril"], 99)
         self.assertEqual(1, media.Book.nb_book)
         b2 = media.Book("123", "Python", 10, ["Cyril"], 99)
+
         self.assertEqual(2, media.Book.nb_book)
         b1._price = 0
-        self.assertNotEqual(b1, b2)
+        self.assertEqual(b1, b2)
         self.assertIsNot(b1, b2)
         b1 = b2
         self.assertEqual(b1, b2)
