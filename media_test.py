@@ -30,8 +30,6 @@ class MediaTest(unittest.TestCase):
         b1 = None #Rare
         del(b1) #Rare
         self.assertEqual(1, media.Book.nbBook)
-        # Passer la TVA en static
-        # Compter automatiquement le nombre de livre instanciés
 
 
     def test_publisher(self):

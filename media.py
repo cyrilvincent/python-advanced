@@ -10,6 +10,7 @@ class Publisher:
 class Book:
 
     tva = 0.055
+    nb_book = 0
 
     def __init__(self, isbn:str, title:str, price:float, authors:List[str], type:str="", nb_page:int=0):
         self.isbn = isbn
@@ -18,9 +19,10 @@ class Book:
         self.authors = authors
         self.type = type
         self.nb_page = nb_page
+        self.nb_book += 1
 
     def net_price(self):
-        return self._price * (1 + 0.055)
+        return self._price * (1 + Book.tva)
 
     @property
     def price(self):
@@ -33,10 +35,8 @@ class Book:
         else:
             raise ValueError("Price <= 0")
 
-    @dataclass()
     def __del__(self):
-        pass
-        # Dernière méthode appelée avant destruction de l'objet
+        Book.nb_book -= 1
 
 
 
