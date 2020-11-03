@@ -21,3 +21,9 @@ class GeometryTest(unittest.TestCase):
     def test_square(self):
         s1 = geometry.Square(2)
         self.assertEqual(4, s1.area())
+
+    def test_equality(self):
+        r1 = geometry.Rectangle(2)
+        r2 = geometry.Rectangle(2)
+        self.assertEqual(r1, r2)
+        self.assertIsNot(r1, r2)

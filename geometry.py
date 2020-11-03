@@ -38,6 +38,12 @@ class Rectangle:
         self.origin.x = x
         self.origin.y = y
 
+    def __eq__(self, other):
+        return self._width == other._width and self._length == other._length
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
+
     def __repr__(self):
         return f"Rectangle length:{self._length} width:{self._width} origin:{self.origin}"
 

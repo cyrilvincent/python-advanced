@@ -55,3 +55,12 @@ class MediaTest(unittest.TestCase):
     def test_inheritance(self):
         cd = media.Cd("001","Allumez le feu",10, ["Johnny"])
         self.assertAlmostEqual(12.0,cd.net_price(),delta = 1e-3)
+
+    def test_dict(self):
+        b1 = media.Book("123", "Python", 10, ["Cyril"], "Informatique", 99)
+        print(b1.__dict__)
+        b1.__dict__["id"]="456"
+        self.assertEqual("456", b1.__dict__["id"])
+        dico = {'id': '789', 'title': 'Python 3', '_price': 15, 'authors': ['Cyril'], 'type': 'Informatique', 'publisher': None, 'nb_page': 99}
+        b1.__dict__ = dico
+        print(b1)
