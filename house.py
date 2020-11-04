@@ -1,5 +1,9 @@
 import csv
 
+
+# Ouvrir et parser house/house.csv
+# Calculer le loyer moyen et max et loyer/m2 moyen et max
+
 with open("data/house/house.csv") as f:
     reader = csv.DictReader(f)
     loyer_sum = 0
