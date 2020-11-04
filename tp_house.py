@@ -1,5 +1,6 @@
 import csv
 import matplotlib.pyplot as plt
+import scipy.stats as stats
 
 with open("data/house/house.csv") as f:
     reader = list(csv.DictReader(f))
