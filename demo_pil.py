@@ -21,3 +21,6 @@ nb_norm = np.clip(nb_norm * 64 + 127.5,0,255)
 
 im = Image.fromarray(nb_norm).convert("RGB")
 im.save("data/ski_modified.jpg")
+
+# Masque => laisser passer les points > 127.5 et mettre à 0 les autres
+# Masque cosine => laisser passer les cos > 0
