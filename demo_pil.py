@@ -10,7 +10,7 @@ print(nb.shape)
 print(nb)
 print(np.min(nb), np.max(nb))
 print(f"Luminance: {np.mean(nb)}")
-print(f"Contrast:  {np.std(nb)}")
+print(f"Contraste:  {np.std(nb)}")
 
 def norm(x, avg, std):
     return (x - avg) / std
@@ -18,6 +18,8 @@ def norm(x, avg, std):
 nb_norm = norm(nb, np.mean(nb), np.std(nb))
 nb_norm = np.clip(nb_norm * 64 + 127.5,0,255)
 
+nb_norm = np.where(nb_norm < 128, 0, nb_norm)
+#nb_norm = np.where(np.cos(nb_norm) < 0, 0, nb_norm)
 
 im = Image.fromarray(nb_norm).convert("RGB")
 im.save("data/ski_modified.jpg")
