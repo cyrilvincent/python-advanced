@@ -49,6 +49,13 @@ class Book(Media):
         self.nb_page = nb_page
         Book.nb_book += 1
 
+    @property
+    def isbn(self):
+        return self.id
+
+    #Faire setter
+    #Avec verification du format isbn
+
     def net_price(self):
         return self._price * (1 + Book.tva)
 

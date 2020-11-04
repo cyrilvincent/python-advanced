@@ -1,5 +1,7 @@
 import unittest
 import media
+import pickle
+
 
 class MediaTest(unittest.TestCase):
 
@@ -52,6 +54,12 @@ class MediaTest(unittest.TestCase):
         cart.remove(b2)
         self.assertEqual(1, len(cart.items))
         self.assertAlmostEqual((10) * 1.055, cart.total_net_price(),delta=1e-3)
+        with open("cart.pickle","wb") as f:
+            pickle.dump(cart, f)
+        cart = None
+        with open("cart.pickle","rb") as f:
+            cart = pickle.load(f)
+        print(cart)
 
     def test_inheritance(self):
         cd = media.Cd("001","Allumez le feu",10, ["Johnny"])
