@@ -8,17 +8,24 @@ class Publisher:
     name:str
     address:str=""
 
+@dataclass
+class Category:
+
+    name:str
+    books:List
+
 class Media:
 
     tva = 0.2
 
-    def __init__(self, id:str, title:str, price:float, authors:List[str], type:str= "", publisher:Publisher = None):
+    def __init__(self, id:str, title:str, price:float, authors:List[str], type:str= "", publisher:Publisher = None, category:Category = None):
         self.id = id
         self.title = title
         self._price = price
         self.authors = authors
         self.type = type
         self.publisher = publisher
+        self.category = category
 
     def net_price(self):
         return self._price * (1 + Media.tva)
