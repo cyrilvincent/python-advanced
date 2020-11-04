@@ -18,12 +18,12 @@ class MediaTest(unittest.TestCase):
         self.assertEqual(i,j)
         j += 1
         self.assertNotEqual(i, j)
-        self.assertEqual(0, media.Book.nb_book)
+        #self.assertEqual(0, media.Book.nb_book)
         b1 = media.Book("123", "Python", 10, ["Cyril"], 99)
-        self.assertEqual(1, media.Book.nb_book)
+        #self.assertEqual(1, media.Book.nb_book)
         b2 = media.Book("123", "Python", 10, ["Cyril"], 99)
 
-        self.assertEqual(2, media.Book.nb_book)
+        #self.assertEqual(2, media.Book.nb_book)
         b1._price = 0
         self.assertEqual(b1, b2)
         self.assertIsNot(b1, b2)
@@ -32,7 +32,7 @@ class MediaTest(unittest.TestCase):
         self.assertIs(b1, b2)
         b1 = None #Rare
         del(b1) #Rare
-        self.assertEqual(1, media.Book.nb_book)
+        #self.assertEqual(1, media.Book.nb_book)
 
 
     def test_publisher(self):
@@ -73,3 +73,9 @@ class MediaTest(unittest.TestCase):
         dico = {'id': '789', 'title': 'Python 3', '_price': 15, 'authors': ['Cyril'], 'type': 'Informatique', 'publisher': None, 'nb_page': 99}
         b1.__dict__ = dico
         print(b1)
+
+    def test_isbn(self):
+        b1 = media.Book("", "Python", 10,[])
+        b1.isbn = "123-1-1234-1234-1"
+        with self.assertRaises(ValueError):
+            b1.isbn = "123-1-1234-1234-1X"

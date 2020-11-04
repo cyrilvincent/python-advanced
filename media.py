@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from typing import List
+import re
 
 @dataclass
 class Publisher:
@@ -53,8 +54,12 @@ class Book(Media):
     def isbn(self):
         return self.id
 
-    #Faire setter
-    #Avec verification du format isbn
+    @isbn.setter
+    def isbn(self, value):
+        if re.match(r"^(ISBN )?\d{3}-\d-(\d){4}-\d{4}-\d$", value):
+            self.id = value
+        else:
+            raise ValueError
 
     def net_price(self):
         return self._price * (1 + Book.tva)
