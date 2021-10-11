@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72d430bd-4dab-4199-a818-972cd0fe5bd6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/demo_filter_map.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo_house.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo_lambda.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo_list.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo_yield.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tdd.py" beforeDir="false" afterPath="$PROJECT_DIR$/tdd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_yield.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_yield.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,13 +171,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568200120026</updated>
-    </task>
-    <task id="LOCAL-00112" summary="ST">
-      <created>1601642681802</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1601642681802</updated>
     </task>
     <task id="LOCAL-00113" summary="ST">
       <created>1601643627951</created>
@@ -521,7 +508,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633945820494</updated>
     </task>
-    <option name="localTasksCounter" value="161" />
+    <task id="LOCAL-00161" summary="Pollen">
+      <created>1633955186497</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1633955186497</updated>
+    </task>
+    <option name="localTasksCounter" value="162" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -550,10 +544,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Pollen" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="397" y="0" key="CommitChangelistDialog2" timestamp="1633945820123">
+    <state x="397" y="0" key="CommitChangelistDialog2" timestamp="1633955186103">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="397" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1633945820123" />
+    <state x="397" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1633955186103" />
     <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1633939242323">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -590,10 +584,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1537" height="195" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1633953764319" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1633945821606">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1633955187933">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1633945821606" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1633955187933" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

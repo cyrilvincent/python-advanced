@@ -23,6 +23,12 @@ def list(g):
         res.append(val)
     return res
 
+def infinite():
+    i = 0
+    while True:
+        yield i
+        i += 1
+        
 res = filter(lambda x: x % 2 == 0, range(10))
 res = filter(lambda x: mylib.is_prime(x), res)
 res = map(lambda x: x ** 0.5, res)
