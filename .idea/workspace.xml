@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72d430bd-4dab-4199-a818-972cd0fe5bd6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/demo_tuple.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_house.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_house.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo_yield.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_yield.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +48,7 @@
       <recent name="C:\Users\conta\CVC\Formation\Python\Avance\GitPythonAdvanced\data\media" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.demo_house">
+  <component name="RunManager" selected="Python.demo_tuple">
     <configuration name="demo_filter_map" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GIT" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,7 +112,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="demo_list" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="demo_tuple" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GIT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -121,7 +124,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_list.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_tuple.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -153,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.demo_tuple" />
         <item itemvalue="Python.demo_house" />
         <item itemvalue="Python.demo_yield" />
         <item itemvalue="Python.demo_filter_map" />
         <item itemvalue="Python.demo_lambda" />
-        <item itemvalue="Python.demo_list" />
       </list>
     </recent_temporary>
   </component>
@@ -171,13 +174,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568200120026</updated>
-    </task>
-    <task id="LOCAL-00113" summary="ST">
-      <created>1601643627951</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1601643627951</updated>
     </task>
     <task id="LOCAL-00114" summary="ST">
       <created>1601644200859</created>
@@ -515,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633955186497</updated>
     </task>
-    <option name="localTasksCounter" value="162" />
+    <task id="LOCAL-00162" summary="Pollen">
+      <created>1633955493722</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1633955493722</updated>
+    </task>
+    <option name="localTasksCounter" value="163" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -544,50 +547,50 @@
     <option name="LAST_COMMIT_MESSAGE" value="Pollen" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="397" y="0" key="CommitChangelistDialog2" timestamp="1633955186103">
+    <state x="397" y="0" key="CommitChangelistDialog2" timestamp="1633955493372">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="397" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1633955186103" />
+    <state x="397" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1633955493372" />
     <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1633939242323">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1633939242323" />
-    <state width="1537" height="396" key="GridCell.Tab.0.bottom" timestamp="1633955093098">
+    <state width="1537" height="228" key="GridCell.Tab.0.bottom" timestamp="1633960447851">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="396" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1633955093098" />
-    <state width="1537" height="396" key="GridCell.Tab.0.center" timestamp="1633955093098">
+    <state width="1537" height="228" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1633960447851" />
+    <state width="1537" height="228" key="GridCell.Tab.0.center" timestamp="1633960447851">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="396" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1633955093098" />
-    <state width="1537" height="396" key="GridCell.Tab.0.left" timestamp="1633955093098">
+    <state width="1537" height="228" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1633960447851" />
+    <state width="1537" height="228" key="GridCell.Tab.0.left" timestamp="1633960447851">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="396" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1633955093098" />
-    <state width="1537" height="396" key="GridCell.Tab.0.right" timestamp="1633955093098">
+    <state width="1537" height="228" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1633960447851" />
+    <state width="1537" height="228" key="GridCell.Tab.0.right" timestamp="1633960447851">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="396" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1633955093098" />
-    <state width="1537" height="195" key="GridCell.Tab.1.bottom" timestamp="1633953764319">
+    <state width="1537" height="228" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1633960447851" />
+    <state width="1537" height="195" key="GridCell.Tab.1.bottom" timestamp="1633960320052">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="195" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1633953764319" />
-    <state width="1537" height="195" key="GridCell.Tab.1.center" timestamp="1633953764319">
+    <state width="1537" height="195" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1633960320052" />
+    <state width="1537" height="195" key="GridCell.Tab.1.center" timestamp="1633960320052">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="195" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1633953764319" />
-    <state width="1537" height="195" key="GridCell.Tab.1.left" timestamp="1633953764319">
+    <state width="1537" height="195" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1633960320052" />
+    <state width="1537" height="195" key="GridCell.Tab.1.left" timestamp="1633960320052">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="195" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1633953764319" />
-    <state width="1537" height="195" key="GridCell.Tab.1.right" timestamp="1633953764319">
+    <state width="1537" height="195" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1633960320052" />
+    <state width="1537" height="195" key="GridCell.Tab.1.right" timestamp="1633960320052">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="195" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1633953764319" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1633955187933">
+    <state width="1537" height="195" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1633960320052" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1633955494737">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1633955187933" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1633955494737" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -641,6 +644,11 @@
           <url>file://$PROJECT_DIR$/demo_yield.py</url>
           <line>11</line>
           <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/demo_house.py</url>
+          <line>7</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
