@@ -21,4 +21,6 @@ class MyClass(unittest.TestCase):
     def test_sum(self):
         mylib.sum1([1,2,3])
         mylib.sum2(1,2,3)
+        x = 1
+        print(f"totototto {x:.1f} ")
 
