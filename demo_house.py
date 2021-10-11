@@ -22,5 +22,3 @@ with open("data/house/house.csv") as f:
         print(loyer / surface)
 
 
-print(max)
-
