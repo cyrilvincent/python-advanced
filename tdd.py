@@ -54,6 +54,12 @@ class MyClass(unittest.TestCase):
             cart = pickle.load(f)
             self.assertIsNotNone(cart)
 
+    def test_isbn(self):
+        b1 = media.Book(1, "Python pur les nuls", 10.0)
+        b1.isbn = "123-1-1234-1234-1"
+        with self.assertRaises(ValueError):
+            b1.isbn = "123-1-1234-1234"
+
 
 
     def test_polygon(self):

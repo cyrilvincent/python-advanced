@@ -3,6 +3,7 @@ from typing import Optional, List
 import abc
 import pickle
 import jsonpickle
+import re
 
 
 @dataclass
@@ -60,9 +61,11 @@ class Book(AbstractMedia):
 
     @isbn.setter
     def isbn(self, value):
-        # Vérifier que value soit du format ISBN 000-1-0000-000-0
-        raise ValueError("Bad ISBN format")
-        # with self.assertRaises(ValueError)
+        regex = r"^\d{3}-\d-\d{4}-\d{4}-\d$"
+        if re.match(regex, value):
+            self._isbn = value
+        else:
+            raise ValueError("Bad ISBN format")
 
     @property
     def net_price(self)->float:
