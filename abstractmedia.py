@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from typing import Optional, List
+import abc
 
 
 @dataclass
@@ -8,8 +9,13 @@ class Publisher:
     id: int
     name: str
 
+class IMedia(metaclass=abc.ABCMeta):
 
-class Media:
+    @abc.abstractmethod
+    def net_price(self): ...
+
+
+class AbstractMedia(IMedia):
 
     taxe = 0.2
 
@@ -21,17 +27,17 @@ class Media:
 
     @property
     def net_price(self):
-        return self.price * (1 + Media.taxe)
+        return self.price * (1 + AbstractMedia.taxe)
 
 
-class Cd(Media):
+class Cd(AbstractMedia):
 
     def __init__(self, id, title, price, publisher: Optional[Publisher] = None, nb_track=0):
         super().__init__(id, title, price,publisher)
         self.nb_track = nb_track
 
 
-class Book(Media):
+class Book(AbstractMedia):
 
     taxe = 0.05
 
@@ -46,12 +52,12 @@ class Book(Media):
 class Cart:
 
     def __init__(self):
-        self.medias:List[Media] = []
+        self.medias:List[AbstractMedia] = []
 
-    def add(self, media:Media):
+    def add(self, media:AbstractMedia):
         self.medias.append(media)
 
-    def remove(self, media:Media):
+    def remove(self, media:AbstractMedia):
         self.medias.remove(media)
 
     @property

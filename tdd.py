@@ -4,7 +4,7 @@ import mylib
 import config
 import pandas
 import geometry
-import media
+import abstractmedia
 
 
 class MyClass(unittest.TestCase):
@@ -37,9 +37,9 @@ class MyClass(unittest.TestCase):
         del(r1)
 
     def test_media(self):
-        cart = media.Cart()
-        b1 = media.Book(1,"Python pur les nuls",10.0)
-        cd1 = media.Cd(2,"Allumer le feu",20.0)
+        cart = abstractmedia.Cart()
+        b1 = abstractmedia.Book(1, "Python pur les nuls", 10.0)
+        cd1 = abstractmedia.Cd(2, "Allumer le feu", 20.0)
         cart.add(b1)
         cart.add(cd1)
         self.assertAlmostEqual(33.99, cart.total_net_price, delta=1e-2)
