@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from typing import Optional, List
 import abc
+import pickle
+import jsonpickle
 
 
 @dataclass
@@ -29,6 +31,12 @@ class AbstractMedia(IMedia):
     def net_price(self):
         return self.price * (1 + AbstractMedia.taxe)
 
+    def __eq__(self, other):
+        return self.id == other.id
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
+
 
 class Cd(AbstractMedia):
 
@@ -44,9 +52,24 @@ class Book(AbstractMedia):
     def __init__(self, id, title, price, publisher: Optional[Publisher] = None, nb_page=0):
         super().__init__(id, title, price,publisher)
         self.nb_page = nb_page
+        self._isbn = None
 
     @property
-    def net_price(self):
+    def isbn(self):
+        return self._isbn
+
+    @isbn.setter
+    def isbn(self, value):
+        # Vérifier que value soit du format ISBN 000-1-0000-000-0
+        raise ValueError("Bad ISBN format")
+        # with self.assertRaises(ValueError)
+
+    @property
+    def net_price(self)->float:
+        """
+        calcul de prix TTC
+        :return:
+        """
         return self.price * 0.95 * (1 + Book.taxe) + 0.01
 
 class Cart:
@@ -61,26 +84,54 @@ class Cart:
         self.medias.remove(media)
 
     @property
-    def total_net_price(self):
+    def total_net_price(self)->float:
+        """
+        Calcul le prix TTC du panier
+        :return: le prix
+        """
         return sum([m.net_price for m in self.medias])
 
 
 class AbstractMediaRepository(metaclass=abc.ABCMeta):
 
-    def __init__(self):
-        self.medias = []
+
+    def __init__(self, medias):
+        """
+        Constructeur
+        :param medias: liste des medias
+        """
+        self.medias = medias
 
     @abc.abstractmethod
-    def save(self, uri):...
+    def save(self, uri): ...
 
     @abc.abstractmethod
-    def load(self, uri):...
+    def load(self, uri): ...
+
 
 class JsonMediaRepository(AbstractMediaRepository):
 
-    pass
+    def __init__(self, medias):
+        super().__init__(medias)
 
+    def save(self, uri, unpicklable=False):
+        with open(uri, "w") as f:
+            f.write(jsonpickle.encode(self.medias, unpicklable=unpicklable, indent=4))
+
+    def load(self, uri):
+        with open(uri, "r") as f:
+            self.medias = jsonpickle.decode(f.read())
 
 class PickleMediaRepository(AbstractMediaRepository):
-    pass
+
+    def __init__(self, medias):
+        super().__init__(medias)
+
+    def save(self, uri):
+        with open(uri, "w") as f:
+            pickle.dump(self.medias, f)
+
+    def load(self, uri):
+        with open(uri, "r") as f:
+            self.medias = pickle.load(f)
 
