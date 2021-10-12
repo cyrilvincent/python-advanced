@@ -44,4 +44,9 @@ class MyClass(unittest.TestCase):
         cart.add(cd1)
         self.assertAlmostEqual(33.99, cart.total_net_price, delta=1e-2)
 
+    def test_polygon(self):
+        # p1 = geometry.Polygon()
+        t1 = geometry.Triangle()
+
+
 

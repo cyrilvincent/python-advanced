@@ -1,4 +1,5 @@
 from typing import List
+import abc
 
 class Coord:
 
@@ -42,4 +43,23 @@ class Rectangles:
 
     def __init__(self):
         self.rectangles: List[Rectangle] = []
+
+
+class Polygon(metaclass=abc.ABCMeta):
+
+    @abc.abstractmethod
+    def area(self): ...
+
+    @abc.abstractmethod
+    def perimeter(self): ...
+
+
+class Triangle(Polygon):
+
+    def area(self):
+        pass
+
+    def perimeter(self):
+        pass
+
 
