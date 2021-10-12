@@ -4,13 +4,16 @@ import mylib
 import config
 import pandas
 import geometry
-import abstractmedia
+import media
+import pickle
+import jsonpickle
 
 
 class MyClass(unittest.TestCase):
 
     def test1(self):
         self.assertEqual(2, 1+1)
+        pandas.read_csv()
 
     def test_iseven(self):
         res = mylib.is_even(8)
@@ -37,12 +40,21 @@ class MyClass(unittest.TestCase):
         del(r1)
 
     def test_media(self):
-        cart = abstractmedia.Cart()
-        b1 = abstractmedia.Book(1, "Python pur les nuls", 10.0)
-        cd1 = abstractmedia.Cd(2, "Allumer le feu", 20.0)
+        cart = media.Cart()
+        b1 = media.Book(1, "Python pur les nuls", 10.0)
+        cd1 = media.Cd(2, "Allumer le feu", 20.0)
         cart.add(b1)
         cart.add(cd1)
         self.assertAlmostEqual(33.99, cart.total_net_price, delta=1e-2)
+        with open("data/cart.pickle", "wb") as f:
+            pickle.dump(cart, f)
+        with open("data/cart.json", "w") as f:
+            f.write(jsonpickle.encode(cart, unpicklable=False, indent=4))
+        with open("data/cart.pickle", "rb") as f:
+            cart = pickle.load(f)
+            self.assertIsNotNone(cart)
+
+
 
     def test_polygon(self):
         # p1 = geometry.Polygon()

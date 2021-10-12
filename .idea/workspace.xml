@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72d430bd-4dab-4199-a818-972cd0fe5bd6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/data/cart.pickle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirement.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media.py" beforeDir="false" afterPath="$PROJECT_DIR$/media.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/abstractmedia.py" beforeDir="false" afterPath="$PROJECT_DIR$/media.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tdd.py" beforeDir="false" afterPath="$PROJECT_DIR$/tdd.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +49,7 @@
       <recent name="C:\Users\conta\CVC\Formation\Python\Avance\GitPythonAdvanced\data\media" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in tdd.py">
+  <component name="RunManager" selected="Python tests.Unittests for tdd.MyClass.test_media">
     <configuration name="demo_tuple" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GIT" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -126,9 +129,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for tdd.MyClass.test_media" />
         <item itemvalue="Python tests.Unittests in tdd.py" />
         <item itemvalue="Python tests.Unittests for tdd.MyClass.test_polygon" />
-        <item itemvalue="Python tests.Unittests for tdd.MyClass.test_media" />
         <item itemvalue="Python tests.Unittests for tdd.MyClass.test_rectangle" />
         <item itemvalue="Python.demo_tuple" />
       </list>
@@ -144,13 +147,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568200120026</updated>
-    </task>
-    <task id="LOCAL-00120" summary="ATP">
-      <created>1604311256717</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1604311256717</updated>
     </task>
     <task id="LOCAL-00121" summary="ATP">
       <created>1604312388383</created>
@@ -488,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634034400321</updated>
     </task>
-    <option name="localTasksCounter" value="169" />
+    <task id="LOCAL-00169" summary="Pollen">
+      <created>1634040342285</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1634040342285</updated>
+    </task>
+    <option name="localTasksCounter" value="170" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -517,10 +520,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="Pollen" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="397" y="0" key="CommitChangelistDialog2" timestamp="1634034399969">
+    <state x="324" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1634040247419">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="397" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1634034399969" />
+    <state x="324" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1634040247419" />
+    <state x="397" y="0" key="CommitChangelistDialog2" timestamp="1634040341852">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="397" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1634040341852" />
     <state width="670" height="466" key="DebuggerActiveHint" timestamp="1634026193602">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -529,46 +536,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1633939242323" />
-    <state width="1537" height="228" key="GridCell.Tab.0.bottom" timestamp="1634033630927">
+    <state width="1537" height="180" key="GridCell.Tab.0.bottom" timestamp="1634043083357">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="228" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1634033630927" />
-    <state width="1537" height="228" key="GridCell.Tab.0.center" timestamp="1634033630927">
+    <state width="1537" height="180" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1634043083357" />
+    <state width="1537" height="180" key="GridCell.Tab.0.center" timestamp="1634043083357">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="228" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1634033630927" />
-    <state width="1537" height="228" key="GridCell.Tab.0.left" timestamp="1634033630927">
+    <state width="1537" height="180" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1634043083357" />
+    <state width="1537" height="180" key="GridCell.Tab.0.left" timestamp="1634043083357">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="228" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1634033630927" />
-    <state width="1537" height="228" key="GridCell.Tab.0.right" timestamp="1634033630927">
+    <state width="1537" height="180" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1634043083357" />
+    <state width="1537" height="180" key="GridCell.Tab.0.right" timestamp="1634043083357">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="228" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1634033630927" />
-    <state width="1537" height="195" key="GridCell.Tab.1.bottom" timestamp="1634031743785">
+    <state width="1537" height="180" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1634043083357" />
+    <state width="1537" height="180" key="GridCell.Tab.1.bottom" timestamp="1634043083358">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="195" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1634031743785" />
-    <state width="1537" height="195" key="GridCell.Tab.1.center" timestamp="1634031743785">
+    <state width="1537" height="180" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1634043083358" />
+    <state width="1537" height="180" key="GridCell.Tab.1.center" timestamp="1634043083357">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="195" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1634031743785" />
-    <state width="1537" height="195" key="GridCell.Tab.1.left" timestamp="1634031743785">
+    <state width="1537" height="180" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1634043083357" />
+    <state width="1537" height="180" key="GridCell.Tab.1.left" timestamp="1634043083357">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="195" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1634031743785" />
-    <state width="1537" height="195" key="GridCell.Tab.1.right" timestamp="1634031743785">
+    <state width="1537" height="180" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1634043083357" />
+    <state width="1537" height="180" key="GridCell.Tab.1.right" timestamp="1634043083357">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="195" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1634031743785" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1633963666368">
+    <state width="1537" height="180" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1634043083357" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1634042534787">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1633963666368" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1634034401289">
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1634042534787" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1634040344712">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1634034401289" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1634040344712" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -605,7 +612,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tdd.py</url>
-          <line>19</line>
+          <line>22</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -635,14 +642,20 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tdd.py</url>
-          <line>35</line>
+          <line>38</line>
           <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tdd.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
         <watch expression="x % div" language="Python" />
+        <watch expression="cart.__dict__" language="Python" />
       </configuration>
     </watches-manager>
   </component>

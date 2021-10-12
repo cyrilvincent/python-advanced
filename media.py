@@ -63,3 +63,24 @@ class Cart:
     @property
     def total_net_price(self):
         return sum([m.net_price for m in self.medias])
+
+
+class AbstractMediaRepository(metaclass=abc.ABCMeta):
+
+    def __init__(self):
+        self.medias = []
+
+    @abc.abstractmethod
+    def save(self, uri):...
+
+    @abc.abstractmethod
+    def load(self, uri):...
+
+class JsonMediaRepository(AbstractMediaRepository):
+
+    pass
+
+
+class PickleMediaRepository(AbstractMediaRepository):
+    pass
+
