@@ -6,7 +6,7 @@ class HugeCompute(threading.Thread):
 
     def __init__(self, num, sleep, nb_iter, end_fn, progress_fn):
         """
-        
+
         :param num:
         :param sleep:
         :param nb_iter:
