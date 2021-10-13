@@ -10,6 +10,7 @@ dataframe.to_csv("data/house/filtered.csv", index=None)
 print(dataframe.describe())
 
 slope, intercept, rvalue,_,_ = stats.linregress(dataframe.surface, dataframe.loyer)
+print(slope, intercept)
 print(f"Correlation: {rvalue*100:.1f}%")
 
 f = lambda x: slope * x + intercept
