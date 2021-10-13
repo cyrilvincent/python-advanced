@@ -1,9 +1,18 @@
 import threading
 import time
+import asyncio
 
 class HugeCompute(threading.Thread):
 
     def __init__(self, num, sleep, nb_iter, end_fn, progress_fn):
+        """
+        
+        :param num:
+        :param sleep:
+        :param nb_iter:
+        :param end_fn:
+        :param progress_fn:
+        """
         super().__init__()
         self.num = num
         self.sleep = sleep

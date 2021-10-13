@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72d430bd-4dab-4199-a818-972cd0fe5bd6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/demo_thread.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PPT/PythonMath05-MatPlotLib.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PPT/PythonMath06-Numpy.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PPT/PythonMath07-NumpyMatrix.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PPT/PythonMath08-FFT.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PPT/PythonMath09-Stats.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PPT/PythonMath10-Scipy.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PPT/PythonMath11-Pandas.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PPT/PythonMath12-ScikitLearn.pptx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PPT/Python21-Threading.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/PPT/Python21-Threading.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPT/DataScience06-MatPlotLib.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPT/DataScience07-Numpy.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPT/DataScience12-Pandas.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPT/DataScience13-ScikitLearn.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_thread.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,13 +156,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568200120026</updated>
-    </task>
-    <task id="LOCAL-00124" summary="ATP">
-      <created>1604319872988</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1604319872988</updated>
     </task>
     <task id="LOCAL-00125" summary="ATP">
       <created>1604321731288</created>
@@ -489,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634050937219</updated>
     </task>
-    <option name="localTasksCounter" value="173" />
+    <task id="LOCAL-00173" summary="Pollen">
+      <created>1634111056105</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1634111056105</updated>
+    </task>
+    <option name="localTasksCounter" value="174" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -522,10 +533,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="324" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1634040247419" />
-    <state x="397" y="0" key="CommitChangelistDialog2" timestamp="1634050936850">
+    <state x="397" y="0" key="CommitChangelistDialog2" timestamp="1634111055723">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="397" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1634050936850" />
+    <state x="397" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1634111055723" />
     <state width="670" height="466" key="DebuggerActiveHint" timestamp="1634026193602">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -570,10 +581,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1634042534787" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1634050938029">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1634111057326">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1634050938029" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1634111057326" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
