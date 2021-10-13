@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72d430bd-4dab-4199-a818-972cd0fe5bd6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/data/house/filtered.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo_curvefit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo_pandas.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ski_modified.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/data/ski_modified.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_pil.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_pil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_numpy.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_numpy.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,21 +35,42 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\conta\CVC\Formation\Python\Avance\GitPythonAdvanced" />
+      <recent name="C:\Users\conta\CVC\Formation\Python\Avance\GitPythonAdvanced\data" />
+      <recent name="C:\Users\conta\CVC\Formation\Python\Avance\GitPythonAdvanced\data\media" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\conta\CVC\Formation\Python\Avance\GitPythonAdvanced\doc" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\conta\CVC\Formation\Python\Avance\GitPythonAdvanced\data" />
-      <recent name="C:\Users\conta\CVC\Formation\Python\Avance\GitPythonAdvanced" />
-      <recent name="C:\Users\conta\CVC\Formation\Python\Avance\GitPythonAdvanced\data\media" />
-    </key>
   </component>
-  <component name="RunManager" selected="Python.demo_pil">
+  <component name="RunManager" selected="Python.demo_pandas">
+    <configuration name="demo_curvefit" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GIT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_curvefit.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="demo_numpy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GIT" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -61,6 +84,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_numpy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="demo_pandas" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GIT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_pandas.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -90,7 +134,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="demo_thread" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="demo_tuple" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GIT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -102,7 +146,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_thread.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_tuple.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -111,41 +155,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for tdd.MyClass.test_isbn" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="GIT" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tdd.MyClass.test_isbn&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for tdd.MyClass.test_media" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="GIT" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tdd.MyClass.test_media&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.demo_pil" />
+        <item itemvalue="Python.demo_pandas" />
+        <item itemvalue="Python.demo_curvefit" />
+        <item itemvalue="Python.demo_tuple" />
         <item itemvalue="Python.demo_numpy" />
-        <item itemvalue="Python.demo_thread" />
-        <item itemvalue="Python tests.Unittests for tdd.MyClass.test_isbn" />
-        <item itemvalue="Python tests.Unittests for tdd.MyClass.test_media" />
+        <item itemvalue="Python.demo_pil" />
       </list>
     </recent_temporary>
   </component>
@@ -159,13 +175,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568200120026</updated>
-    </task>
-    <task id="LOCAL-00128" summary="ATP">
-      <created>1604325863296</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1604325863296</updated>
     </task>
     <task id="LOCAL-00129" summary="ATP">
       <created>1604327982790</created>
@@ -503,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634118511378</updated>
     </task>
-    <option name="localTasksCounter" value="177" />
+    <task id="LOCAL-00177" summary="Pollen">
+      <created>1634125245960</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1634125245960</updated>
+    </task>
+    <option name="localTasksCounter" value="178" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -536,10 +552,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="324" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1634040247419" />
-    <state x="397" y="0" key="CommitChangelistDialog2" timestamp="1634118511005">
+    <state x="397" y="0" key="CommitChangelistDialog2" timestamp="1634125245570">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="397" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1634118511005" />
+    <state x="397" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1634125245570" />
     <state width="670" height="466" key="DebuggerActiveHint" timestamp="1634026193602">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -548,46 +564,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1633939242323" />
-    <state width="1537" height="200" key="GridCell.Tab.0.bottom" timestamp="1634124843366">
+    <state width="1537" height="472" key="GridCell.Tab.0.bottom" timestamp="1634128175575">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="200" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1634124843366" />
-    <state width="1537" height="200" key="GridCell.Tab.0.center" timestamp="1634124843366">
+    <state width="1537" height="472" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1634128175575" />
+    <state width="1537" height="472" key="GridCell.Tab.0.center" timestamp="1634128175575">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="200" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1634124843366" />
-    <state width="1537" height="200" key="GridCell.Tab.0.left" timestamp="1634124843366">
+    <state width="1537" height="472" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1634128175575" />
+    <state width="1537" height="472" key="GridCell.Tab.0.left" timestamp="1634128175575">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="200" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1634124843366" />
-    <state width="1537" height="200" key="GridCell.Tab.0.right" timestamp="1634124843366">
+    <state width="1537" height="472" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1634128175575" />
+    <state width="1537" height="472" key="GridCell.Tab.0.right" timestamp="1634128175575">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="200" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1634124843366" />
-    <state width="1537" height="180" key="GridCell.Tab.1.bottom" timestamp="1634043083358">
+    <state width="1537" height="472" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1634128175575" />
+    <state width="1537" height="180" key="GridCell.Tab.1.bottom" timestamp="1634127208710">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="180" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1634043083358" />
-    <state width="1537" height="180" key="GridCell.Tab.1.center" timestamp="1634043083357">
+    <state width="1537" height="180" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1634127208710" />
+    <state width="1537" height="180" key="GridCell.Tab.1.center" timestamp="1634127208710">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="180" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1634043083357" />
-    <state width="1537" height="180" key="GridCell.Tab.1.left" timestamp="1634043083357">
+    <state width="1537" height="180" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1634127208710" />
+    <state width="1537" height="180" key="GridCell.Tab.1.left" timestamp="1634127208710">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="180" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1634043083357" />
-    <state width="1537" height="180" key="GridCell.Tab.1.right" timestamp="1634043083357">
+    <state width="1537" height="180" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1634127208710" />
+    <state width="1537" height="180" key="GridCell.Tab.1.right" timestamp="1634127208710">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1537" height="180" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1634043083357" />
+    <state width="1537" height="180" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1634127208710" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1634042534787">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1634042534787" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1634118512229">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1634125246907">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1634118512229" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1634125246907" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1634116087686">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

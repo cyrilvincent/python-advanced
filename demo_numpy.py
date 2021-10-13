@@ -43,3 +43,8 @@ print(np.dot(v1, v2))
 print(np.sum(mat2))
 print(mat2)
 print(np.sum(mat2, axis=1))
+
+imag = 1j ** 2
+print(imag)
+complex = 3 + 2j
+print(imag + complex)
