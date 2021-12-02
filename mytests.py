@@ -2,6 +2,7 @@ import math
 import unittest
 import mylib
 import demo_yield
+import geometry
 
 class MyTests(unittest.TestCase):
 
@@ -63,5 +64,15 @@ class MyTests(unittest.TestCase):
         res = (x * 2 for x in demo_yield.infinite() if mylib.is_prime(x))
         for i in res:
             print(i)
+
+    def test_rectangle(self):
+        r1 = geometry.Rectangle(3,2)
+        self.assertEqual(6, r1.area)
+        r1.scale(2)
+        self.assertEqual(6, r1._length)
+        geometry.Rectangle.scale(r1, 0.5)
+        self.assertEqual(3, r1._length)
+        r1._length += 2
+
 
 

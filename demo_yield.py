@@ -28,6 +28,7 @@ def infinite():
         yield i
         i += 1
 
+
 if __name__ == '__main__':
     l = range(10000000000000000000000000000000000000000)
     res = filter(lambda x: mylib.is_prime(x), l)
