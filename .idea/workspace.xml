@@ -1,12 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="72d430bd-4dab-4199-a818-972cd0fe5bd6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/demomnist.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demosklearn.py" afterDir="false" />
+    <list default="true" id="72d430bd-4dab-4199-a818-972cd0fe5bd6" name="Default Changelist" comment="Pollen">
+      <change afterPath="$PROJECT_DIR$/PPT/Python19-IHM.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qt6_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/GIT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GIT.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/mnist/breast-cancer/wdbc.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/mnist/breast-cancer/wdbc.names" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPT/PythonMath08-FFT.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPT/PythonMath10-Scipy.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPT/PythonMath11-Pandas.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PPT/PythonMath12-ScikitLearn.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/books.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/books.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/cart.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/covid-france.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/covid.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ski_modified.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_curvefit.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_filter_map.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_house.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_lambda.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_list.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_numpy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_pandas.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_pil.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_thread.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_tuple.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_yield.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demomnist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demosklearn.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/geometry.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello.py" beforeDir="false" afterPath="$PROJECT_DIR$/hello.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mylib.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirement.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tdd.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +58,9 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="1dJutRbLdenS3ffGWfzCuPHYBcz" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -32,13 +69,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/conta/git-CVC/Formation/Python/Avance/GitPythonAdvanced",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\conta\CVC\Formation\Python\Avance\GitPythonAdvanced" />
@@ -49,28 +88,7 @@
       <recent name="C:\Users\conta\CVC\Formation\Python\Avance\GitPythonAdvanced\doc" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.demomnist">
-    <configuration name="demo_curvefit" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="GIT" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_curvefit.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.qt6_demo">
     <configuration name="demo_pandas" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GIT" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -84,27 +102,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_pandas.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="demo_tuple" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="GIT" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_tuple.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -155,16 +152,59 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="hello" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GIT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hello.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="qt6_demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GIT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/qt6_demo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.qt6_demo" />
+        <item itemvalue="Python.hello" />
         <item itemvalue="Python.demomnist" />
         <item itemvalue="Python.demosklearn" />
         <item itemvalue="Python.demo_pandas" />
-        <item itemvalue="Python.demo_curvefit" />
-        <item itemvalue="Python.demo_tuple" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -175,13 +215,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568200120026</updated>
-    </task>
-    <task id="LOCAL-00132" summary="ATP">
-      <created>1604391561531</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1604391561531</updated>
     </task>
     <task id="LOCAL-00133" summary="ATP">
       <created>1604393685335</created>
@@ -519,7 +552,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634130769276</updated>
     </task>
-    <option name="localTasksCounter" value="181" />
+    <task id="LOCAL-00181" summary="Pollen">
+      <created>1634135238281</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1634135238281</updated>
+    </task>
+    <option name="localTasksCounter" value="182" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -546,68 +586,6 @@
     <MESSAGE value="ATP" />
     <MESSAGE value="Pollen" />
     <option name="LAST_COMMIT_MESSAGE" value="Pollen" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="324" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1634040247419">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="324" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1634040247419" />
-    <state x="397" y="0" key="CommitChangelistDialog2" timestamp="1634130768933">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="397" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1634130768933" />
-    <state width="670" height="466" key="DebuggerActiveHint" timestamp="1634026193602">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="670" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1634026193602" />
-    <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1633939242323">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1633939242323" />
-    <state width="1537" height="308" key="GridCell.Tab.0.bottom" timestamp="1634134604938">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1537" height="308" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1634134604938" />
-    <state width="1537" height="308" key="GridCell.Tab.0.center" timestamp="1634134604938">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1537" height="308" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1634134604938" />
-    <state width="1537" height="308" key="GridCell.Tab.0.left" timestamp="1634134604938">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1537" height="308" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1634134604938" />
-    <state width="1537" height="308" key="GridCell.Tab.0.right" timestamp="1634134604938">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1537" height="308" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1634134604938" />
-    <state width="1537" height="180" key="GridCell.Tab.1.bottom" timestamp="1634127208710">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1537" height="180" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1634127208710" />
-    <state width="1537" height="180" key="GridCell.Tab.1.center" timestamp="1634127208710">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1537" height="180" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1634127208710" />
-    <state width="1537" height="180" key="GridCell.Tab.1.left" timestamp="1634127208710">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1537" height="180" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1634127208710" />
-    <state width="1537" height="180" key="GridCell.Tab.1.right" timestamp="1634127208710">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1537" height="180" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1634127208710" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1634042534787">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1634042534787" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1634130770528">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1634130770528" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1634116087686">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1634116087686" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -641,46 +619,6 @@
           <url>file://$PROJECT_DIR$/demo_book_excel.py</url>
           <line>18</line>
           <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tdd.py</url>
-          <line>22</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/demo_yield.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/demo_yield.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/demo_yield.py</url>
-          <line>11</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/demo_house.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/geometry.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tdd.py</url>
-          <line>38</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tdd.py</url>
-          <line>51</line>
-          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
