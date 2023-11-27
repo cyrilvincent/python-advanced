@@ -1,6 +1,7 @@
 import unittest
 import rappels
 import geometry
+import media
 
 class MyTests(unittest.TestCase):
 
@@ -36,11 +37,10 @@ class MyTests(unittest.TestCase):
         r2 = geometry.Rectangle(4,3)
 
     def test_media_book(self):
-        book = media.Book("Python", 10.0, ???????)
+        book = media.Book("Python", 10.0)
         self.assertEqual("Python", book.title)
         self.assertAlmostEqual(10.55, book.get_net_price(), delta=0.01)
-        # Mettre la TVA en dur à 5.5% return price * 1.055
-        # Correction à 13h45
+
 
 
 
