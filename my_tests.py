@@ -60,11 +60,14 @@ class MyTests(unittest.TestCase):
 
     def test_association(self):
         publisher = media.Publisher("Editions Python") # dataclass
-        author1 = media.Author("Cyril", "Vincent", id="1234", mail="contact@cyrilvincent.com") # dataclass
-        author2 = media.Author("Guido", "Van Rossum", id="007", mail="guido@microsoft.com")
-        book = media.Book("Python", 10.0, publisher=publisher, authors=???)
-        self.assertEqual("Editions Python", book)
-        self.assertEqual("Guido", book.)
+        author1 = media.Author("1234", "Cyril", "Vincent", mail="contact@cyrilvincent.com") # dataclass
+        author2 = media.Author("1234", "Guido", "Van Rossum", mail="guido@microsoft.com")
+        book = media.Book("Python", 10.0, publisher=publisher, authors=[author1, author2])
+        self.assertEqual("Editions Python", book.publisher.name)
+        self.assertEqual("Guido", book.authors[1].first_name)
+
+
+        # Correction à 16h05
 
 
 
