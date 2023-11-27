@@ -1,5 +1,6 @@
 import unittest
 import rappels
+import geometry
 
 class MyTests(unittest.TestCase):
 
@@ -27,5 +28,19 @@ class MyTests(unittest.TestCase):
     #     l = [1, 3, 8, 99, 100, 10, 13, 17, 2, 18]
     #     res = tp_intention.filter_prime_x2(l)
     #     self.assertEqual([6,26,34,4], res)
+
+    def test_geometry(self):
+        r = geometry.Rectangle(3,2)
+        self.assertEqual(6, r.get_area())
+        self.assertEqual(10, r.get_perimeter())
+        r2 = geometry.Rectangle(4,3)
+
+    def test_media_book(self):
+        book = media.Book("Python", 10.0, ???????)
+        self.assertEqual("Python", book.title)
+        self.assertAlmostEqual(10.55, book.get_net_price(), delta=0.01)
+        # Mettre la TVA en dur à 5.5% return price * 1.055
+        # Correction à 13h45
+
 
 
