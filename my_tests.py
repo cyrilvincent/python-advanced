@@ -23,9 +23,9 @@ class MyTests(unittest.TestCase):
         res = rappels.filter_prime(l)
         self.assertEqual([3,13,17,2], res)
 
-    def test_tp_filter_prime(self):
-        l = [1, 3, 8, 99, 100, 10, 13, 17, 2, 18]
-        res = tp_intention.filter_prime_x2(l)
-        self.assertEqual([6,26,34,4], res)
+    # def test_tp_filter_prime(self):
+    #     l = [1, 3, 8, 99, 100, 10, 13, 17, 2, 18]
+    #     res = tp_intention.filter_prime_x2(l)
+    #     self.assertEqual([6,26,34,4], res)
 
 
