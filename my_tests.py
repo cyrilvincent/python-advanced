@@ -35,12 +35,28 @@ class MyTests(unittest.TestCase):
         self.assertEqual(6, r.get_area())
         self.assertEqual(10, r.get_perimeter())
         r2 = geometry.Rectangle(4,3)
+        self.assertEqual(6, r.area)
+        r.width = 4
+        r2 = geometry.Rectangle2(length=3,width=4)
+        print(r2.area())
+
 
     def test_media_book(self):
         book = media.Book("Python", 10.0)
         self.assertEqual("Python", book.title)
         self.assertAlmostEqual(10.55, book.get_net_price(), delta=0.01)
+        book.get_net_price()
+        # <=>
+        media.Book.get_net_price(book)
 
+    def test_nb_book(self):
+        # Passer get_net_price en propriété
+        book = media.Book("Python", 10.0)
+        self.assertAlmostEqual(10.55, book.net_price, delta=0.01)
+        b2 = media.Book("Numpy", 10)
+        self.assertEqual(2, ????)
+        del(b2)
+        self.assertEqual(1, ????)
 
 
 

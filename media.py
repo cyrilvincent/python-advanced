@@ -1,6 +1,5 @@
 from datetime import datetime
 
-
 class Book:
 
     def __init__(self, title, price, parution=datetime.now(), nb_page=0):
@@ -11,4 +10,6 @@ class Book:
 
     def get_net_price(self):
         return self.price * 1.055
+
+
 
