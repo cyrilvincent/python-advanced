@@ -39,6 +39,9 @@ class Rectangle:
     def __del__(self):
         print("Bye bye")
 
+    def __repr__(self):
+        return f"Rectangle {self.width}x{self.length}"
+
     # Appelé quand
     # r = Rectangle(...)
     # r = None
@@ -54,5 +57,27 @@ class Rectangle2:
     def area(self):
         return self.length * self.width
 
+
+class Square(Rectangle):
+
+    def __init__(self, side):
+        super().__init__(side, side)
+
+class TriangleRectangle(Rectangle):
+
+    @property
+    def area(self):
+        return super(Rectangle).area / 2
+
+    @property
+    def hypothenuse(self):
+        return (self.width ** 2 + self.length ** 2) ** 0.5
+
+    @property
+    def perimeter(self):
+        return self.width + self.length + self.hypothenuse
+
+
 if __name__ == '__main__':
     r = Rectangle(3,2)
+

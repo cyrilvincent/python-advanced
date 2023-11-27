@@ -61,10 +61,21 @@ class MyTests(unittest.TestCase):
     def test_association(self):
         publisher = media.Publisher("Editions Python") # dataclass
         author1 = media.Author("1234", "Cyril", "Vincent", mail="contact@cyrilvincent.com") # dataclass
-        author2 = media.Author("1234", "Guido", "Van Rossum", mail="guido@microsoft.com")
+        author2 = media.Author("1234", first_name="Guido", last_name="Van Rossum", mail="guido@microsoft.com")
+        media.Author(mail="toto@titi.com", first_name="A", last_name="V", id="123")
         book = media.Book("Python", 10.0, publisher=publisher, authors=[author1, author2])
         self.assertEqual("Editions Python", book.publisher.name)
         self.assertEqual("Guido", book.authors[1].first_name)
+
+    def test_square(self):
+        square = geometry.Square(3)
+        self.assertEqual(9, square.area)
+
+    # Media, puis Book, Cd, Dvd
+    # Book.nb_page
+    # Cd.nb_track
+    # Blueray.zone
+
 
 
         # Correction à 16h05

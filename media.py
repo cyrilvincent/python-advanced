@@ -21,7 +21,13 @@ class Book:
 
     nb_book = 0
 
-    def __init__(self, title, price, parution=datetime.now(), nb_page=0, publisher:Publisher=None, authors: List[Author]=[]):
+    def __init__(self,
+                 title,
+                 price,
+                 parution=datetime.now(),
+                 nb_page=0,
+                 publisher:Publisher=None,
+                 authors: List[Author]=[]):
         self.title = title
         self.price = price
         self.parution = parution

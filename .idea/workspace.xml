@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="72d430bd-4dab-4199-a818-972cd0fe5bd6" name="Default Changelist" comment="ST">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PPT/Python08-OO.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/PPT/Python08-OO.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geometry.py" beforeDir="false" afterPath="$PROJECT_DIR$/geometry.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/media.py" beforeDir="false" afterPath="$PROJECT_DIR$/media.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_tests.py" afterDir="false" />
     </list>
@@ -74,7 +74,7 @@
       <recent name="C:\Users\conta\CVC\Formation\Python\Avance\GitPythonAdvanced\doc" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for my_tests.MyTests.test_association">
+  <component name="RunManager" selected="Python tests.Python tests for my_tests.MyTests.test_geometry">
     <configuration name="demo_static" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GIT" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -124,20 +124,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for my_tests.MyTests.test_media_book" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="GIT" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;my_tests.MyTests.test_media_book&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests for my_tests.MyTests.test_nb_book" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="GIT" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -152,13 +138,27 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for my_tests.MyTests.test_square" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="GIT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;my_tests.MyTests.test_square&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for my_tests.MyTests.test_geometry" />
+        <item itemvalue="Python tests.Python tests for my_tests.MyTests.test_square" />
         <item itemvalue="Python tests.Python tests for my_tests.MyTests.test_association" />
         <item itemvalue="Python tests.Python tests for my_tests.MyTests.test_nb_book" />
         <item itemvalue="Python.demo_static" />
-        <item itemvalue="Python tests.Python tests for my_tests.MyTests.test_media_book" />
-        <item itemvalue="Python tests.Python tests for my_tests.MyTests.test_geometry" />
       </list>
     </recent_temporary>
   </component>
@@ -517,7 +517,7 @@
       <option name="project" value="LOCAL" />
       <updated>1634135238281</updated>
     </task>
-    <option name="localTasksCounter" value="198" />
+    <option name="localTasksCounter" value="199" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -591,18 +591,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/my_tests.py</url>
-          <line>2</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/my_tests.py</url>
           <line>19</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/media.py</url>
-          <line>33</line>
+          <line>39</line>
           <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/my_tests.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
