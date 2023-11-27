@@ -44,19 +44,19 @@ class MyTests(unittest.TestCase):
     def test_media_book(self):
         book = media.Book("Python", 10.0)
         self.assertEqual("Python", book.title)
-        self.assertAlmostEqual(10.55, book.get_net_price(), delta=0.01)
-        book.get_net_price()
-        # <=>
-        media.Book.get_net_price(book)
+        # self.assertAlmostEqual(10.55, book.get_net_price(), delta=0.01)
+        # book.get_net_price()
+        # # <=>
+        # media.Book.get_net_price(book)
 
     def test_nb_book(self):
         # Passer get_net_price en propriété
         book = media.Book("Python", 10.0)
         self.assertAlmostEqual(10.55, book.net_price, delta=0.01)
         b2 = media.Book("Numpy", 10)
-        self.assertEqual(2, ????)
+        self.assertEqual(2, media.Book.nb_book)
         del(b2)
-        self.assertEqual(1, ????)
+        self.assertEqual(1, media.Book.nb_book)
 
 
 
