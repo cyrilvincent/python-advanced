@@ -1,3 +1,4 @@
+import abc
 from dataclasses import dataclass
 from datetime import datetime
 from typing import List
@@ -72,6 +73,30 @@ class Cd(Media):
     @property
     def net_price(self):
         return self.price * 1.2
+
+class AbstractMediaService(metaclass=abc.ABCMeta):
+
+    def __init__(self):
+        self.medias: List[Media]= []
+
+    @abstractmethod
+    def load(self, path: str):...
+
+    @abstractmethod
+    def get_by_title(self, title: str) -> List[Media]:...
+        # "th".upper() in "python".upper() => True
+        # Intention list
+        # UnitTest
+
+    @abstractmethod
+    def get_by_price(self, price: float) -> List[Media]:...
+        # Retourne les livres <= price
+
+    # Faire un moteur de recherche de livre
+    # Saisir le prix du livre ou son titre
+    # Checkbox pour choisir title ou price
+    # Afficher le 1er résultat dans un label
+    # Bonus : ListBox (items) => Title des livres trouvés
 
 
 
