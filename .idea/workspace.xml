@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="72d430bd-4dab-4199-a818-972cd0fe5bd6" name="Default Changelist" comment="ST">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp_widget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qtdesigner.py" beforeDir="false" afterPath="$PROJECT_DIR$/qtdesigner.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +72,7 @@
       <recent name="C:\Users\conta\CVC\Formation\Python\Avance\GitPythonAdvanced\doc" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.tp_widget">
+  <component name="RunManager" selected="Python.qtdesigner">
     <configuration name="qt_widget_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GIT" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -180,9 +180,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.qtdesigner" />
         <item itemvalue="Python.tp_widget" />
         <item itemvalue="Python.qtdesigner_event" />
-        <item itemvalue="Python.qtdesigner" />
         <item itemvalue="Python.qt_widget_1" />
         <item itemvalue="Python.qt_widget_2" />
       </list>
@@ -543,7 +543,7 @@
       <option name="project" value="LOCAL" />
       <updated>1634135238281</updated>
     </task>
-    <option name="localTasksCounter" value="210" />
+    <option name="localTasksCounter" value="212" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
