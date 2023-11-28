@@ -15,17 +15,17 @@ class MainWindow(QMainWindow):
         self.button.clicked.connect(self.button_clicked)
         self.label = QLabel()
 
-        layout = QVBoxLayout()
-        layout.addWidget(self.input)
-        layout.addWidget(self.checkbox)
-        layout.addWidget(self.button)
-        layout.addWidget(self.label)
+        self.layout = QVBoxLayout()
+        self.layout.addWidget(self.input)
+        self.layout.addWidget(self.checkbox)
+        self.layout.addWidget(self.button)
+        self.layout.addWidget(self.label)
 
-        container = QWidget()
-        container.setLayout(layout)
+        self.container = QWidget()
+        self.container.setLayout(self.layout)
 
         # Set the central widget of the Window.
-        self.setCentralWidget(container)
+        self.setCentralWidget(self.container)
 
     def button_clicked(self):
         value = float(self.input.text())
