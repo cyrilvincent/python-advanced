@@ -71,14 +71,10 @@ class MyTests(unittest.TestCase):
         square = geometry.Square(3)
         self.assertEqual(9, square.area)
 
-    # Media, puis Book, Cd, Dvd
-    # Book.nb_page
-    # Cd.nb_track
-    # Blueray.zone
+    def test_cd(self):
+        cd = media.Cd("Rock python", 10)
+        self.assertAlmostEqual(12, cd.net_price, delta=0.001)
 
-
-
-        # Correction à 16h05
 
 
 

@@ -17,31 +17,58 @@ class Author:
     mail: str
 
 
-class Book:
+class Media:
 
-    nb_book = 0
+    nb_media = 0
 
     def __init__(self,
                  title,
                  price,
                  parution=datetime.now(),
-                 nb_page=0,
                  publisher:Publisher=None,
                  authors: List[Author]=[]):
         self.title = title
         self.price = price
         self.parution = parution
-        self.nb_page = nb_page
         self.publisher = publisher
         self.authors = authors
-        Book.nb_book += 1
+        Media.nb_media += 1
 
     @property
     def net_price(self):
-        return self.price * 1.055
+        return self.price * 1.2
 
     def __del__(self):
-        Book.nb_book -= 1
+        Media.nb_media -= 1
+
+class Book(Media):
+
+    def __init__(self,
+                 title,
+                 price,
+                 parution=datetime.now(),
+                 publisher: Publisher = None,
+                 authors: List[Author] = [],
+                 nb_page=0):
+        super().__init__(title, price, parution, publisher, authors)
+        self.nb_page = nb_page
+
+    @property
+    def net_price(self):
+        return self.price * 1.2 * 0.95 + 0.01
+
+
+class Cd(Media):
+    def __init__(self,
+                 title,
+                 price,
+                 parution=datetime.now(),
+                 publisher: Publisher = None,
+                 authors: List[Author] = [],
+                 nb_track=0):
+        super().__init__(title, price, parution, publisher, authors)
+        self.nb_track = nb_track
+
 
 
 
