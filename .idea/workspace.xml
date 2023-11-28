@@ -73,7 +73,7 @@
       <recent name="C:\Users\conta\CVC\Formation\Python\Avance\GitPythonAdvanced\doc" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for my_tests.MyTests.test_cd">
+  <component name="RunManager" selected="Python tests.Python tests for my_tests.MyTests.test_media">
     <configuration name="Python tests for my_tests.MyTests.test_association" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="GIT" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -116,7 +116,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for my_tests.MyTests.test_nb_book" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for my_tests.MyTests.test_media" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="GIT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -126,7 +126,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;my_tests.MyTests.test_nb_book&quot;" />
+      <option name="_new_target" value="&quot;my_tests.MyTests.test_media&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -146,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for my_tests.MyTests.test_media" />
         <item itemvalue="Python tests.Python tests for my_tests.MyTests.test_cd" />
         <item itemvalue="Python tests.Python tests for my_tests.MyTests.test_association" />
         <item itemvalue="Python tests.Python tests for my_tests.MyTests.test_geometry" />
         <item itemvalue="Python tests.Python tests for my_tests.MyTests.test_square" />
-        <item itemvalue="Python tests.Python tests for my_tests.MyTests.test_nb_book" />
       </list>
     </recent_temporary>
   </component>
@@ -509,7 +509,7 @@
       <option name="project" value="LOCAL" />
       <updated>1634135238281</updated>
     </task>
-    <option name="localTasksCounter" value="200" />
+    <option name="localTasksCounter" value="201" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -588,7 +588,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/media.py</url>
-          <line>37</line>
+          <line>38</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">

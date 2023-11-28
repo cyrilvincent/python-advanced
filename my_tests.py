@@ -75,6 +75,13 @@ class MyTests(unittest.TestCase):
         cd = media.Cd("Rock python", 10)
         self.assertAlmostEqual(12, cd.net_price, delta=0.001)
 
+    def test_media(self):
+        with self.assertRaises(TypeError):
+            m = media.Media("Essai", 10)
+
+
+
+
 
 
 

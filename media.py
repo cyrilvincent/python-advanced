@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from datetime import datetime
 from typing import List
+from abc import ABCMeta, abstractmethod
 
 
 @dataclass
@@ -17,7 +18,7 @@ class Author:
     mail: str
 
 
-class Media:
+class Media(metaclass=ABCMeta):
 
     nb_media = 0
 
@@ -34,9 +35,8 @@ class Media:
         self.authors = authors
         Media.nb_media += 1
 
-    @property
-    def net_price(self):
-        return self.price * 1.2
+    @abstractmethod
+    def net_price(self):...
 
     def __del__(self):
         Media.nb_media -= 1
@@ -68,6 +68,10 @@ class Cd(Media):
                  nb_track=0):
         super().__init__(title, price, parution, publisher, authors)
         self.nb_track = nb_track
+
+    @property
+    def net_price(self):
+        return self.price * 1.2
 
 
 
