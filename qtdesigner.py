@@ -13,8 +13,12 @@ class Ui(QtWidgets.QMainWindow):
         self.show()
 
     def pushButton_clicked(self):
+        # if self.checkbox.ischecked():
+        #     res = self.service.get_by_price(10)
+        # else:
+        #     res = self.service.get_by_title("Python")
         res = self.service.get_by_price(10)
-        self.result_label.setText(res[0].title)
+        self.result_label.setText(f"{res[0].title} {res[0].price:.2f}€")
 
 
 

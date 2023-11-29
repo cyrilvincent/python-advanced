@@ -1,6 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import config
+from config import config
 
 print(f"Version {config.version}")
 dataframe = pd.read_csv(config.path, index_col="t")

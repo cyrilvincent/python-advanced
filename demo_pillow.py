@@ -13,9 +13,11 @@ print(f"Contraste: {np.std(array)}")
 nb = np.mean(array, axis=2)
 nb = np.clip(nb - 50,0,255)
 
-green = array[:,:,1]
+green = array[10:-10,100:-100,1]
 print(green.shape)
 
 dest = Image.fromarray(nb.astype(np.uint8)).convert("RGB")
 dest.save("data/out.jpg")
 dest.show()
+
+#Reprise 13h45
