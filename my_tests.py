@@ -2,6 +2,7 @@ import unittest
 import rappels
 import geometry
 import media
+import house_service
 
 class MyTests(unittest.TestCase):
 
@@ -91,6 +92,14 @@ class MyTests(unittest.TestCase):
         res = service.get_by_title("python")
         self.assertEqual(2, len(res))
         self.assertEqual("Python", res[0].title)
+
+    def test_house_service(self):
+        service = house_service.HouseService()
+        extension = service.extension("data/house/house.csv")
+        self.assertEqual("csv", extension)
+        service.load("data/house/house.csv")
+        self.assertTrue(len(service.dataframe > 0))
+        self.assertAlmostEqual(2307.5, service.mean("loyer"), delta=0.01)
 
 
 

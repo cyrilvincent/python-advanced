@@ -6,11 +6,32 @@ print(config.version)
 
 # Charger par pandas un house.csv avec le path
 # service.load("data/house/house.csv") déduit qu'il faut utiliser read_csv par l'extension
-path = "data/house/house.csv"
-index = path.rindex(".")
-extension = path[index + 1:]
-print(extension)
+
 # service.mean("surface") => 65.1
 # service.str("surface")
 # Tester unittest
 
+class HouseService:
+
+    def __init__(self):
+        self.dataframe = None
+
+    def extension(self, path: str) -> str:
+        index = path.rindex(".")
+        extension = path[index + 1:]
+        return extension
+
+    def load(self, path: str):
+        extension = self.extension(path)
+        if extension == "csv":
+            self.dataframe = pd.read_csv(path)
+        elif extension == "xlsx":
+            self.dataframe = pd.read_excel(path)
+        else:
+            raise ValueError(f"Bad extension {extension}")
+
+    def mean(self, column: str):
+        return np.mean(self.dataframe[column])
+
+    def median(self, column: str):
+        return np.median(self.dataframe[column])
