@@ -1,9 +1,10 @@
 import sys
 
-from PyQt6.QtWidgets import QMainWindow
+from PyQt6.QtWidgets import QMainWindow, QFileDialog
 
 from qt_pyuic import Ui_MainWindow
 from PyQt6 import QtWidgets, uic
+import house_service
 
 class MyApp(QMainWindow, Ui_MainWindow):
 
@@ -11,11 +12,20 @@ class MyApp(QMainWindow, Ui_MainWindow):
         super().__init__()
         self.setupUi(self)
         self.pushButton.clicked.connect(self.pushButton_clicked)
-        self.actionCompute.triggered.connect(self.pushButton_clicked)
+        self.actionOpen.triggered.connect(self.fileOpen_trigerred)
+        self.service = house_service.HouseService()
         self.show()
 
     def pushButton_clicked(self):
-        self.result_label.setText("TOTO")
+        print("Btn Ok")
+        result = self.service.mean("surface")
+        self.label.setText(f"{result}:.2f")
+
+    def fileOpen_trigerred(self):
+        fname = QFileDialog.getOpenFileName(self, 'Open file',
+                                            './data')
+        self.service.load(fname[0])
+        print("Load Ok")
 
 app = QtWidgets.QApplication(sys.argv)
 window = MyApp()
