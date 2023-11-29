@@ -79,6 +79,19 @@ class MyTests(unittest.TestCase):
         with self.assertRaises(TypeError):
             m = media.Media("Essai", 10)
 
+    def test_media_service(self):
+        service = media.MediaService()
+        service.load("data/media/books.csv")
+        res = service.get_by_price(11)
+        self.assertEqual(2, len(res))
+
+    def test_media_service_by_title(self):
+        service = media.MediaService()
+        service.load("data/media/books.csv")
+        res = service.get_by_title("python")
+        self.assertEqual(2, len(res))
+        self.assertEqual("Python", res[0].title)
+
 
 
 
