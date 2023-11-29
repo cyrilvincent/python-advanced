@@ -19,11 +19,13 @@ class Ui(QtWidgets.QMainWindow):
         self.service = media.MediaService()
         self.service.load("data/media/books.csv")
         self.otherwindows = OtherWindow()
-        self.otherwindows.setText("Hello from Main Window")
+        self.i = 0
         self.show()
+        self.otherwindows.show()
 
     def pushButton_clicked(self):
-        self.otherwindows.show()
+        self.i += 1
+        self.otherwindows.setText(f"Hello from Main Window {self.i}")
 
 
 
