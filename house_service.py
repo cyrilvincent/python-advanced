@@ -11,6 +11,12 @@ print(config.version)
 # service.str("surface")
 # Tester unittest
 
+# Avec qtdesigner créer une mainwindow avec menu
+# Créer l'attribut qui instancie HouseService + load
+# File / Open => Ouvrir une filedialog pour choisir le fichier
+# Créer une combo avec les valeurs "surface", loyer (dataframe.columns)
+# Créer un bouton Ok => slot Affiche la moyenne de la colonne spécifiée
+
 class HouseService:
 
     def __init__(self):
