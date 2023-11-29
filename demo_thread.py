@@ -22,8 +22,9 @@ def result_slot(result, num):
     print(f"Result {result} from thread {num}")
 
 if __name__ == '__main__':
-    thread1 = MyThread(1,0.1, result_slot)
-    thread2 = MyThread(2,0.05, result_slot)
+    print(type(result_slot))
+    thread1 = MyThread(1,0.1, slot = result_slot)
+    thread2 = MyThread(2,0.05, slot = result_slot)
     thread1.start()
     thread2.start()
 
