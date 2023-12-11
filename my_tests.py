@@ -16,11 +16,14 @@ class MyTests(unittest.TestCase):
         self.assertFalse(rappels.is_prime(8))
 
     def test_filter_generic(self):
-        pass
+        l = [1, 2, 8, 7, 9, 12, 13, 99, 51, 11]
+        res = rappels.filter_generic(rappels.is_prime, l)
+        self.assertEqual([2, 7, 13, 11], res)
+
 
     def test_intention(self):
         l = [1,2,3,4,5,6,7,8,9]
-        res = [] #todo intention : filtrer les nombre premier puis renvoie au carré
+        res = [x ** 2 for x in l if rappels.is_prime(x)]
         self.assertEqual([4,9,25,49], res)
 
 
