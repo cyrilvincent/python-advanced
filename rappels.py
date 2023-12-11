@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Callable
 
 
 def is_prime(x: int) -> bool:
@@ -32,6 +32,15 @@ def filter_prime(l: List[int]) -> List[int]:
             res.append(value)
     return res
 
+def filter_generic(fn: Callable, l: List[int]) -> List[int]:
+    res = []
+    for value in l:
+        if fn(value):
+            res.append(value)
+    return res
+
+def is_x3(x):
+    return x % 3 == 0
 
 if __name__ == '__main__':
     print(is_prime(7))
@@ -40,3 +49,5 @@ if __name__ == '__main__':
     print(sum(l))
     print(filter_even(l))
     print(filter_prime(l))
+    print(filter_generic(is_prime, l))
+    print(filter_generic(is_x3, l))
