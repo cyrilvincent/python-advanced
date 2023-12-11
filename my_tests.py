@@ -2,6 +2,7 @@ import unittest
 import math
 import rappels
 import geometry
+import media
 
 
 class MyTests(unittest.TestCase):
@@ -35,6 +36,11 @@ class MyTests(unittest.TestCase):
         self.assertEqual(r1.perimeter(), 10)
         r2 = geometry.Rectangle(4, 2)
         r2.width = 3
+
+    def test_book(self):
+        b1 = media.Book("Python", 10.0, "1234567890123")
+        self.assertEqual("Python", b1.title)
+        self.assertAlmostEqual(10.55, b1.net_price(), delta=0.001)
 
 
 
