@@ -29,18 +29,28 @@ class MyTests(unittest.TestCase):
         self.assertEqual([4,9,25,49], res)
 
     def test_rectangle(self):
-        r1 = geometry.Rectangle(3,2)
+        p1 = geometry.Point(2,-1)
+        r1 = geometry.Rectangle(p1,3,2)
         self.assertEqual(r1.width, 2)
         self.assertEqual(r1.length, 3)
-        self.assertEqual(r1.area(), 6)
+        self.assertEqual(r1.area, 6)
         self.assertEqual(r1.perimeter(), 10)
-        r2 = geometry.Rectangle(4, 2)
+        r2 = geometry.Rectangle(geometry.Point(5,4), 4, 2)
         r2.width = 3
+        r2.origin.x += 1
 
     def test_book(self):
         b1 = media.Book("Python", 10.0, "1234567890123")
         self.assertEqual("Python", b1.title)
         self.assertAlmostEqual(10.55, b1.net_price(), delta=0.001)
+
+        b1.net_price() # <=> media.Book.net_price(b1)
+        b1._toto = 4
+
+    def test_point(self):
+        p1 = geometry.Point(3,2)
+        self.assertEqual(3, p1.x)
+        self.assertEqual(2, p1.y)
 
 
 

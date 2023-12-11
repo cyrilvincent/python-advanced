@@ -1,8 +1,8 @@
-# class Book
-# Avec environ 5 attributs (dont title, price)
-# net_price() => price * 1.055
-# Tester AlmostEqual(delta=0.001)
-# Reprise 15h
+# dataclass Publisher : Name, id
+# 1 book possède 1 publisher
+# dataclass Author fname, lname
+# 1 book possède n authors
+# Test
 
 class Book:
 
@@ -12,6 +12,12 @@ class Book:
         self.isbn = isbn
         self.format = format
         self.nb_page = nb_page
+        self._toto = 0
 
+    @property
     def net_price(self):
         return self.price * 1.055
+
+    def _titi(self):
+        pass
+
