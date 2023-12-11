@@ -1,6 +1,7 @@
 import unittest
 import math
 import rappels
+import geometry
 
 
 class MyTests(unittest.TestCase):
@@ -25,5 +26,15 @@ class MyTests(unittest.TestCase):
         l = [1,2,3,4,5,6,7,8,9]
         res = [x ** 2 for x in l if rappels.is_prime(x)]
         self.assertEqual([4,9,25,49], res)
+
+    def test_rectangle(self):
+        r1 = geometry.Rectangle(3,2)
+        self.assertEqual(r1.width, 2)
+        self.assertEqual(r1.length, 3)
+        self.assertEqual(r1.area(), 6)
+        self.assertEqual(r1.perimeter(), 10)
+        r2 = geometry.Rectangle(4, 2)
+        r2.width = 3
+
 
 
