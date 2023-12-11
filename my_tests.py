@@ -52,5 +52,15 @@ class MyTests(unittest.TestCase):
         self.assertEqual(3, p1.x)
         self.assertEqual(2, p1.y)
 
+    def test_publisher(self):
+        p1 = media.Publisher("1", "Python.org")
+        a1 = media.Author("Cyril", "Vincent")
+        a2 = media.Author("Guido", "Van Rossum")
+        b1 = media.Book("Python",10,"1234567890123", [a1, a2], p1)
+        self.assertEqual("1", b1.publisher.id)
+        b2 = media.Book("Python", 10, "1234567890123", [a1], media.Publisher("1", "Python.org"))
+        self.assertEqual("Cyril", b1.authors[0].first_name)
+
+
 
 
