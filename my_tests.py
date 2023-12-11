@@ -1,5 +1,7 @@
 import unittest
 import math
+
+import demo_static
 import rappels
 import geometry
 import media
@@ -60,6 +62,15 @@ class MyTests(unittest.TestCase):
         self.assertEqual("1", b1.publisher.id)
         b2 = media.Book("Python", 10, "1234567890123", [a1], media.Publisher("1", "Python.org"))
         self.assertEqual("Cyril", b1.authors[0].first_name)
+
+    def test_nb_book(self):
+        b1 = media.Book("Python",10,"1234567890123")
+        self.assertEqual(media.Book.nb_book, 1)
+        b2 = media.Book("Python 3", 10, "1234567890123")
+        self.assertEqual(media.Book.nb_book, 2)
+        del(b2)
+        self.assertEqual(media.Book.nb_book, 1)
+
 
 
 

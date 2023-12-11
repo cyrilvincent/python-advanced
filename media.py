@@ -37,6 +37,13 @@ class Book:
     def net_price(self):
         return self.price * 1.055
 
-    def _titi(self):
+    def __del__(self):
         pass
+        # x = y => x va mourir
+        # x = None
+        # del(x)
+
+    # Mettre le taux de TVA en static
+    # Compter automatiquement les livres
+
 
