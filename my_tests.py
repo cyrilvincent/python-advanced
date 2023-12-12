@@ -112,6 +112,7 @@ class MyTests(unittest.TestCase):
         self.assertEqual(1, len(cart.items))
         # cart.remove(cd)
         b1 = media.Book("Python", 10, "1234567890123")
+        cart.add(b1)
         self.assertAlmostEqual(12+10.55, cart.total_net_price, delta=0.001)
         # Reprise 13h30
 

@@ -81,3 +81,20 @@ class Cd(Media):
     def net_price(self):
         return self.price * (1 + Media.vat_rate)
 
+class Cart:
+
+    def __init__(self):
+        self.items: List[Media] = []
+
+    def add(self, media: Media):
+        self.items.append(media)
+
+    def remove(self, media: Media):
+        self.items.remove(media)
+
+    @property
+    def total_net_price(self):
+        return sum([m.net_price for m in self.items])
+
+
+
