@@ -48,5 +48,7 @@ class Book:
         # x = None
         # del(x)
 
-    # Mettre le taux de TVA en static
-    # Compter automatiquement les livres
+ # Créer la classe Cd(nb_track) et Dvd(zone)
+ # Penser à faire un Media
+ # Penser au prixTTC Book 5.5%, le reste 20%
+ # Reprise à 10h45

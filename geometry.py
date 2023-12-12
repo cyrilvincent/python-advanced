@@ -15,6 +15,8 @@ class Rectangle:
         self.width = width
         if self.width > self.length:
             raise ValueError("Width > Length")
+        if not isinstance(origin, Point):
+            raise TypeError("Type error")
 
     @property
     def area(self):
@@ -46,14 +48,14 @@ class Triangle:
         self.p2 = p2
         self.p3 = p3
 
-class TriangleRectangle(Triangle, Rectangle):
+class TriangleRectangle(Rectangle, Triangle):
 
     def __init__(self, origin: Point, length: float, width: float):
-        super(Rectangle).__init__(origin, length, width)
+        super().__init__(origin, length, width)
 
     @property
     def area(self):
-        return super(Rectangle).area / 2
+        return super().area / 2
 
     @property
     def hypothenuse(self):

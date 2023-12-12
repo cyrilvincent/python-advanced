@@ -81,6 +81,10 @@ class MyTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             r = geometry.Rectangle(geometry.Point(0,0), 0, 1)
 
+    def test_triangle_rectangle(self):
+        tr = geometry.TriangleRectangle(geometry.Point(0,0),3,2)
+        self.assertEqual(3, tr.area)
+
 
 
 
