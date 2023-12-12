@@ -71,6 +71,12 @@ class MyTests(unittest.TestCase):
         del(b2)
         self.assertEqual(media.Book.nb_book, 1)
 
+    def test_square(self):
+        s = geometry.Square(geometry.Point(0,0), 3)
+        print(s)
+        self.assertEqual(9, s.area)
+        self.assertEqual(12, s.perimeter)
+
 
 
 
