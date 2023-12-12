@@ -21,7 +21,7 @@ class MainWindow(QMainWindow):
         self.label_error = QLabel("ERROR")
         self.label_error.setVisible(False)
         self.checkbox = QCheckBox("Degrees")
-
+        self.checkbox.stateChanged.connect(self.button_clicked)
         self.button.clicked.connect(self.button_clicked)
 
         layout = QVBoxLayout()
