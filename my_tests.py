@@ -85,6 +85,10 @@ class MyTests(unittest.TestCase):
         tr = geometry.TriangleRectangle(geometry.Point(0,0),3,2)
         self.assertEqual(3, tr.area)
 
+    def test_cd(self):
+        cd = media.Cd("Python Rock",10, "007")
+        self.assertAlmostEqual(12, cd.net_price, delta=0.001)
+
 
 
 
