@@ -3,8 +3,10 @@
 # dataclass Author fname, lname
 # 1 book possède n authors
 # Test
+from abc import ABCMeta, abstractmethod
 from dataclasses import dataclass
 from typing import List
+
 
 
 @dataclass
@@ -18,10 +20,10 @@ class Publisher:
 class Author:
 
     first_name: str
-    last_name: str
+    name: str
 
 
-class Media:
+class Media(metaclass=ABCMeta):
 
     nb_media = 0
     vat_rate = 0.2
@@ -35,8 +37,8 @@ class Media:
         Media.nb_media += 1
 
     @property
-    def net_price(self):
-        return self.price * (1 + Media.vat_rate)
+    @abstractmethod
+    def net_price(self):...
 
     def __del__(self):
         Media.nb_media -= 1
@@ -52,17 +54,21 @@ class Media:
 class Book(Media):
 
     vat_rate = 0.055
+    nb_book = 0
 
     def __init__(self, title: str, price: float, isbn: str, authors: List[Author] = [], publisher: Publisher = None,
                  format="A4", nb_page=0):
         super().__init__(title, price, isbn, authors, publisher)
         self.format = format
         self.nb_page = nb_page
+        Book.nb_book += 1
 
 
     @property
     def net_price(self):
         return self.price * (1 + Book.vat_rate)
+
+
 
 class Cd(Media):
 
@@ -70,4 +76,8 @@ class Cd(Media):
                  nb_track=0):
         super().__init__(title, price, id, authors, publisher)
         self.nb_track = nb_track
+
+    @property
+    def net_price(self):
+        return self.price * (1 + Media.vat_rate)
 

@@ -1,5 +1,6 @@
 import unittest
 import math
+from typing import List
 
 import demo_static
 import rappels
@@ -65,11 +66,11 @@ class MyTests(unittest.TestCase):
 
     def test_nb_book(self):
         b1 = media.Book("Python",10,"1234567890123")
-        self.assertEqual(media.Book.nb_book, 1)
+        self.assertEqual(media.Book.nb_media, 1)
         b2 = media.Book("Python 3", 10, "1234567890123")
-        self.assertEqual(media.Book.nb_book, 2)
+        self.assertEqual(media.Book.nb_media, 2)
         del(b2)
-        self.assertEqual(media.Book.nb_book, 1)
+        self.assertEqual(media.Book.nb_media, 1)
 
     def test_square(self):
         s = geometry.Square(geometry.Point(0,0), 3)
@@ -88,6 +89,33 @@ class MyTests(unittest.TestCase):
     def test_cd(self):
         cd = media.Cd("Python Rock",10, "007")
         self.assertAlmostEqual(12, cd.net_price, delta=0.001)
+        print(cd.__dict__)
+        cd.__dict__["price"] += 1
+        self.assertEqual(11, cd.price)
+
+    def test_polymorphism(self):
+        l: List[geometry.Rectangle] = [
+            geometry.Rectangle(geometry.Point(0,0),3,2),
+            geometry.Square(geometry.Point(0, 0), 3)
+        ]
+        surface = sum([x.area for x in l])
+
+    def test_abstract(self):
+        # m = media.Media("",0,0)
+        cd = media.Cd("Python Rock", 10, "007")
+
+
+    def test_cart(self):
+        cart = media.Cart() #Quoi ?
+        cd = media.Cd("Python Rock", 10, "007")
+        cart.add(cd)
+        self.assertEqual(1, len(cart.items))
+        # cart.remove(cd)
+        b1 = media.Book("Python", 10, "1234567890123")
+        self.assertAlmostEqual(12+10.55, cart.total_net_price, delta=0.001)
+
+
+
 
 
 
