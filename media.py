@@ -23,7 +23,11 @@ class Author:
 
 class Book:
 
-    def __init__(self, title: str, price: float, isbn: str, authors: List[Author] = [], publisher: Publisher = None, format="A5", nb_page=0):
+    nb_book = 0
+    vat_rate = 0.055
+
+    def __init__(self, title: str, price: float, isbn: str, authors: List[Author] = [], publisher: Publisher = None,
+                 format="A5", nb_page=0):
         self.title = title
         self.price = price
         self.isbn = isbn
@@ -32,18 +36,17 @@ class Book:
         self.publisher = publisher
         self.authors = authors
         self._toto = 0
+        Book.nb_book += 1
 
     @property
     def net_price(self):
-        return self.price * 1.055
+        return self.price * (1 + Book.vat_rate)
 
     def __del__(self):
-        pass
+        Book.nb_book -= 1
         # x = y => x va mourir
         # x = None
         # del(x)
 
     # Mettre le taux de TVA en static
     # Compter automatiquement les livres
-
-
