@@ -77,6 +77,10 @@ class MyTests(unittest.TestCase):
         self.assertEqual(9, s.area)
         self.assertEqual(12, s.perimeter)
 
+    def test_robustness(self):
+        with self.assertRaises(ValueError):
+            r = geometry.Rectangle(geometry.Point(0,0), 0, 1)
+
 
 
 

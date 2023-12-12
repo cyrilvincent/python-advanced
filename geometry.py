@@ -13,6 +13,8 @@ class Rectangle:
         self.origin = origin
         self.length = length
         self.width = width
+        if self.width > self.length:
+            raise ValueError("Width > Length")
 
     @property
     def area(self):
