@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72d430bd-4dab-4199-a818-972cd0fe5bd6" name="Default Changelist" comment="ST">
-      <change afterPath="$PROJECT_DIR$/demo_pandas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/qt_widget_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/qt_widget_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/house/house.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PPT/PyQt03-Actions.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/PPT/PyQt03-Actions.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp_qt.py" beforeDir="false" afterPath="$PROJECT_DIR$/tp_qt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_pandas.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_pandas.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -550,7 +547,7 @@
       <option name="project" value="LOCAL" />
       <updated>1634135238281</updated>
     </task>
-    <option name="localTasksCounter" value="255" />
+    <option name="localTasksCounter" value="256" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
