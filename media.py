@@ -103,7 +103,7 @@ class MediaService:
         self.medias: List[Media] = []
 
     def load(self, path):
-        with open("path") as f:
+        with open(path) as f:
             reader = csv.DictReader(f)
             for row in reader:
                 title = row["title"]
@@ -113,17 +113,7 @@ class MediaService:
                 self.medias.append(book)
 
     def get_book_by_title(self, title):
-        # "to".upper() in "toto".upper() => True
-        # unidecode.unidecode(string)
-        pass
+        return [book for book in self.medias if title.upper() in book.title.upper()]
 
-    # Saisir le titre puis afficher le titre du livre
-    # Bonus afficher le prix, l'id
-    # Bonus2 get_book_by_price
-    # Bonus3 Afficher les livre dans un QListBox
-    # Correction à 15h55
-    # 16h Multithread
-    # 16h15 Evaluations
-    # 16h30 End
 
 

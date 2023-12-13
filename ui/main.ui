@@ -34,7 +34,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Saisir un chiffre</string>
+     <string>Saisir un titre</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
