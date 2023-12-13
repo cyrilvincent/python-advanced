@@ -6,6 +6,7 @@ import demo_static
 import rappels
 import geometry
 import media
+import tp_house
 
 
 class MyTests(unittest.TestCase):
@@ -116,7 +117,13 @@ class MyTests(unittest.TestCase):
         self.assertAlmostEqual(12+10.55, cart.total_net_price, delta=0.001)
         # Reprise 13h30
 
-
+    def test_house_service(self):
+        service = tp_house.HouseService("data/house/house.csv")
+        service.save_json("data/house/house.json")
+        service.show()
+        slope, intersect = service.lineregress()
+        self.assertAlmostEqual(31.06, slope, delta=0.01)
+        self.assertAlmostEqual(245.36, intersect, delta=0.01)
 
 
 
