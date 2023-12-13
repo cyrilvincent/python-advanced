@@ -11,7 +11,10 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib
 import scipy.stats as stats
+
+matplotlib.use("Qt5Agg")
 
 class HouseService:
 
@@ -22,6 +25,11 @@ class HouseService:
         self.df["loyer_per_m2"] = self.df.loyer / self.df.surface
 
     def save_json(self, path):
+        """
+        Save JSON
+        :param path: path to file
+        :return: None
+        """
         self.df.to_json(path)
 
     def show(self):
