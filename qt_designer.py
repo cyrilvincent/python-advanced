@@ -1,6 +1,7 @@
 from PyQt6 import QtWidgets, uic
 import media
 import sys
+import tp_house
 
 
 class Ui(QtWidgets.QMainWindow):
@@ -8,10 +9,13 @@ class Ui(QtWidgets.QMainWindow):
         super().__init__()
         uic.loadUi('ui/main.ui', self)
         self.pushButton.clicked.connect(self.pushButton_clicked)
+        self.service = tp_house.HouseService("data/house/house.csv")
         self.show()
 
     def pushButton_clicked(self):
-        self.result_label.setText("Pushed")
+        slope, intercept = self.service.lineregress()
+        self.result_label.setText(f"{slope}, {intercept}")
+        self.service.show()
 
 app = QtWidgets.QApplication(sys.argv)
 window = Ui()

@@ -3,6 +3,7 @@
 # dataclass Author fname, lname
 # 1 book possède n authors
 # Test
+import csv
 from abc import ABCMeta, abstractmethod
 from dataclasses import dataclass
 from typing import List
@@ -96,5 +97,33 @@ class Cart:
     def total_net_price(self):
         return sum([m.net_price for m in self.items])
 
+class MediaService:
+
+    def __init__(self):
+        self.medias: List[Media] = []
+
+    def load(self, path):
+        with open("path") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                title = row["title"]
+                id = row["id"]
+                price = float(row["price"])
+                book = Book(title, price, id)
+                self.medias.append(book)
+
+    def get_book_by_title(self, title):
+        # "to".upper() in "toto".upper() => True
+        # unidecode.unidecode(string)
+        pass
+
+    # Saisir le titre puis afficher le titre du livre
+    # Bonus afficher le prix, l'id
+    # Bonus2 get_book_by_price
+    # Bonus3 Afficher les livre dans un QListBox
+    # Correction à 15h55
+    # 16h Multithread
+    # 16h15 Evaluations
+    # 16h30 End
 
 
