@@ -4,6 +4,7 @@
 # 1 book possède n authors
 # Test
 import csv
+import threading
 from abc import ABCMeta, abstractmethod
 from dataclasses import dataclass
 from typing import List
@@ -114,6 +115,17 @@ class MediaService:
 
     def get_book_by_title(self, title):
         return [book for book in self.medias if title.upper() in book.title.upper()]
+
+class MediaServiceThread(threading.Thread):
+
+    def __init__(self, path):
+        super().__init__()
+        self.path = path
+        self.service = MediaService()
+
+    def run(self):
+        self.service.load(self.path)
+
 
 
 
