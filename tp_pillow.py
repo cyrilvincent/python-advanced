@@ -39,6 +39,7 @@ class ImageService:
     def change_contrast(self, ratio):
         self.array = np.clip((self.array - self.luminance()) * ratio + self.luminance() , 0, 255)
 
+
 if __name__ == '__main__':
     service = ImageService("data/ski.jpg")
     # service.display()
