@@ -25,5 +25,5 @@ dest.show()
 # TP
 # Porter celà en OO
 # lum, contrast, lum_by_chanel(0), contrast_by_chanel(0), crop, save, display, change_lum, change_contrast
-
+# Correction à 13h30
 
