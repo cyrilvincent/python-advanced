@@ -6,7 +6,38 @@
   <component name="ChangeListManager">
     <list default="true" id="72d430bd-4dab-4199-a818-972cd0fe5bd6" name="Default Changelist" comment="ST">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media.py" beforeDir="false" afterPath="$PROJECT_DIR$/media.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_fft.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_intention.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_kwargs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_matrix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_numpy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_pandas.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_pillow.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_qt_01.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_qt_02.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_qt_03.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_qt_04.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_qt_05.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_reference.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_static.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_thread.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_tuple.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_yield.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/geometry.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qt_book.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qt_designer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qt_dialog_box.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qt_pyuic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qt_widget_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qt_widget_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qtdesigner_multiwindows.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rappels.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp_house.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp_pillow.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp_qt.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,15 +84,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/conta/git-CVC/Formation/Python/Avance/GitPythonAdvanced",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/conta/git-CVC/Formation/Python/Avance/GitPythonAdvanced&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\conta\git-CVC\Formation\Python\Avance\GitPythonAdvanced" />
@@ -547,7 +578,7 @@
       <option name="project" value="LOCAL" />
       <updated>1634135238281</updated>
     </task>
-    <option name="localTasksCounter" value="266" />
+    <option name="localTasksCounter" value="267" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -618,30 +649,6 @@
           <url>file://$PROJECT_DIR$/demo_book_excel.py</url>
           <line>18</line>
           <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/rappels.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/my_tests.py</url>
-          <line>20</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/my_tests.py</url>
-          <line>78</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/qt_designer.py</url>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/qt_book.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
