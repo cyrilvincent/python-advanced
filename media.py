@@ -24,6 +24,9 @@ class Author:
 
 class Book:
 
+    tva = 0.055
+    nb_book = 0
+
     def __init__(self, ean: str, title: str, price: float, genre: str = "", nb_page: int = 0,
                  publisher: Publisher = None, authors: list[Author] = []):
         self.ean = ean
@@ -33,7 +36,10 @@ class Book:
         self.nb_page = nb_page
         self.publisher = publisher
         self.authors = authors
+        Book.nb_book += 1
 
     def net_price(self) -> float:
-        return self.price * 1.055
+        return self.price * (1 + Book.tva)
 
+    def __del__(self):
+        Book.nb_book -= 1
