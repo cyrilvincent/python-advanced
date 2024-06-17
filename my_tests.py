@@ -16,10 +16,17 @@ class MyTests(unittest.TestCase):
         self.assertFalse(tp1.is_prime(9))
 
     def test_rectangle(self):
-        r = geometry.Rectangle(2,3)
-        self.assertEqual(6, r.area())
-        self.assertEqual(10, r.perimeter())
+        r = geometry.Rectangle(2, 3)
+        self.assertEqual(6, r.area)
+        self.assertEqual(10, r._perimeter())
+
 
     def test_book(self):
         b = media.Book("1", "Python", 10)
         self.assertAlmostEqual(10.55, b.net_price(), delta=1e-3)
+        self.assertAlmostEqual(10.55, media.Book.net_price(b))
+
+    def test_coord(self):
+        c = geometry.Coord(1,4)
+        r = geometry.Rectangle(2,3,c)
+        self.assertEqual(1, r.coord.x)

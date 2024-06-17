@@ -1,3 +1,9 @@
+# Créer la dataclass Publisher
+# Ajouter l'attribut book.publisher (relation 1)
+# Créer la dataclass Author
+# Ajouter l'attribut book.authors (relation n)
+# Tester
+
 class Book:
 
     def __init__(self, ean: str, title: str, price: float, genre: str = "", nb_page: int = 0):
