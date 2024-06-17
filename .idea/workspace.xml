@@ -5,39 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72d430bd-4dab-4199-a818-972cd0fe5bd6" name="Default Changelist" comment="ST">
+      <change afterPath="$PROJECT_DIR$/demo_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tp1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_fft.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_intention.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_kwargs.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_matrix.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_numpy.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_pandas.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_pillow.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_qt_01.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_qt_02.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_qt_03.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_qt_04.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_qt_05.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_reference.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_static.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_thread.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_tuple.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_yield.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geometry.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qt_book.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qt_designer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qt_dialog_box.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qt_pyuic.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qt_widget_1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qt_widget_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qtdesigner_multiwindows.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rappels.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp_house.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp_pillow.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp_qt.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,15 +54,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/conta/git-CVC/Formation/Python/Avance/GitPythonAdvanced&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/cyril/python-advanced",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\conta\git-CVC\Formation\Python\Avance\GitPythonAdvanced" />
@@ -107,7 +77,28 @@
       <recent name="C:\Users\conta\CVC\Formation\Python\Avance\GitPythonAdvanced\doc" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.demo_thread">
+  <component name="RunManager">
+    <configuration name="demo_list" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GIT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_list.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="demo_thread" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GIT" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -150,48 +141,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="qt_dialog_box" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="GIT" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/qt_dialog_box.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="qt_pyuic (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="GIT" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/qt_pyuic.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="qtdesigner_multiwindows" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GIT" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -213,13 +162,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tp1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GIT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tp1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.tp1" />
+        <item itemvalue="Python.demo_list" />
         <item itemvalue="Python.demo_thread" />
         <item itemvalue="Python.qt_book" />
         <item itemvalue="Python.qtdesigner_multiwindows" />
-        <item itemvalue="Python.qt_dialog_box" />
-        <item itemvalue="Python.qt_pyuic (1)" />
       </list>
     </recent_temporary>
   </component>
