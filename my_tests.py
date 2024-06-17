@@ -30,3 +30,15 @@ class MyTests(unittest.TestCase):
         c = geometry.Coord(1,4)
         r = geometry.Rectangle(2,3,c)
         self.assertEqual(1, r.coord.x)
+
+    def test_publisher(self):
+        p = media.Publisher(1, "Cyril")
+        b = media.Book("1","Python",10,publisher=p)
+        b2 = media.Book("1","Python",10, publisher=media.Publisher(1, "Cyril"))
+        self.assertEqual("Cyril", b.publisher.name)
+
+    def test_authors(self):
+        a1 = media.Author("Cyril", "Vincent")
+        a2 = media.Author("Victor", "Hugo")
+        b = media.Book("1","Python",10,authors=[a1, a2])
+        self.assertEqual("Cyril", b.authors[0].first_name)
