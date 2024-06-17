@@ -42,3 +42,11 @@ class MyTests(unittest.TestCase):
         a2 = media.Author("Victor", "Hugo")
         b = media.Book("1","Python",10,authors=[a1, a2])
         self.assertEqual("Cyril", b.authors[0].first_name)
+
+    def test_nb_book(self):
+        b = media.Book("","",0)
+        self.assertEqual(1, b.nb_book)
+        b2 = media.Book("", "", 0)
+        self.assertEqual(2, b.nb_book)
+        del b2
+        self.assertEqual(1, b.nb_book)

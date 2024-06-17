@@ -3,6 +3,9 @@
 # Créer la dataclass Author
 # Ajouter l'attribut book.authors (relation n)
 # Tester
+
+# Mettre la TVA en variable statique
+# Compter automatiquement le nombre de livre instancié
 from dataclasses import dataclass
 
 
