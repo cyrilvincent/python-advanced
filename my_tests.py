@@ -1,6 +1,7 @@
 import unittest
 import tp1
 import geometry
+import media
 
 class MyTests(unittest.TestCase):
 
@@ -18,3 +19,7 @@ class MyTests(unittest.TestCase):
         r = geometry.Rectangle(2,3)
         self.assertEqual(6, r.area())
         self.assertEqual(10, r.perimeter())
+
+    def test_book(self):
+        b = media.Book("1", "Python", 10)
+        self.assertAlmostEqual(10.55, b.net_price(), delta=1e-3)
