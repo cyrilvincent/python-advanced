@@ -59,3 +59,15 @@ class MyTests(unittest.TestCase):
     def test_cd(self):
         cd = media.Cd("1", "Johnny", 10)
         self.assertAlmostEqual(12.0, cd.net_price(), delta=1e-3)
+
+    def test_polymorphism(self):
+        l: list[geometry.Rectangle] = []
+        l.append(geometry.Rectangle(3,2))
+        l.append(geometry.Square(3))
+        l.append(geometry.TriangleRectangle(3,2))
+        total = sum([r.area for r in l])
+
+    def test_polygon(self):
+        with self.assertRaises(TypeError):
+            p = geometry.Polygon()
+
