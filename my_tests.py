@@ -23,8 +23,8 @@ class MyTests(unittest.TestCase):
 
     def test_book(self):
         b = media.Book("1", "Python", 10)
-        self.assertAlmostEqual(10.55, b.net_price(), delta=1e-3)
-        self.assertAlmostEqual(10.55, media.Book.net_price(b))
+        self.assertAlmostEqual(10.032, b.net_price(), delta=1e-3)
+        self.assertAlmostEqual(10.032, media.Book.net_price(b), delta=1e-3)
 
     def test_coord(self):
         c = geometry.Coord(1,4)

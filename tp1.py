@@ -1,5 +1,5 @@
 import sys
-print(sys.version)
+
 
 def is_prime(x: int) -> bool:
     """
@@ -26,6 +26,7 @@ def filter_primes(l: list[int]) -> list[int]:
     return [x for x in l if is_prime(x)]
 
 if __name__ == '__main__':
+    print(sys.version)
     print(is_prime(7)) # True
     print(is_prime(27644437))
     print(filter_primes(range(100)))

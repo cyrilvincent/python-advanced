@@ -48,9 +48,14 @@ class Media(metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def net_price(self) -> float: ...
 
+    def __eq__(self, other):
+        return self.ean == other.ean
 
     def __del__(self):
         Media.nb_media -= 1
+
+    def __repr__(self):
+        return f"{type(self).__name__} {self.ean} {self.title} {self.price}"
 
 
 class Book(Media):
@@ -104,5 +109,15 @@ class Cart:
 
     def total_net_price(self) -> float:
         return sum([m.net_price() for m in self.items])
+
+if __name__ == '__main__':
+    b = Book("1", "Python", 10)
+    dico = b.__dict__
+    print(dico["title"])
+    dico["title"] = "toto"
+    print(b.title)
+    b2 = Book("1", "Python", 10)
+    print(b == b2)
+    print(b)
 
 
