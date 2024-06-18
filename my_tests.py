@@ -2,6 +2,7 @@ import unittest
 import tp1
 import geometry
 import media
+import tp_house
 
 class MyTests(unittest.TestCase):
 
@@ -77,4 +78,9 @@ class MyTests(unittest.TestCase):
         cart.add(media.Cd("", "", 10))
         cart.add(media.Dvd("", "", 10))
         self.assertAlmostEqual(28.032, cart.total_net_price(), delta=1e-3)
+
+    def test_house(self):
+        repo = tp_house.HouseRepository()
+        repo.load("data/house/house.csv")
+        print(repo.surfaces)
 
