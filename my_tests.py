@@ -45,13 +45,17 @@ class MyTests(unittest.TestCase):
 
     def test_nb_book(self):
         b = media.Book("","",0)
-        self.assertEqual(1, b.nb_book)
+        self.assertEqual(1, b.nb_media)
         b2 = media.Book("", "", 0)
-        self.assertEqual(2, b.nb_book)
+        self.assertEqual(2, b.nb_media)
         del b2
-        self.assertEqual(1, b.nb_book)
+        self.assertEqual(1, b.nb_media)
 
     def test_square(self):
         s = geometry.Square(3)
         self.assertEqual(9, s.area)
         self.assertEqual(12, s._perimeter())
+
+    def test_cd(self):
+        cd = media.Cd("1", "Johnny", 10)
+        self.assertAlmostEqual(12.0, cd.net_price(), delta=1e-3)
