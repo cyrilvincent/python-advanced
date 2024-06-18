@@ -6,6 +6,13 @@
 
 # Mettre la TVA en variable statique
 # Compter automatiquement le nombre de livre instancié
+
+# Créer les classes cd(nb_track) dvd(zone)
+# Pour celà créer la super classe Media
+# Garder Book.tva = 5.5%
+# Créer Media.tva = 20%
+# Tester
+
 from dataclasses import dataclass
 
 

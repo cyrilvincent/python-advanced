@@ -50,3 +50,8 @@ class MyTests(unittest.TestCase):
         self.assertEqual(2, b.nb_book)
         del b2
         self.assertEqual(1, b.nb_book)
+
+    def test_square(self):
+        s = geometry.Square(3)
+        self.assertEqual(9, s.area)
+        self.assertEqual(12, s._perimeter())
