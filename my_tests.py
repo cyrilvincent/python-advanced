@@ -71,3 +71,10 @@ class MyTests(unittest.TestCase):
         with self.assertRaises(TypeError):
             p = geometry.Polygon()
 
+    def test_cart(self):
+        cart = media.Cart()
+        cart.add(media.Book("", "", 10))
+        cart.add(media.Cd("", "", 10))
+        cart.add(media.Dvd("", "", 10))
+        self.assertAlmostEqual(28.032, cart.total_net_price(), delta=1e-3)
+

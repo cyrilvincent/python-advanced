@@ -14,6 +14,7 @@
 # Tester
 
 from dataclasses import dataclass
+import abc
 
 
 @dataclass
@@ -29,7 +30,7 @@ class Author:
     last_name: str
 
 
-class Media:
+class Media(metaclass=abc.ABCMeta):
 
     tva = 0.2
     nb_media = 0
@@ -44,8 +45,9 @@ class Media:
         self.authors = authors
         Media.nb_media += 1
 
-    def net_price(self) -> float:
-        return self.price * (1 + Media.tva)
+    @abc.abstractmethod
+    def net_price(self) -> float: ...
+
 
     def __del__(self):
         Media.nb_media -= 1
@@ -61,7 +63,7 @@ class Book(Media):
         self.nb_page = nb_page
 
     def net_price(self) -> float:
-        return self.price * (1 + Book.tva)
+        return self.price * 0.95 * (1 + Book.tva) + 0.01
 
 
 class Cd(Media):
@@ -70,5 +72,37 @@ class Cd(Media):
                  publisher: Publisher = None, authors: list[Author] = [], nb_track=0):
         super().__init__(ean, title, price, genre, publisher, authors)
         self.nb_track = nb_track
+
+    def net_price(self) -> float:
+        return self.price * (1 + Media.tva)
+
+
+class Dvd(Media):
+
+    def __init__(self, ean: str, title: str, price: float, genre: str = "",
+                 publisher: Publisher = None, authors: list[Author] = [], zone=0):
+        super().__init__(ean, title, price, genre, publisher, authors)
+        self.zone = zone
+
+    def net_price(self) -> float:
+        return self.price * (1 + Media.tva) * 0.5
+
+
+class Cart:
+
+    def __init__(self):
+        self.items: list[Media] = []
+
+    def add(self, media: Media):
+        self.items.append(media)
+
+    def remove(self, media: Media):
+        self.items.remove(media)
+
+    def validate(self) -> bool:
+        return True
+
+    def total_net_price(self) -> float:
+        return sum([m.net_price() for m in self.items])
 
 
