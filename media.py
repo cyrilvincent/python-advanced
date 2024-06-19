@@ -110,6 +110,30 @@ class Cart:
     def total_net_price(self) -> float:
         return sum([m.net_price() for m in self.items])
 
+
+class BookService:
+
+    def __init__(self):
+        self.books: list[Book] = []
+
+    def load(self, path: str):
+        pass # Charger /data/media/nooks.csv
+
+    def search_by_ean(self, ean: str) -> Book | None:
+        pass
+
+    def search_by_title(self, title: str) -> list[Book]:
+        pass
+        s = "python"
+        title = "Python 3"
+        # s.upper() in title.upper() => True
+        # module unidecode
+
+    def search_by_price(self, price: float) -> list[Book]:
+        pass
+
+
+
 if __name__ == '__main__':
     b = Book("1", "Python", 10)
     dico = b.__dict__

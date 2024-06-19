@@ -15,7 +15,7 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.list)
 
     def item_changed(self):
-        print(self.list.currentItem(), self.list.currentRow())
+        print(self.list.currentItem().text(), self.list.currentRow())
 
 app = QApplication(sys.argv)
 
