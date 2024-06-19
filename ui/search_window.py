@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'ui/SearchWindow.ui'
+# Form implementation generated from reading ui file 'ui/search_window.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.2
 #

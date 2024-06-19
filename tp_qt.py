@@ -6,6 +6,7 @@ from ui.detail_window import Ui_Form
 from PyQt6 import QtWidgets
 import media
 import config
+import re
 
 
 class MyApp(QMainWindow, Ui_MainWindow):
@@ -24,7 +25,13 @@ class MyApp(QMainWindow, Ui_MainWindow):
 
     def pushButton_clicked(self):
         text = self.lineEdit.text()
-        self.res = self.service.search_by_title(text.strip())
+        if self.radioTitleButton.isChecked():
+            self.res = self.service.search_by_title(text.strip())
+        elif self.radioPriceButton.isChecked():
+            self.res = self.service.search_by_price(float(text.strip()))
+        else:
+            self.res = [self.service.search_by_ean(text.strip())]
+        self.listWidget.clear()
         for book in self.res:
             self.listWidget.addItem(book.title)
 
@@ -46,9 +53,10 @@ class DetailWindow(QWidget, Ui_Form):
         self.idLineEdit.setText(book.ean)
         self.titleLineEdit.setText(book.title)
         self.priceLineEdit.setText(f"{book.net_price():.2f} €")
+        self.regex = r"^\d{3}-\d-\d{2}-\d{6}-\d$"
 
     def saveButton_clicked(self):
-        print("Save")
+        print(re.match(self.regex, self.idLineEdit.text()) is not None)
 
 
 
