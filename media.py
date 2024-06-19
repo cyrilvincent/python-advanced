@@ -15,6 +15,7 @@
 
 from dataclasses import dataclass
 import abc
+import csv
 
 
 @dataclass
@@ -117,20 +118,26 @@ class BookService:
         self.books: list[Book] = []
 
     def load(self, path: str):
-        pass # Charger /data/media/nooks.csv
+        with open(path, "r") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                ean = row["id"]
+                title = row["title"]
+                price = float(row["price"])
+                b = Book(ean, title, price)
+                self.books.append(b)
 
     def search_by_ean(self, ean: str) -> Book | None:
-        pass
+        res = [b for b in self.books if b.ean == ean]
+        if len(res) == 0:
+            return None
+        return res[0]
 
     def search_by_title(self, title: str) -> list[Book]:
-        pass
-        s = "python"
-        title = "Python 3"
-        # s.upper() in title.upper() => True
-        # module unidecode
+        return [b for b in self.books if title.upper() in b.title.upper()]
 
     def search_by_price(self, price: float) -> list[Book]:
-        pass
+        return [b for b in self.books if b.price <= price]
 
 
 
