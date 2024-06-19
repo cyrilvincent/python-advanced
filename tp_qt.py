@@ -19,6 +19,7 @@ class MyApp(QMainWindow, Ui_MainWindow):
         self.service.load(config.csv_path)
         self.radioTitleButton.setChecked(True)
         self.res = []
+        self.detail_window = None
         self.show()
 
     def pushButton_clicked(self):
@@ -29,8 +30,8 @@ class MyApp(QMainWindow, Ui_MainWindow):
 
     def listWidget_currentItemChanged(self):
         book = self.res[self.listWidget.currentRow()]
-        detail_window = DetailWindow(book)
-        detail_window.show()
+        self.detail_window = DetailWindow(book)
+        self.detail_window.show()
         print("OK")
 
 
