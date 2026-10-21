@@ -75,4 +75,7 @@ class Account:
 #   datetime.datetime.now() :datetime.datetime
 # Account possède * transactions par defaut = []
 # Modifier credit et debit pour ajouter automatiquement une trasaction
-# 
+
+# AccountWithInterest hérite de Account
+# Attribut supplémentaire : interest_rate
+# Methode supplémentaire : solde * (1 + rate)

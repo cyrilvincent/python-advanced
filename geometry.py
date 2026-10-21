@@ -45,3 +45,9 @@ class RectangleCollection:
     
     def areas(self):
         return sum([r.area() for r in self.items])
+    
+class Square(Rectangle):
+
+    def __init__(self, side: float, origin):
+        super().__init__(side, side, origin)
+        

@@ -70,4 +70,10 @@ class Tests(unittest.TestCase):
         self.assertEqual(50, a.transactions[0].amount)
         self.assertEqual(-50, a.transactions[-1].amount)
 
+    def test_square(self):
+        p1 = geometry.Point(-1, 1)
+        s = geometry.Square(3, p1)
+        self.assertEqual(9, s.area())
+        self.assertEqual(12, s.perimeter())
+
     
