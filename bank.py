@@ -72,6 +72,16 @@ class AccountWithInterest(Account):
 
     def compute_interest(self) -> float:
         return self.balance * self.interest
+    
+class Portefeuille:
+
+    def __init__(self, accounts: list[Account]):
+        self.accounts = accounts
+
+    def global_balance(self):
+        return sum([a.balance for a in self.accounts])
+
+    
 
 # Compter automatiquement le nombre de Account créé
 # __del__(self) = destructeur

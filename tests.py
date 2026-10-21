@@ -99,4 +99,16 @@ class Tests(unittest.TestCase):
         print(l)
         areas = sum([r.area() for r in l])
 
+    def test_portefeuille(self):
+        b = bank.Bank("000", "CNRS", "06")
+        a1 = bank.Account("001", "Cyril", b)
+        a1.credit(100)
+        a2 = bank.AccountWithInterest("001", "Cyril", b, 0.01)
+        a2.credit(200)
+        p = bank.Portefeuille([a1, a2])
+        # p = bank.Portefeuille([])
+        # p.accounts.append(a1)
+        # p.accounts.append(a2)
+        self.assertEqual(300, p.global_balance())
+
     
