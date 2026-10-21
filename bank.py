@@ -1,3 +1,14 @@
+from dataclasses import dataclass
+
+
+@dataclass
+class Bank:
+
+    swift: str
+    name: str
+    phone: str
+
+
 class Account:
     """
     Docstring for Account
@@ -31,4 +42,14 @@ class Account:
             self.balance -= amount
         else:
             raise ValueError("Amount must be <= balance")
-    
+
+    def __del__(self):
+        pass
+
+# Compter automatiquement le nombre de Account créé
+# __del__(self) = destructeur
+# a = Account(...)
+# a = toto
+# a = None
+# Sortir du bloc
+# del(a)

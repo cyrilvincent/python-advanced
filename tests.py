@@ -40,4 +40,8 @@ class Tests(unittest.TestCase):
         with self.assertRaises(ValueError):
             a.debit(100)
 
+    def test_bank(self):
+        b = bank.Bank("123", "MyBank", "01234567890")
+        self.assertIsNotNone(b)
+
     
