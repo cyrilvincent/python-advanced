@@ -14,11 +14,14 @@ class Account:
     Docstring for Account
     """
 
+    nb = 0
+
     def __init__(self, id: str, owner: str, bank: str):
         self.balance = 0.
         self.id = id
         self.owner = owner
         self.bank = bank
+        Account.nb += 1
 
     def credit(self, amount: float):
         """
@@ -44,7 +47,7 @@ class Account:
             raise ValueError("Amount must be <= balance")
 
     def __del__(self):
-        pass
+        Account.nb -= 1
 
 # Compter automatiquement le nombre de Account créé
 # __del__(self) = destructeur

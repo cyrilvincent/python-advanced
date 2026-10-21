@@ -44,4 +44,12 @@ class Tests(unittest.TestCase):
         b = bank.Bank("123", "MyBank", "01234567890")
         self.assertIsNotNone(b)
 
+    def test_static(self):
+        a = bank.Account("001", "Cyril", "CNRS")
+        self.assertEqual(1, a.nb)
+        a2 = bank.Account("001", "Cyril", "CNRS")
+        self.assertEqual(2, a.nb)
+        del(a2)
+        self.assertEqual(1, a.nb)
+
     
