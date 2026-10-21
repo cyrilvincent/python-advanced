@@ -1,6 +1,7 @@
 import unittest
 import tp_list_tuple
 import geometry
+import bank
 
 class Tests(unittest.TestCase):
 
@@ -20,4 +21,23 @@ class Tests(unittest.TestCase):
         self.assertEqual(3, r1.length)
         self.assertEqual(6, r1.area())
         self.assertEqual(10, r1.perimeter())
+        
+    def test_bank_credit(self):
+        a = bank.Account("001", "Cyril", "CNRS")
+        self.assertEqual(0, a.balance)
+        a.credit(50)
+        self.assertEqual(50, a.balance)
 
+    def test_bank_debit(self):
+        a = bank.Account("001", "Cyril", "CNRS")
+        a.credit(50)
+        a.debit(20)
+        self.assertEqual(30, a.balance)
+
+    def test_bank_debit_robust(self):
+        a = bank.Account("001", "Cyril", "CNRS")
+        a.credit(50)
+        with self.assertRaises(ValueError):
+            a.debit(100)
+
+    
