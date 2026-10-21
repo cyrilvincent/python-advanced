@@ -56,3 +56,11 @@ class Account:
 # a = None
 # Sortir du bloc
 # del(a)
+
+# Faire le lien Account possède 1 Bank + test
+# Faire la classe Transaction : datetime, amount:float (debit < 0)
+#   import datetime
+#   datetime.datetime.now()
+# Account possède * transactions par defaut = []
+# Modifier credit et debit pour ajouter automatiquement une trasaction
+# 

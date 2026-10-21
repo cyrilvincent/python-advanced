@@ -17,10 +17,14 @@ class Tests(unittest.TestCase):
         self.assertEqual(-1, min)
 
     def test_rectangle(self):
-        r1 = geometry.Rectangle(3, 2)
+        p1 = geometry.Point(-1, 1)
+        r1 = geometry.Rectangle(3, 2, origin=p1)
         self.assertEqual(3, r1.length)
         self.assertEqual(6, r1.area())
         self.assertEqual(10, r1.perimeter())
+        self.assertEqual(-1, r1.origin.x)
+        r1.origin.relative(2, 2)
+        self.assertEqual(1, r1.origin.x)
         
     def test_bank_credit(self):
         a = bank.Account("001", "Cyril", "CNRS")
