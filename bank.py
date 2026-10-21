@@ -61,6 +61,18 @@ class Account:
     def __del__(self):
         Account.nb -= 1
 
+    def __repr__(self):
+        return f"Account {self.id} {self.balance}"
+
+class AccountWithInterest(Account):
+
+    def __init__(self, id: str, owner: str, bank: Bank, interest: float):
+        super().__init__(id, owner, bank)
+        self.interest = interest
+
+    def compute_interest(self) -> float:
+        return self.balance * self.interest
+
 # Compter automatiquement le nombre de Account créé
 # __del__(self) = destructeur
 # a = Account(...)
@@ -78,4 +90,5 @@ class Account:
 
 # AccountWithInterest hérite de Account
 # Attribut supplémentaire : interest_rate
-# Methode supplémentaire : solde * (1 + rate)
+# Methode supplémentaire : solde * rate
+# Faire la méthode __repr__

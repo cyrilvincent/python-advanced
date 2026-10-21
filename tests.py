@@ -76,4 +76,10 @@ class Tests(unittest.TestCase):
         self.assertEqual(9, s.area())
         self.assertEqual(12, s.perimeter())
 
+    def test_interest(self):
+        b = bank.Bank("000", "CNRS", "06")
+        a = bank.AccountWithInterest("001", "Cyril", b, 0.01)
+        a.credit(100)
+        self.assertAlmostEqual(1, a.compute_interest(), delta=0.01)
+
     

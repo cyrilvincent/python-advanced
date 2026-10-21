@@ -36,3 +36,6 @@ print(s1)
 s2 = Singleton.factory()
 print(s2)
 print(s1 is s2)
+
+toto = 3.14
+print(f"Les resultat est {toto:.2f}")
