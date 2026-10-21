@@ -82,4 +82,21 @@ class Tests(unittest.TestCase):
         a.credit(100)
         self.assertAlmostEqual(1, a.compute_interest(), delta=0.01)
 
+    def test_triangle_rectangle(self):
+        p1 = geometry.Point(-1, 1)
+        t = geometry.TriangleRectangle(3,4,p1)
+        self.assertAlmostEqual(5, t.hypothenuse(), delta=0.001)
+
+    def test_polymorphism(self):
+        l: list[geometry.Rectangle] = []
+        p1 = geometry.Point(-1, 1)
+        r1 = geometry.Rectangle(3, 2, origin=p1)
+        l.append(r1)
+        s = geometry.Square(3, p1)
+        l.append(s)
+        t = geometry.TriangleRectangle(3,4,p1)
+        l.append(t)
+        print(l)
+        areas = sum([r.area() for r in l])
+
     

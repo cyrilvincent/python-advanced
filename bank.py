@@ -92,3 +92,8 @@ class AccountWithInterest(Account):
 # Attribut supplémentaire : interest_rate
 # Methode supplémentaire : solde * rate
 # Faire la méthode __repr__
+
+# Faire la classe Portefeuille possède une liste de Account : accounts: list[Account]
+# Mettre dans le portefeuille un Account et un AccountWithInterest
+# Faire la méthode SoldeGlobal qui calcul la somme des soldes de tous les comptes
+

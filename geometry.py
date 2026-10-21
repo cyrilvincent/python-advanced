@@ -50,4 +50,18 @@ class Square(Rectangle):
 
     def __init__(self, side: float, origin):
         super().__init__(side, side, origin)
+
+class TriangleRectangle(Rectangle):
+
+    def __init__(self, length, width, origin):
+        super().__init__(length, width, origin)
+
+    def area(self) -> float:
+        return super().area() / 2
+    
+    def hypothenuse(self) -> float:
+        return (self.length ** 2 + self.width ** 2) ** 0.5
+    
+    def perimeter(self):
+        return self.length + self.width + self.hypothenuse()
         
