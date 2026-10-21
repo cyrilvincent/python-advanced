@@ -27,19 +27,22 @@ class Tests(unittest.TestCase):
         self.assertEqual(1, r1.origin.x)
         
     def test_bank_credit(self):
-        a = bank.Account("001", "Cyril", "CNRS")
+        b = bank.Bank("000", "CNRS", "06")
+        a = bank.Account("001", "Cyril", b)
         self.assertEqual(0, a.balance)
         a.credit(50)
         self.assertEqual(50, a.balance)
 
     def test_bank_debit(self):
-        a = bank.Account("001", "Cyril", "CNRS")
+        b = bank.Bank("000", "CNRS", "06")
+        a = bank.Account("001", "Cyril", b)
         a.credit(50)
         a.debit(20)
         self.assertEqual(30, a.balance)
 
     def test_bank_debit_robust(self):
-        a = bank.Account("001", "Cyril", "CNRS")
+        b = bank.Bank("000", "CNRS", "06")
+        a = bank.Account("001", "Cyril", b)
         a.credit(50)
         with self.assertRaises(ValueError):
             a.debit(100)
@@ -49,11 +52,22 @@ class Tests(unittest.TestCase):
         self.assertIsNotNone(b)
 
     def test_static(self):
-        a = bank.Account("001", "Cyril", "CNRS")
+        b = bank.Bank("000", "CNRS", "06")
+        a = bank.Account("001", "Cyril", b)
         self.assertEqual(1, a.nb)
-        a2 = bank.Account("001", "Cyril", "CNRS")
+        a2 = bank.Account("001", "Cyril", b)
         self.assertEqual(2, a.nb)
         del(a2)
         self.assertEqual(1, a.nb)
+
+    def test_transactions(self):
+        b = bank.Bank("000", "CNRS", "06")
+        a = bank.Account("001", "Cyril", b)
+        a.credit(50)
+        a.credit(50)
+        a.debit(50)
+        self.assertEqual(3, len(a.transactions))
+        self.assertEqual(50, a.transactions[0].amount)
+        self.assertEqual(-50, a.transactions[-1].amount)
 
     
