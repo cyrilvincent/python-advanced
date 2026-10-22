@@ -2,6 +2,7 @@ import unittest
 import tp_list_tuple
 import geometry
 import bank
+import demo_file
 
 class Tests(unittest.TestCase):
 
@@ -110,5 +111,31 @@ class Tests(unittest.TestCase):
         # p.accounts.append(a1)
         # p.accounts.append(a2)
         self.assertEqual(300, p.global_balance())
+
+    def test_house_repository(self):
+        repo = demo_file.HouseRepository()
+        repo.load("data/house/house.csv")
+        self.assertTrue(len(repo.loyers) > 0)
+        self.assertEqual(1330, repo.loyers[0])
+
+    def test_compute_loyer_m2(self):
+        repo = demo_file.HouseRepository()
+        repo.load("data/house/house.csv")
+        result = repo.compute_loyer_m2()
+        self.assertAlmostEqual(35.9, result[0], delta=0.1)
+
+    def test_house_repository_add(self):
+        repo = demo_file.HouseRepository()
+        repo.load("data/house/house.csv")
+        repo.add(100, 10)
+        self.assertEqual(100, repo.loyers[-1])
+
+    def test_house_repository_save(self):
+        repo = demo_file.HouseRepository()
+        repo.load("data/house/house.csv")
+        repo.add(100, 10)
+        repo.save("data/house/house2.csv")
+        repo.load("data/house/house2.csv")
+        self.assertEqual(100, repo.loyers[-1])
 
     

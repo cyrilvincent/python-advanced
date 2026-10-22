@@ -44,7 +44,7 @@ class Rectangle(Polygone):
         """
         return self.width * self.length
     
-    def perimeter2(self):
+    def perimeter(self):
         return 2 * (self.length + self.width)
     
 class RectangleCollection:
