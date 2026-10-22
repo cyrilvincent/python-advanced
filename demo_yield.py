@@ -32,11 +32,11 @@ def infinite():
         yield i
         i += 1
 
-def range(max: int):
-    i = 0
-    while i < max:
-        yield i
-        i += 1
+# def range2(max: int):
+#     i = 0
+#     while i < max:
+#         yield i
+#         i += 1
 
 # result = (v for v in l if is_prime(v))  # Generator
 result = filter_prime_yield(infinite())
