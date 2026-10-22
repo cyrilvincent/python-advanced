@@ -1,4 +1,13 @@
 from dataclasses import dataclass
+import abc
+
+class Polygone(metaclass=abc.ABCMeta):
+
+    @abc.abstractmethod
+    def area(self):...
+
+    @abc.abstractmethod
+    def perimeter(self):...
 
 
 @dataclass
@@ -17,7 +26,7 @@ class Point:
 
     
 
-class Rectangle:
+class Rectangle(Polygone):
     """
     Docstring for Rectangle
     """
@@ -35,7 +44,7 @@ class Rectangle:
         """
         return self.width * self.length
     
-    def perimeter(self):
+    def perimeter2(self):
         return 2 * (self.length + self.width)
     
 class RectangleCollection:

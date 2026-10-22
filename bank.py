@@ -72,7 +72,8 @@ class AccountWithInterest(Account):
 
     def compute_interest(self) -> float:
         return self.balance * self.interest
-    
+
+ 
 class Portefeuille:
 
     def __init__(self, accounts: list[Account]):
