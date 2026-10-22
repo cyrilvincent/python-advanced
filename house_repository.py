@@ -1,4 +1,6 @@
 import csv
+import json
+import pickle
 
 # with open("data/house/house.csv", "r") as f:
 #     with open("data/house/house2.csv", "w") as g:
@@ -51,10 +53,24 @@ class HouseRepository:
             for loyer, surface in zip(self.loyers, self.surfaces):
                 f.write(f"{loyer},{surface}\n")
 
-    # save_pickle
-    # load_pickle
-    # save_json
-    # load_json
+    def save_pickle(self, path: str):
+        with open(path, "wb") as f:
+            pickle.dump((self.loyers, self.surfaces), f)
+
+    def load_pickle(self, path: str):
+        with open(path, "rb") as f:
+            self.loyers, self.surfaces = pickle.load(f)
+
+    def save_json(self, path:str):
+        with open(path, "w") as f:
+            json.dump({"loyers": self.loyers, "surfaces": self.surfaces}, f)
+
+    def load_json(self, path: str):
+        with open(path, "r") as f:
+            result = json.load(f)
+            self.loyers = result["loyers"]
+            self.surfaces = result["surfaces"]
+
 
     
 

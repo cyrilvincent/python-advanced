@@ -138,4 +138,16 @@ class Tests(unittest.TestCase):
         repo.load("data/house/house2.csv")
         self.assertEqual(100, repo.loyers[-1])
 
+    def test_house_repository_pickle(self):
+        repo = house_repository.HouseRepository()
+        repo.load("data/house/house.csv")
+        repo.save_pickle("data/house/house.pkl")
+        repo.load_pickle("data/house/house.pkl")
+
+    def test_house_repository_json(self):
+        repo = house_repository.HouseRepository()
+        repo.load("data/house/house.csv")
+        repo.save_json("data/house/house.json")
+        repo.load_json("data/house/house.json")
+
     
