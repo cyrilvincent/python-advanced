@@ -41,6 +41,6 @@ def infinite():
 # result = (v for v in l if is_prime(v))  # Generator
 result = filter_prime_yield(infinite())
 result2 = (v for v in result if v % 2 == 0)
-result2[1000]
+
 for v in result:
     print(v)
