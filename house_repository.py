@@ -51,3 +51,10 @@ class HouseRepository:
             for loyer, surface in zip(self.loyers, self.surfaces):
                 f.write(f"{loyer},{surface}\n")
 
+    # save_pickle
+    # load_pickle
+    # save_json
+    # load_json
+
+    
+
